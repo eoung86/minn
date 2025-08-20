@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img태그</title>
+  </head>
+  <body>
+    <img src="./img/0.5x/Asset 1@0.5x-100.jpg" alt="" width="1000" />
+    <a href="https://www.google.com/"
+      ><img src="./img/SVG/Asset 1.svg" alt="" width="1000"
+    /></a>
+    <picture>
+      <source
+        media="(min-width:1280px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/14/06/00/cat-9773388_640.jpg
+        "
+      />
+      <source
+        media="(min-width:1024px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/14/05/57/cosmea-9773384_640.jpg
+        "
+      />
+      <source
+        media="(min-width:768px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/18/18/29/hydrangea-9782496_640.jpg
+        "
+      />
+      <source
+        media="(min-width:500px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2025/08/13/09/29/cat-9771851_640.jpg
+        "
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2025/08/18/06/10/kittens-9780980_640.jpg"
+        alt="cat"
+      />
+    </picture>
+    <img src="./img/jakomo1.jpg" alt="" width="1000" />
+    <img src="./img/jakomo2.jpg" alt="" width="1000" />
+    <img src="./img/jakomo3.jpg" alt="" width="1000" />
+  </body>
+</html>
