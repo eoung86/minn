@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font</title>
+    <style>
+      @font-face {
+        font-family: "FlightSans";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Regular.woff2")
+          format("woff2");
+      }
+      @font-face {
+        font-family: "FlightSanstit";
+        src: url(./webfonts/FlightSans-Title.woff);
+      }
+      .con {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .con p:first-child {
+        font-family: "FlightSans";
+        font-size: 56px;
+      }
+      .con p:nth-child(2) {
+        font-family: "FlightSanstit";
+        font-size: 70px;
+        font-weight: 900;
+      }
+      .con p span {
+        color: #1c7cff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <p>해법독서논술은</p>
+      <p>
+        <span>교과연계 1등</span> 콘텐츠로<br />
+        <span>학교공부도 한번에!</span>
+      </p>
+      <p>
+        <img
+          src="https://image.hbedu.co.kr:446/baccal/www2025/img/main/m_free_sub_text.png"
+          alt="글자"
+        />
+      </p>
+      <div class="free">
+        <span>
+          <img
+            src="	https://image.hbedu.co.kr:446/baccal/www2025/img/main/free_item01.png"
+            alt="1"
+          />
+        </span>
+        <span>
+          <img
+            src="		https://image.hbedu.co.kr:446/baccal/www2025/img/main/free_item02.png"
+            alt="2"
+          />
+        </span>
+        <span>
+          <img
+            src="	https://image.hbedu.co.kr:446/baccal/www2025/img/main/free_item03.png"
+            alt="3"
+          />
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
