@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bg</title>
+    <style>
+      p {
+        position: absolute; /* 겹치기*/
+        visibility: hidden; /*안보이게 숨기기*/
+      }
+      div {
+        background-color: green;
+        padding: 100px;
+        margin: 50px; /*padding 과 margin 컨텐츠가 들어가지 못하는 여백*/
+        border: 20px solid rgba(0, 0, 0, 0.5);
+      }
+      div.a01 {
+        background-clip: border-box; /*테두리의 좌측 상단 모퉁이에서*/
+      }
+      div.a02 {
+        background-clip: content-box; /*안여백의 상단 모퉁이에서*/
+      }
+      div.a03 {
+        background-clip: padding-box; /*콘텐츠 좌측 상단부터*/
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <img
+        src="https://cdn.pixabay.com/photo/2025/08/12/08/49/cat-9769723_640.jpg"
+        alt=""
+      />
+    </p>
+    <p>이미지</p>
+    <h1>고양이</h1>
+    <div>백그라운드</div>
+    <div class="a01">백그라운드</div>
+    <div class="a02">백그라운드</div>
+    <div class="a03">백그라운드</div>
+  </body>
+</html>
