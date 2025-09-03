@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background/선형</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 100px;
+        margin: 20px;
+      }
+      p:nth-child(1) {
+        background-image: linear-gradient(red, yellow, green);
+      }
+      p:nth-child(2) {
+        background-image: linear-gradient(to top, red, yellow, green);
+      }
+      p:nth-child(3) {
+        background-image: linear-gradient(to left, red, yellow, green);
+      }
+      p:nth-child(4) {
+        background-image: linear-gradient(to right, red, yellow, green);
+      }
+      p:nth-child(5) {
+        background-image: linear-gradient(to bottom, red, yellow, green);
+      }
+      p:nth-child(5) {
+        background-image: linear-gradient(45deg, red, yellow, green);
+      } /* deg - 각도 단위*/
+      p:nth-child(6) {
+        background-image: linear-gradient(-45deg, red, yellow, green);
+      }
+      p:nth-child(7) {
+        background-image: linear-gradient(red, yellow 10%, green 20%);
+      }
+      p:nth-child(8) {
+        background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+      } /*repeating-반복*/
+      p:nth-child(9) {
+        background-image: radial-gradient(circle, red, yellow, green);
+      } /*radial-원형 , circle- 원형.빙빙돌다*/
+      p:nth-child(10) {
+        background-image: repeating-radial-gradient(red, yellow 10%, green 20%);
+      }
+      p:nth-child(11) {
+        background-image: radial-gradient(#feada6 0%, #f5efef 100%);
+      } /*radial-gradient - 각도X */
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>
