@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxsizing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: auto;
+        height: 500px;
+        background: #ccc;
+        padding: 100px 0;
+        border: 50px solid rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; /*박스 사이즈-패딩과 보더를 포함한 크기*/
+      }
+      ul {
+        width: 1200px;
+        margin: 0 auto; /*가운데정렬*/
+        border: 1px solid;
+        list-style: none; /*ul의 점 제거*/
+        overflow: hidden; /*부모가 자식을 감싸도록*/
+      }
+      ul li {
+        width: 400px;
+        height: 300px;
+        float: left; /*float-정렬*/
+        box-sizing: border-box;
+      }
+      ul li:nth-child(1) {
+        background-color: #aaa;
+        padding: 10px;
+      }
+      ul li:nth-child(2) {
+        background-color: #bbb;
+      }
+      ul li:nth-child(3) {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </body>
+</html>

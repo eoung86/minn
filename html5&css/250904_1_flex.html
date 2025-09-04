@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        display: flex; /*메인축이 가로 (기본값)*/
+        background: #ccc;
+        justify-content: space-between; /*justify-content --> 부모에게 설정 , space-between(around)--> 사이(둘레) 간격 */
+        margin: 20px;
+      }
+      .item {
+        background: red;
+        border: 1px solid;
+        width: 200px;
+      }
+      .flex-container1 {
+        display: flex;
+        background: #ccc;
+        justify-content: center; /*수직정렬*/
+        flex-direction: column; /*메인축.세로*/
+        height: 500px;
+        align-items: center; /*가운데로 정렬*/
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex-container1">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxshadow</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: auto;
+        height: 500px;
+        background: #ccc;
+        padding: 100px 0;
+        border: 50px solid rgba(0, 0, 0, 0.5);
+        box-sizing: border-box; /*박스 사이즈-패딩과 보더를 포함한 크기*/
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); /*박스그림자*/
+      }
+      ul {
+        width: 1200px;
+        margin: 0 auto; /*가운데정렬*/
+        border: 1px solid;
+        list-style: none; /*ul의 점 제거*/
+        overflow: hidden; /*부모가 자식을 감싸도록*/
+        box-shadow: 20px 20px 2px 0px rgba(0, 0, 0, 0.5), 0 0 20px 10px red,
+          inset 20px 0 10px 20px yellow;
+      }
+      ul li {
+        width: 400px;
+        height: 300px;
+        float: left; /*float-정렬*/
+        box-sizing: border-box;
+      }
+      ul li:nth-child(1) {
+        background-color: #aaa;
+        padding: 10px;
+      }
+      ul li:nth-child(2) {
+        background-color: #bbb;
+      }
+      ul li:nth-child(3) {
+        background-color: #ccc;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        box-shadow: 0 0 20px 0 red, inset 20px 20px 20px 0 yellow; /*inset-내부그림자, 앞.뒤 어디에 넣든 상관X*/
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <div></div>
+  </body>
+</html>
