@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex {
+        background: #ccc;
+        margin: 20px;
+        padding: 20px;
+        height: 500px;
+      }
+      .container1 {
+        display: flex;
+        justify-content: space-between; /*컨텐츠가 가로로 되어있을때 수평정렬*/
+        align-items: flex-start;
+      }
+      .container2 {
+        display: inline-flex; /*inline을 부여함으로 한 글자로 취급*/
+      }
+      .container3 {
+        display: flex;
+        width: 500px;
+        flex-direction: column; /*column-세로*/
+        justify-content: space-around; /*flex가 있어야 사용가능 / 수직*/
+      }
+      .item {
+        background: red;
+        border: 1px solid;
+        /* width: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex container1">
+      <div class="item">111111</div>
+      <div class="item">222222</div>
+      <div class="item">333333</div>
+    </div>
+    <div class="flex container2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container3">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>
