@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        display: flex;
+        background: #ccc;
+        /*flex-direction: column; 세로값으로 들어감*/
+        width: 1200px;
+        height: 400px;
+        align-items: flex-start;
+      }
+      .item {
+        background: red;
+        /* flex-basis: 200px; 가로값으로 들어감*/
+        /* flex-basis: 40%; */
+        border: 1px solid;
+        /* flex-grow: 1; 기본값0 */
+        flex-shrink: 0; /*부모크기 안에서 나눔. 특정값만 줄일수 있음. 자식요소에 지정 기본값1*/
+      }
+      .item {
+        flex-grow: 1;
+      }
+      .item:nth-child(2) {
+        flex-grow: 1;
+      }
+      .item:nth-child(3) {
+        flex-grow: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

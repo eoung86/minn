@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background: #ccc;
+        display: flex;
+        gap: 40px; /*수평(행) 수직(열)*/
+        width: 1200px;
+        height: 800px;
+        /*flex-wrap: wrap;  wrap 을 주지않으면 행이 나오지않음
+        flex-direction: column-reverse;  row -가로. column -세로
+        coliumn-reverse -세로의 반대*/
+        flex-flow: column-reverse wrap;
+        align-content: flex-start; /*부모를 중심으로 이동*/
+      }
+      .item {
+        width: 20%;
+        height: 40%;
+        border: 1px solid;
+        flex-shrink: 0; /*자식에게 주는 속성/ 작을때 쓰는*/
+        flex-grow: 1; /*flex-wrap 을 주어야 사용가능/ 클 때 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>
