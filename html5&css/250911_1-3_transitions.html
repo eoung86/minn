@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transitions</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 115px;
+        margin: 50px auto;
+      }
+
+      ul li {
+        height: 94px;
+        overflow: hidden;
+        position: relative;
+      }
+      ul li img:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.5s;
+      }
+      ul li:hover img:nth-child(2) {
+        left: -100%;
+        top: -100%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="./img/menu1_over.jpg" alt="" />
+        <img src="./img/menu1.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./img/menu2_over.jpg" alt="" />
+        <img src="./img/menu2.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./img/menu3_over.jpg" alt="" />
+        <img src="./img/menu3.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./img/menu4_over.jpg" alt="" />
+        <img src="./img/menu4.jpg" alt="" />
+      </li>
+      <li>
+        <img src="./img/menu5_over.jpg" alt="" />
+        <img src="./img/menu5.jpg" alt="" />
+      </li>
+    </ul>
+  </body>
+</html>
