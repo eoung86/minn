@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>food</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0; /*이미지가 떨어져있을경우 이미지의 상위요소에게 입력*/
+      }
+      .wrap > div {
+        display: flex;
+      }
+      .wrap .top {
+        height: 24px;
+      }
+      .wrap .meun {
+        justify-content: space-between;
+        height: 13px;
+      }
+      .wrap .meun div {
+        display: flex;
+      }
+      .wrap .meun div ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+      }
+      .wrap .meun div ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        font-size: 10px;
+      }
+      .wrap .main {
+        align-items: flex-end;
+        height: 744px;
+      }
+      .wrap .foot {
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <p><img src="./img/food_img/top.gif" alt="top" /></p>
+      </div>
+      <div class="meun">
+        <p><img src="./img/food_img/food_01.gif" alt="01" /></p>
+        <div>
+          <ul>
+            <li><a href="#">august / 2003 / </a></li>
+            <li><a href="#">summer</a></li>
+            <li><a href="#">special</a></li>
+            <li><a href="#">e·magazine</a></li>
+          </ul>
+          <p><img src="./img/food_img/food_02.gif" alt="02" /></p>
+        </div>
+      </div>
+      <div class="main">
+        <p><img src="./img/food_img/note.gif" alt="note" /></p>
+        <p><img src="./img/food_img/image.gif" alt="image" /></p>
+        <div>
+          <p><img src="./img/food_img/number.gif" alt="number" /></p>
+          <p><img src="./img/food_img/navigation.gif" alt="navigation" /></p>
+        </div>
+        <p><img src="./img/food_img/page.gif" alt="page" /></p>
+      </div>
+      <div class="foot">
+        <p><img src="./img/food_img/bottom.gif" alt="bottom" /></p>
+      </div>
+    </div>
+  </body>
+</html>

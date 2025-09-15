@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>instory</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        background: #d3222a;
+      }
+      .wrap {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .wrap .top {
+        display: flex;
+        justify-content: flex-end; /*방향 설정 flex-end : 오른쪽 끝*/
+      }
+      .wrap .top ul {
+        display: flex;
+        gap: 20px;
+        padding: 10px 0;
+      }
+      .wrap .top ul li a {
+        color: #fff;
+        text-transform: uppercase; /*영문자- 대문자로 변경*/
+      } /* a태그에 글자쓴건 무조건 a에 적용*/
+      .pattern {
+        background: url(./img/instory/pattern.gif);
+        height: 82px;
+      }
+      .wrap .main {
+        display: flex;
+        height: 625px;
+      }
+      .wrap .main > div:nth-child(2) {
+        background: url(./img/instory/index_main_02.gif);
+        width: 514px;
+      }
+      .wrap .copyright {
+        background: #fff;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } /* justify-content: center;
+          align-items: center; 수평 수직의 가운데*/
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <ul>
+          <li><a href="#">korean</a></li>
+          <li><a href="#">english</a></li>
+          <li><a href="#">japanese</a></li>
+          <li><a href="#">chinese</a></li>
+          <li><a href="#">italian</a></li>
+        </ul>
+      </div>
+      <div class="pattern">
+        <p>
+          <img src="./img/instory/index_pattern.gif" alt="patten" />
+        </p>
+      </div>
+      <div class="main">
+        <div>
+          <p>
+            <img src="./img/instory/index_main_01.gif" alt="main01" />
+          </p>
+        </div>
+        <div>
+          <h1>home 메인페이지입니다</h1>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          <img src="./img/instory/copyright.gif" alt="copyright" />
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
