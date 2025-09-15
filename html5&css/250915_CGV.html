@@ -16,16 +16,27 @@
       .warp .top {
         display: flex;
         background: #e32213;
-        color: #fff;
-        font-size: 11px;
         gap: 30px;
+        justify-content: flex-end;
       }
+
       .warp .top p {
         margin: 5px;
+        font-size: 11px;
+        color: #fff;
+      }
+      .warp .meun {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .warp .meun div {
+        display: flex;
       }
       .warp .meun div ul {
         list-style: none;
         display: flex;
+        gap: 40px;
       }
       .warp .meun div ul li a {
         text-decoration: none;
@@ -36,9 +47,32 @@
       }
       .warp .maintwo {
         display: flex;
+        justify-content: space-between;
       }
       .warp .foot {
         display: flex;
+      }
+      .warp .foot .a {
+        width: 50%;
+        display: flex;
+        justify-content: space-between; /*부모의 크기를 나눠갖음*/
+      }
+      .warp .con {
+        display: flex;
+      }
+      .warp .foot .b {
+        margin: 20px;
+      }
+      .warp .foot .c {
+        display: flex;
+        flex-direction: column;
+      }
+      .warp .foottwo {
+        background: #d8b978;
+        height: 65px;
+        display: flex;
+        justify-content: flex-start; /*가로 왼쪽*/
+        align-items: center; /*세로 가운데*/
       }
     </style>
   </head>
@@ -71,15 +105,25 @@
         <p><img src="./img/CGV/image/cgv_img03 (2).png" alt="" /></p>
       </div>
       <div class="foot">
-        <h4>이벤트</h4>
-        <p><img src="./img/CGV/image/cgv_banner.jpg" alt="" /></p>
-        <div>
-          <h4>공지사항</h4>
-          <div class="son">
+        <div class="a">
+          <h4>이벤트</h4>
+          <p><img src="./img/CGV/image/cgv_banner.jpg" alt="" /></p>
+        </div>
+        <div class="con">
+          <div class="b">
+            <h4>공지사항</h4>
             <p>공지사항 제목이 들어갑니다.</p>
             <p>공지사항 제목이 들어갑니다.</p>
             <p>공지사항 제목이 들어갑니다.</p>
             <p>공지사항 제목이 들어갑니다.</p>
+            <p>공지사항 제목이 들어갑니다.</p>
+          </div>
+          <div class="c">
+            <p>2017-08-07</p>
+            <p>2017-08-07</p>
+            <p>2017-08-07</p>
+            <p>2017-08-07</p>
+            <p>2017-08-07</p>
           </div>
         </div>
       </div>
