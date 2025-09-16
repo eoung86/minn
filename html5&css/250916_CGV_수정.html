@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGV</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrapper .topwarp {
+        background: url(./img/CGV/image/cgv_bg_top.gif);
+      }
+      .wrapper .topwarp .top {
+        width: 1025px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .wrapper .topwarp .top ul {
+        display: flex;
+        gap: 40px;
+        padding: 20px 0;
+      }
+      .wrapper .topwarp .top ul a {
+        color: #fff;
+      }
+      .wrapper .menu {
+        width: 1025px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /*수직정렬*/
+        /*padding: 20px 0; 위아래 왼쪽오른쪽*/
+        height: 100px; /*높이값으로 주려면 'align-items: center;' 필요함*/
+      }
+      .wrapper .menu ul {
+        display: flex;
+        gap: 40px;
+      }
+      .wrapper .menu ul li a {
+        color: #e32213;
+        font-size: 18px;
+      }
+      .wrapper .visual {
+        width: 1025px;
+        margin: 0 auto;
+        border-radius: 20px;
+        overflow: hidden; /*넘치는 자식 숨기기 */
+      }
+      .wrapper .cgv {
+        width: 1025px;
+        margin: 0 auto;
+      }
+      .wrapper .cgv ul {
+        display: flex;
+        justify-content: space-around; /*대상의 양쪽사이드 여백이 같아짐*/
+        padding: 20px 0;
+      }
+      .wrapper .banner{
+        width: 1025px;
+        margin: 0 auto;
+      display: flex;
+      }
+      .wrapper .banner > div{
+        flex: 1;/*부모의 공간을 나눔*/
+      }
+      .wrapper .banner > div:first-child{
+        display: flex;
+        justify-content: space-between;
+      }
+       .wrapper .banner .notice{
+        display: flex;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="topwarp">
+        <div class="top">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- topwarp 끝 -->
+      <div class="menu">
+        <div>
+          <p><img src="./img/CGV/image/cgv_logo.gif" alt="cgv_logo" /></p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">영화예매</a></li>
+            <li><a href="#">신작개봉</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">CGV매점</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- menu 끝 -->
+      <div class="visual">
+        <p><img src="./img/CGV/image/cgv_visual.jpg" alt="visual" /></p>
+      </div>
+      <!-- visual 끝 -->
+      <div class="cgv">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="./img/CGV/image/cgv_img03 (3).png" alt="01"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/CGV/image/cgv_img03 (4).png" alt="02"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/CGV/image/cgv_img03 (1).png" alt="03"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./img/CGV/image/cgv_img03 (2).png" alt="03"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!-- cgv 끝 -->
+      <div class="banner">
+        <div>
+          <h3>이벤트</h3>
+          <p><img src="./img/CGV/image/cgv_banner.jpg" alt="banner" /></p>
+        </div>
+        <div>
+          <h3>공지사항</h3>
+          <div class="notice">
+            <ul>
+                <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+                <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+             </ul>
+             <ul>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+             </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- banner 끝 -->
+    </div>
+    <!-- wrapper 끝 -->
+  </body>
+</html>
