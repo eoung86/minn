@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form -input태그(인라인)</title>
+    <style>
+      :focus {
+        outline: none;
+      }
+      /* 커서 선택시 바깥테두리X */
+    </style>
+  </head>
+  <body>
+    <!-- <p><input type="button" value="로그인" /></p> 버튼태그와 동일 -->
+    <button type="button">회원가입</button>
+    <!-- type 없이도 사용가능 -->
+    <form>
+      <fieldset>
+        <legend>회원가입</legend>
+        <p>
+          아이디 :
+          <input
+            type="text"
+            maxlength="10"
+            minlength="5"
+            size="10"
+            placeholder="아이디입력"
+            onfocus="this.placeholder=''"
+            autofocus
+          />
+          <!-- autofocus-페이지가 로드될때 자동으로 특정 입력 필드 커서 이동하도록 지정 -->
+        </p>
+        <!-- maxlength-최대글자수. minlength-최소글자수, placeholder-아이디입력칸,onfocus-focus(입력칸에 깜빡임)실행시 나타나는 현상 -->
+        <p>비밀번호 : <input type="password" required /></p>
+        <!-- required-입력시에만 다음으로 이동 -->
+        <p>검색 : <input type="search" /></p>
+        <p>이메일 : <input type="email" /></p>
+        <p>
+          전화번호 :
+          <input
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="000-0000-0000"
+          />
+        </p>
+        <p>color : <input type="color" /></p>
+        <p>
+          number : <input type="number" value="1" step="5" max="20" min="1" />
+        </p>
+        <!-- step-단계를 뛰어넘음 ex) 1-6-11 -->
+        <p>range : <input type="range" /></p>
+        <!-- range-슬라이드바, 최소 최대값 지정가능 -->
+        <p>
+          <label for="men">남</label>
+          <input type="radio" name="gender" id="men" value="남자" />
+        </p>
+        <!-- label 'for'속성은 input의 'id'의속성과 동일해야함 /연동이 됨('남'이라는 글자를 클릭해도 선택가능) -->
+        <p><input type="radio" name="gender" id="women" value="여자" />여</p>
+        <!-- 클릭선택 취소 불가, 같은 name사용-중복선택 불가, value-관리자가 보는 값(이름변경)-->
+        <p>
+          <label for="hobby">관심분야</label>
+          <input type="checkbox" name="design" id="hobby" />
+        </p>
+        <!-- 클릭선택 취소 가능, 중복 선택가능 / for,id 이름이 같아야함-->
+        <p><textarea name="txt" id="txt" cols="30" rows="10"></textarea></p>
+        <!-- textarea-text를 입력하는 영역 -->
+        <p>
+          <select name="city" id="city">
+            <option value="">선택</option>
+            <option value="서울">서울</option>
+            <option value="대전">대전</option>
+            <option value="부산">부산</option>
+          </select>
+          <!-- 선택란 -->
+        </p>
+        <p>년월일 : <input type="date" /></p>
+        <p>년월일 시간 : <input type="datetime-local" /></p>
+        <p>시간 : <input type="time" /></p>
+        <p>월 : <input type="month" /></p>
+        <p>주 : <input type="week" /></p>
+        <p><input type="submit" value="전송" /></p>
+        <!-- submit-제출버튼 -->
+        <p><input type="reset" /></p>
+        <!-- 초기화 -->
+        <p><input type="button" value="로그인" /></p>
+        <p><input type="image" src="./img/img_search.JPG" /></p>
+        <!-- 이미지모양 버튼 -->
+        <p><input type="file" multiple /></p>
+        <!-- 파일선택(기본은 다중선택X), multiple-다중 선택가능 -->
+      </fieldset>
+    </form>
+  </body>
+</html>
