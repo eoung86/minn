@@ -14,29 +14,118 @@
       }
       a {
         text-decoration: none;
-        color: #666;
       }
       .wrapper {
         background: #fff;
+        font-family: "Pretendard";
+      }
+      .wrapper .main {
+        border-bottom: 1px solid #ccc;
       }
       .wrapper .one {
         width: 1150px;
-      }
-      .wrapper .one ul {
+        margin: 0 auto;
         display: flex;
+        justify-content: flex-end;
+        padding: 6px 0;
+      }
+      .one ul {
+        display: flex;
+        gap: 40px;
+      }
+      .one ul li a {
+        color: #666;
+        font-size: 13px;
+      }
+      .wrapper .two {
+        width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+      .wrapper .two p:first-child img {
+        width: 72px;
+        height: 60px;
+      }
+      .wrapper .two ul {
+        display: flex;
+        width: 585px;
+      }
+      .wrapper .two ul li {
+        cursor: pointer;
+        padding: 12px;
+      }
+      .wrapper .two ul li a {
+        font-size: 20px;
+        color: #000;
+        font-weight: 600;
+      }
+      .wrapper .two .icon {
+        border: 1px solid;
+        border-radius: 22px;
+        background: #00a5b9;
+        width: 114px;
+        height: 40px;
+        text-align: center;
+        margin: 0 0 0 30px;
+        padding: 0 18px;
+      }
+
+      .wrapper .two .icon a {
+        font-size: 14px;
+        color: #fff;
+      }
+      .wrapper .two .icon p img {
+        width: 24px;
+        height: 24px;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
-      <div class="one">
-        <ul>
-          <li><a href="#">로그인/회원가입</a></li>
-          <li><a href="#">주문/예약 내역</a></li>
-          <li><a href="#">매장찾기</a></li>
-        </ul>
+      <div class="main">
+        <div class="one">
+          <ul>
+            <li><a href="#">로그인/회원가입</a></li>
+            <li><a href="#">주문/예약 내역</a></li>
+            <li><a href="#">매장찾기</a></li>
+          </ul>
+        </div>
       </div>
-      <!-- one end -->
+
+      <div class="two">
+        <p>
+          <img
+            src="https://stat.lotteeatz.com/202509171800/assets/images/common/comm_header_logo.svg"
+            alt="lotte"
+          />
+        </p>
+        <ul>
+          <li><a href="#">브랜드</a></li>
+          <li><a href="#">쿠폰</a></li>
+          <li><a href="#">쇼핑</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">고객지원</a></li>
+        </ul>
+        <p>
+          <img
+            src="https://stat.lotteeatz.com/202509171800/assets/images/common/comm_ico_cart.svg"
+            alt="icon"
+          />
+        </p>
+        <div class="icon">
+          <p>
+            <img
+              src="https://stat.lotteeatz.com/202509171800/assets/images/common/comm_ico_eatz_character.svg"
+              alt="icon2"
+            />
+            <a href="#"> 주문하기</a>
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
