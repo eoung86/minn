@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form - input</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        display: none;
+      }
+      label {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        margin: 100px;
+        cursor: pointer;
+        border: 1px solid;
+      }
+      label span {
+        display: block;
+        height: 2px;
+        background: #111;
+        border-radius: 2px;
+        position: absolute;
+        right: 0;
+        transition: 0.5s;
+      }
+      label .bar1 {
+        width: 50%;
+        top: 18px;
+      }
+      label .bar2 {
+        width: 100%;
+        bottom: 18px;
+      }
+      #menu:checked ~ label .bar1 {
+        width: 100%;
+        transform: translate(0, 7px) rotate(45deg);
+      }
+      #menu:checked ~ label .bar2 {
+        transform: translate(0, -7px) rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="mobile" id="menu" />
+    <label for="menu">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+    </label>
+  </body>
+</html>
