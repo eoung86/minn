@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form -lnput</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        display: none;
+      }
+      div.la {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+      }
+      div.la label {
+        display: block;
+        text-align: center;
+        font-size: 22px;
+        color: #999;
+        cursor: pointer;
+      }
+      div.la label::after {
+        content: "|";
+        display: inline-block;
+        padding: 0 40px;
+        font-weight: normal;
+        color: #999;
+      }
+      div.la label:last-child:after {
+        content: "";
+      }
+      div.tp {
+        position: relative;
+        width: 1920px;
+        height: 480px;
+      }
+      div.tp p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      div.tp p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+      }
+      #tp1:checked ~ div.tp p:first-child img,
+      #tp2:checked ~ div.tp p:nth-child(2) img,
+      #tp3:checked ~ div.tp p:nth-child(3) img,
+      #tp4:checked ~ div.tp p:nth-child(4) img,
+      #tp5:checked ~ div.tp p:nth-child(5) img,
+      #tp6:checked ~ div.tp p:nth-child(6) img {
+        opacity: 1;
+      }
+      #tp1:checked ~ div.la label:first-child,
+      #tp2:checked ~ div.la label:nth-child(2),
+      #tp3:checked ~ div.la label:nth-child(3),
+      #tp4:checked ~ div.la label:nth-child(4),
+      #tp5:checked ~ div.la label:nth-child(5),
+      #tp6:checked ~ div.la label:nth-child(6) {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: #5cb3e6;
+        color: #111;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photo" id="tp1" checked />
+    <input type="radio" name="photo" id="tp2" />
+    <input type="radio" name="photo" id="tp3" />
+    <input type="radio" name="photo" id="tp4" />
+    <input type="radio" name="photo" id="tp5" />
+    <input type="radio" name="photo" id="tp6" />
+    <div class="la">
+      <label for="tp1">CEO 인사말</label>
+      <label for="tp2">연혁</label>
+      <label for="tp3">미션·비전</label>
+      <label for="tp4">CI</label>
+      <label for="tp5">계열사</label>
+      <label for="tp6">글로벌 사업장</label>
+    </div>
+    <div class="tp">
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual01_1.jpg" alt="" />
+      </p>
+      <p><img src="https://tp-inc.com/images/sub/sub_visual02.jpg" alt="" /></p>
+      <p>
+        <img src="	https://tp-inc.com/images/sub/sub_visual_vision.jpg" alt="" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual04_2.jpg" alt="" />
+      </p>
+      <p>
+        <img src="	https://tp-inc.com/images/sub/sub_visual_nadia.jpg" alt="" />
+      </p>
+      <p>
+        <img src="	https://tp-inc.com/images/sub/sub_visual_global.jpg" alt="" />
+      </p>
+    </div>
+  </body>
+</html>

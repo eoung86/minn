@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>태광그룹</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      section {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+      }
+      /* position: sticky 는 top 과 함께 사용 */
+      section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+      }
+      section .txt {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        height: 100%;
+      }
+      @font-face {
+        font-family: "Poppins";
+        src: url(./webfonts/Poppins-Black.woff);
+      }
+      @font-face {
+        font-family: "NanumSquareR";
+        src: url(./webfonts/NanumSquareR.woff);
+      }
+      section .txt h1 {
+        font-size: 71px;
+        font-family: "Poppins";
+        text-align: right;
+        padding-top: 16rem;
+        margin: 50px;
+      }
+      section .txt p {
+        font-size: 24px;
+        font-family: "NanumSquareR";
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+      }
+      footer {
+        height: 1000px;
+        background: #ccc;
+        position: relative;
+        z-index: 1;
+      }
+      /* z-index 를 사용하려면 position: relative가 있어야함 */
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <section>
+        <video muted autoplay loop>
+          <source
+            src="https://www.taekwanggroup.co.kr/UPLOAD/MAIN_MOVIE_MO/main_visual_1_mo.mp4"
+          />
+        </video>
+        <div class="txt">
+          <h1>Connection the <br />Future with Light</h1>
+          <p>연결(Connection) 미래(Future) 빛(Light)</p>
+        </div>
+      </section>
+
+      <section>
+        <video muted autoplay loop>
+          <source
+            src="https://www.taekwanggroup.co.kr/UPLOAD/MAIN_MOVIE_MO/main_visual_2_mo.mp4"
+          />
+        </video>
+        <div class="txt">
+          <h1>
+            Add Value to <br />
+            Your Everyday
+          </h1>
+          <p>가치(Value) 고객(Customer) 지속가능성(Sustainability)</p>
+        </div>
+      </section>
+
+      <section>
+        <video muted autoplay loop>
+          <source
+            src="https://www.taekwanggroup.co.kr/UPLOAD/MAIN_MOVIE_MO/main_visual_3_mo.mp4"
+          />
+        </video>
+        <div class="txt">
+          <h1>
+            Awaken <br />
+            Imagination, <br />
+            Shape the Future
+          </h1>
+          <p>꿈(Dream) 희망(Hope) 열정(Passion)</p>
+        </div>
+      </section>
+
+      <section>
+        <video muted autoplay loop>
+          <source
+            src="https://www.taekwanggroup.co.kr/UPLOAD/MAIN_MOVIE_MO/main_visual_4_mo.mp4"
+          />
+        </video>
+        <div class="txt">
+          <h1>
+            Finally, A <br />
+            ‘big <br />
+            Forest’ Is Formed
+          </h1>
+          <p>숲과 함께 자라는 나무, 태광이 닮고 싶은 이름입니다</p>
+        </div>
+      </section>
+    </div>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>멀티미디어</title>
+    <style></style>
+  </head>
+  <body>
+    <audio controls muted>
+      <source src="./video/Kalimba.mp3" type="audio/mp3" />
+      <source src="./video/Kalimba.ogg" type="audio/ogg" />
+    </audio>
+    <video controls autoplay muted loop>
+      <!-- autoplay- 문서가 로드될때 오디오자동 실행 muted-음소거 loop - 무한재생  -->
+      <source src="./video/Wildlife.mp4" type="video/mp4" />
+      <source src="./video/Wildlife.webm" type="video/webm" />
+    </video>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/B531ZMgSz3I?autoplay=1&mute=1&loop=1&playlist=B531ZMgSz3I"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
