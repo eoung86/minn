@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map태그</title>
+    <style></style>
+  </head>
+  <body>
+    <img src="./img/map.jpg" alt="map" usemap="#korea" />
+    <map name="korea">
+      <!-- <area
+        shape="reck"
+        coords="60,500,130,540"
+        href="https://www.jejusi.go.kr/index.ac"
+        alt="제주시"
+        target="_new"
+      /> -->
+      <!-- coords-좌표값(대체로 그림판으로봄)
+       target="_new" - 여러개의 창이 뜨지않음 -->
+      <!-- <area shape="circle" coords="90,520,45" href="https://www.jejusi.go.kr/index.ac" alt="제주시" /> -->
+      <!-- coords-가로,세로,반지름(오른쪽중심-중심) -->
+      <area
+        shape="poly"
+        coords="67,513,90,500,120,500,77,539"
+        href="https://www.jejusi.go.kr/index.ac"
+        alt="제주시"
+      />
+      <!-- 각 꼭짓점의 좌표값 -->
+    </map>
+  </body>
+</html>

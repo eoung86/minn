@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      /* duration-애니메이션 한 주기를 완료하는데 걸리는 시간 */
+      @keyframes move {
+        from {
+          left: 0;
+          background: red;
+        }
+        50% {
+          left: 250px;
+          background: green;
+        }
+        to {
+          left: 500px;
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>

@@ -17,12 +17,15 @@
       p:nth-child(2) {
         color: yellow;
       }
-      p :last-of-type {
+      p:last-of-type {
         color: blue;
       }
-      :ont(p) {
+      /* :last-of-type - 같은 부모에 여러태그가 섞여있때 해당 태그 중 마지막 태그 선택
+      :last-child - 부모 안에 마지막 태그(태그 종류 상관없이) */
+      :not(p) {
         color: pink;
-      }
+      } /*------> p를 제외한 나머지 */
+      /* :not() - 특정 선택자를 제외한 나머지 선택 */
     </style>
   </head>
   <body>

@@ -8,9 +8,14 @@
       div > p {
         color: tomato;
       }
+      /* '>' - 직계 자식을 선택
+      ex)  div > p - div 바로 아래있는 p */
       p ~ span {
         color: yellowgreen;
       }
+      /* '~' - 같은 부를 가진 형제 요소 중 특정 요소 뒤에있는 모든 형제
+      ->p 뒤에 나오는 같은 부모의 span 모두 선택 
+      '+' - 인접 형제, p 바로 뒤 span 1개만*/
     </style>
   </head>
   <body>

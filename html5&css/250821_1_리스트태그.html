@@ -3,14 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>리스트태그</title>
+    <title>list태그</title>
     <style>
       ul {
         list-style: square;
       }
+      /* list-style: - 불릿모양(ul li 태그 사용시 글자 앞 모양)
+      disc (● 기본값)
+circle (○)
+square (■)
+none (불릿 없음)
+decimal (1, 2, 3 …)
+upper-alpha (A, B, C …)
+lower-alpha (a, b, c …)
+upper-roman (I, II, III …)
+lower-roman (i, ii, iii …) */
+
       ul li::marker {
         color: yellowgreen;
       }
+      /* ::marker - li 의 불릿이나 번호를 스타일링할 때 사용 */
     </style>
   </head>
   <body>
