@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글라스락몰-메인페이지(filter/animation)</title>
+    <style>
+      body {
+        background-image: url(https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/bg_inno1.jpg);
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .con {
+        width: 1920px;
+        justify-content: space-between;
+      }
+      .logo img {
+        filter: invert() sepia() saturate(1%) hue-rotate(143deg)
+          brightness(107%) contrast();
+        width: 150px;
+      }
+      /*100% 는 생략가능*/
+      .mall {
+        filter: invert();
+        display: flex;
+        width: 110px;
+        border: 1px solid;
+        border-radius: 50px;
+        justify-content: center;
+        justify-content: space-between;
+      }
+      .mall img {
+        width: 20px;
+        height: 20px;
+        padding: 0px 5px;
+      }
+      .mall a {
+        font-size: 14px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        padding: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <p class="logo">
+        <img
+          src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/logo.svg"
+          alt=""
+        />
+      </p>
+      <div class="mall">
+        <a href="#">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_topmall_cart_bk.svg"
+            alt=""
+          />글라스락몰
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
