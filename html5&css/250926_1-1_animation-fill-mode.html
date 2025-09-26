@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation-fill-mode</title>
+    <style>
+      .ani .box p {
+        position: absolute;
+        animation-name: move 5s linear;
+        animation-fill-mode: none;
+      }
+      .ani .btn:checked {
+        animation-play-state: paused;
+      }
+      @keyframes move {
+        0% {
+          left: 0;
+        }
+        0% {
+          left: 0;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+      @keyframes move {
+        0% {
+          right: 0;
+        }
+        100% {
+          right: 100%;
+        }
+      }
+      /*  @keyframes move {
+        0% { right: 0; } -> 사용시 포지션 있어야 레이아웃에 영향을 줌 / 레이아웃 위치를 직접 변경 */
+    </style>
+  </head>
+  <body>
+    <div class="ani">
+      <input type="radio" name="btn" id="left" />
+      <input type="radio" name="btn" id="right" />
+      <input type="radio" name="btn" id="off" />
+      <div class="box">
+        <p><img src="./img/pipe.png" alt="" /></p>
+        <p><img src="./img/propeller.png" alt="" /></p>
+      </div>
+      <div class="btn">
+        <label for="left">Turn Left</label>
+        <label for="right">Turn right</label>
+        <label for="off">off</label>
+      </div>
+    </div>
+  </body>
+</html>

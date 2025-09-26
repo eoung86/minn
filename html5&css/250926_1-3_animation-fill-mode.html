@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .txt {
+        position: relative;
+        font-size: 70px;
+        font-weight: bold;
+      }
+      .txt .dark {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: txt 3s infinite;
+      }
+      /* white-space:nowrap - 줄바꿈 X */
+      .txt .gray {
+        color: #e6e6e6;
+        white-space: nowrap;
+      }
+      @keyframes txt {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      /* h1 {
+        font-size: 100px;
+        -webkit-text-stroke: 1px red; 텍스트 테투리 사이즈, 색깔
+        color: transparent; 색을 투명하게
+      }
+      h1 span(text- 가 span으로) {
+        color: #000;
+        -webkit-text-stroke: 1px #000;
+      } */
+      h1 {
+        font-size: 100px;
+      }
+      h1 span {
+        -webkit-text-stroke: 1px red;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <p class="dark">Harness Your Data</p>
+      <p class="gray">Harness Your Data</p>
+    </div>
+    <h1>text-<span>storke</span></h1>
+  </body>
+</html>

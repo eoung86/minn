@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation-fill-mode</title>
+    <style>
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        position: relative;
+        /* animation-name: move;
+        animation-duration: 10s; 애니메이션 동작 시간
+        animation-timing-function: linear; 애니메이션 속도 / linear - 일정하게
+        animation-delay: 2s; */
+        animation: move 10s linear 2s;
+      } /*animation: 이름 시간 시간 대기시간 반복횟수 재생방향 시작전/후 스타일유지여부 실행/정지 상태  - 이름, 시간 필수입력*/
+      p.none {
+        animation-fill-mode: none;
+      }
+      p.forwards {
+        animation-fill-mode: forwards;
+      }
+      p.backwards {
+        animation-fill-mode: backwards;
+      }
+      p.both {
+        animation-fill-mode: both;
+      }
+      @keyframes move {
+        0% {
+          left: 0;
+          background: red;
+        }
+        100% {
+          left: 500px;
+          background: yellow;
+        }
+      }
+      #start:checked ~ p {
+        animation-play-state: paused;
+      }
+      /*animation-play-state - 애니메이션을 실행할지 멈출지 제어하는 속성
+paused - 멈추기 / running - 정상적으로 재생 (기본값)*/
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="start" />
+    <label for="start">시작/중지</label>
+    <p class="none">none</p>
+    <p class="forwards">forwards</p>
+    <p class="backwards">backwards</p>
+    <p class="both">both</p>
+  </body>
+</html>
