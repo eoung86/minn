@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+      }
+      img {
+        width: 100%;
+      }
+      div p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 1s;
+      }
+      div:hover p:last-child {
+        transform: scale(10);
+      }
+      /* transform: scale()- 가로,세로 방향으로 확대/축소 (배수) */
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        <img
+          src="https://corp.oliveyoung.com/img/main/key_msg_back-90998f6de42a777977aa140f5864b7f6.jpg;jsessionid=69128F65B86DD8CB3CF539F51B8A7750"
+          alt=""
+        />
+      </p>
+      <p>
+        <img
+          src="https://corp.oliveyoung.com/img/main/key_msg_front_pc-00846b47344d2c188cb3f16b3b2d387d.svg"
+          alt=""
+        />
+      </p>
+    </div>
+  </body>
+</html>

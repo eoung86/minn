@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul.list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 100px;
+      }
+      ul.list li {
+        width: 280px;
+        height: 357px;
+        border: 1px solid #e5e5e5;
+        border-radius: 24px;
+        transition: 0.5s;
+      }
+      ul.list li:hover {
+        border-color: #007aff;
+        transform: translateY(-40px);
+      }
+      ul.list li a {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px;
+        box-sizing: border-box;
+      }
+      ul.list li a .title .subtitle {
+        display: flex;
+        justify-content: space-between;
+      }
+      ul.list li a .title h1 {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+      ul.list li a p.imgAni {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+      }
+      ul.list li:first-child a p.imgAni {
+        background-image: url(./img/icon1.png);
+      }
+      ul.list li:first-child:hover a p.imgAni {
+        background-image: url(./img/icon1_main.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      ul.list li:nth-child(2) a p.imgAni {
+        background-image: url(./img/icon2.png);
+      }
+      ul.list li:nth-child(2):hover a p.imgAni {
+        background-image: url(./img/icon2_main);
+        background-size: 11040px 120px;
+        animation: solutionplay 3s steps(92) infinite;
+      }
+      ul.list li:nth-child(3) a p.imgAni {
+        background-image: url(./img/icon3.png);
+      }
+      ul.list li:nth-child(3):hover a p.imgAni {
+        background-image: url(./img/icon3_main);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      ul.list li:nth-child(4) a p.imgAni {
+        background-image: url(./img/icon4.png);
+      }
+      ul.list li:nth-child(4):hover a p.imgAni {
+        background-image: url(./img/icon4_main.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+      @keyframes solutionplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -11040px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><span>></span></p>
+            <h1>Data서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><span>></span></p>
+            <h1>Data서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><span>></span></p>
+            <h1>Data서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><span>></span></p>
+            <h1>Data서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

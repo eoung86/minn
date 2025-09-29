@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      mask-image / 보이려는 이미지가 검정, 가리는 이미지가 흰 , 반 회색
+    </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p:first-child {
+        mask-image: url(./img/maskimg.png);
+        mask-repeat: no-repeat; /*반복X*/
+        /* mask-size: cover; */
+        mask-position: center;
+      }
+      p:nth-child(2) {
+        width: 960px;
+        mask-image: radial-gradient(circle, #000 50%, rgba(0, 0, 0, 0) 50%);
+        mask-position: center;
+      }
+      /* radial-gradient(circle) 원형 */
+      .bg1 {
+        height: 500px;
+        background: url(./img/photo1.jpg);
+      }
+      .bg1 h1 {
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        background: #fff;
+        line-height: 500px;
+        mix-blend-mode: screen; /*mix-blend-mode ->색을 섞는 효과*/
+      }
+      .bg2 {
+        background: url(./img/photo1.jpg);
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        color: transparent;
+        background-clip: text;
+      }
+      /*.bg1 , bg2 결과값은 동일*/
+    </style>
+  </head>
+
+  <body>
+    <p>
+      <img src="./img/photo1.jpg" alt="" />
+    </p>
+    <p>
+      <img src="./img/photo1.jpg" alt="" />
+    </p>
+    <div class="bg1">
+      <h1>mix-blend-mode</h1>
+    </div>
+    <div class="bg2">mix-blend-mode</div>
+  </body>
+</html>

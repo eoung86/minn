@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신한카드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul.list {
+        display: flex;
+        justify-content: center;
+        background: #f7f8fc;
+      }
+
+      ul.list li {
+        width: 280px;
+        height: 357px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 24px;
+        margin-top: 40px;
+        padding: 32px;
+        display: flex;
+      }
+      ul.list li p.imgAni {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto; /*가운데 */
+      }
+      ul.list li a p.txt {
+        background: #f1f4fe;
+        border-radius: 24px;
+      }
+      ul.list li:hover {
+        border: 1px solid #356cff;
+        background: #f7f8fc;
+        box-shadow: 0 24px 24px #13265914;
+        transform: translateY(-40px);
+      }
+      ul.list li:first-child a p.imgAni {
+        background-image: url(./img/icon1.png);
+      }
+      ul.list li:first-child:hover a p.imgAni {
+        background-image: url(./img/icon1_main.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -11040px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <a href="https://databada.shinhancard.com/serv/data/prod/srch">
+          <div class="title">
+            <p class="subtitle"><span>다양한</span><span></span></p>
+            <h1>Data서비스</h1>
+          </div>
+          <p class="imgAni"></p>
+          <p class="txt">Data One-Stop Service</p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
