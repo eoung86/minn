@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svg</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        width: 500px;
+        height: 500px;
+        stroke-dasharray: 300;
+        /* 선 길이 ? -> 빈칸 ? -> 반복 / 100을 지정하면 100 100 과 동일하게 동작
+        점선을 만드는 데 사용 */
+        stroke-dashoffset: 300;
+        /* 점선 패턴을 어디서부터 시작할지 지정 / 패턴을 오른쪽으로 ?px 밀어낸것 처럼 보임 */
+        transition: 0.5s;
+      }
+      svg:hover {
+        stroke-dashoffset: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- x, y → 사각형의 좌상단 시작 좌표
+    width → 사각형의 가로 길이
+    height → 사각형의 세로 길이
+    rx, ry → 모서리를 둥글게 (라운드 처리)
+    fill → 내부 색상
+    stroke → 테두리 색상
+    stroke-width → 테두리 두께 -->
+    <svg class="rect">
+      <g stroke="#000" stroke-width="20">
+        <line x1="50" y1="50" x2="300" y2="50" stroke-linecap="round" />
+        <!-- round - 선 끝이 둥근 모양 -->
+        <line x1="50" y1="150" x2="300" y2="150" stroke-linecap="square" />
+        <!-- square - 선 끝이 네모 모양 -->
+        <line x1="50" y1="250" x2="300" y2="250" stroke-linecap="butt" />
+        <!-- butt - 기본값 -->
+        <line x1="50" y1="350" x2="300" y2="350" />
+        <!-- line 태그는 / 로 닫으면됨 -->
+      </g>
+    </svg>
+  </body>
+</html>
