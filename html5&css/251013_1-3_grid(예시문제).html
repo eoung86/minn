@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid예시문제/a-3/4.pdf</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        display: grid;
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 200px 200px 400px 200px 200px;
+        grid-template-areas: "hlogo menu menu menu menu" "slide slide slide slide slide" "c1 c1  c2 c3 c3" "fmenu fmenu fmenu fmenu family" "coptright coptright coptright coptright family";
+        grid-template-rows: 100px 300px 200px 50px 50px;
+      }
+      .grid-container .hlogo {
+        grid-area: hlogo;
+        background: #aaa;
+      }
+      .grid-container .menu {
+        grid-area: menu;
+        background: #bbb;
+      }
+      .grid-container .slide {
+        grid-area: slide;
+        background: #ccc;
+      }
+      .grid-container .c1 {
+        grid-area: c1;
+        background: #ddd;
+      }
+      .grid-container .c2 {
+        grid-area: c2;
+        background: #eee;
+      }
+      .grid-container .c3 {
+        grid-area: c3;
+        background: #aaa;
+      }
+      .grid-container .fmenu {
+        grid-area: fmenu;
+        background: #bbb;
+      }
+      .grid-container .coptright {
+        grid-area: coptright;
+        background: #ddd;
+      }
+      .grid-container .family {
+        grid-area: family;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="hlogo"></div>
+      <div class="menu"></div>
+      <div class="slide"></div>
+      <div class="c1"></div>
+      <div class="c2"></div>
+      <div class="c3"></div>
+      <div class="fmenu"></div>
+      <div class="coptright"></div>
+      <div class="family"></div>
+    </div>
+  </body>
+</html>

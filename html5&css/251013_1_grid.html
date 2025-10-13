@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        background: #ccc;
+        /* display: grid; */
+        display: inline-grid;
+        grid-template-columns: 100px 200px 300px; /*세로 너비*/
+        grid-template-rows: 100px; /*가로 높이*/
+        grid-auto-rows: 200px;
+        /* column-gap: 20px;
+        row-gap: 40px; 세로,가로 간격 */
+        gap: 40px 20px; /*row-gap column-gap*/
+      }
+      /*template - 명시 , auto - 암시*/
+      .grid-container .grid-item {
+        background: #ddd;
+      }
+      /* grid-template-columns or rows - 직접 정의한 열과 행 
+         grid-auto-columns or rows - 자동으로 생성하는 열과행 ( 수직 수평)*/
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>

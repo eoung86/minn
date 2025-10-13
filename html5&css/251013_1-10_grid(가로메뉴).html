@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가로메뉴5</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        background: pink;
+      }
+      header:hover {
+        background: #fff;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+      .menu > ul {
+        display: flex; /*1차원, grid-2차원*/
+        height: 50px;
+        width: 600px;
+      }
+      .menu > ul > li {
+        flex: 1;
+        text-align: center;
+        position: relative;
+      }
+      .menu > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+      }
+
+      .menu > ul > li .sub {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background: #fff;
+        height: 0;
+        overflow: hidden;
+        transition: 0.2s;
+        z-index: 1;
+      }
+      .menu > ul:hover > li .sub {
+        height: 120px;
+      }
+      .menu > ul > li:hover > a {
+        color: red;
+      }
+      .menu > ul > li .sub li a:hover {
+        font-weight: bold;
+        text-decoration: underline; /*밑줄*/
+      }
+      .menu .bg {
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        background: #fff;
+        left: 0;
+        top: 50px;
+        transition: 0.2s;
+      }
+      .menu > ul:hover ~ .bg {
+        height: 120px;
+      } /* ~ 형제선택자*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="hlogo">로고</div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">탑</a>
+              <ul class="sub">
+                <li><a href="#">블라우스</a></li>
+                <li><a href="#">티</a></li>
+                <li><a href="#">셔츠</a></li>
+                <li><a href="#">니트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아우터</a>
+              <ul class="sub">
+                <li><a href="#">자켓</a></li>
+                <li><a href="#">코트</a></li>
+                <li><a href="#">가디건</a></li>
+                <li><a href="#">머플러</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">팬츠</a>
+              <ul class="sub">
+                <li><a href="#">청바지</a></li>
+                <li><a href="#">짧은바지</a></li>
+                <li><a href="#">긴바지</a></li>
+                <li><a href="#">레깅스</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">악세서리</a>
+              <ul class="sub">
+                <li><a href="#">귀고리</a></li>
+                <li><a href="#">목걸이</a></li>
+                <li><a href="#">반지</a></li>
+                <li><a href="#">팔찌</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </div>
+        <div class="right">오른쪽메뉴</div>
+      </div>
+    </header>
+  </body>
+</html>
