@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹grid-미디어커리사용x</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px; /*width, max(min)-width ->필수(기본)*/
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        height: 50vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3vw;
+      }
+      section ul li {
+        background: #ccc;
+        flex: 1 0 40%;
+        overflow: hidden;
+      }
+      section ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

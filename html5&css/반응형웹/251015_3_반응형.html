@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px; /*width, max(min)-width ->필수(기본)*/
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      section ul li {
+        background: #ccc;
+        flex: 1 0 40%;
+        height: 300px;
+        /* padding-top: 50%; @meida 가 없어도 가변(유동적인 값)이 일어나서 반응형 가능*/
+        /* background-size: cover; 백그라운드 이미지 사이즈 부모크기에 맞춤*/
+      }
+      section ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /*@meida screen and(max-width:1024px) {
+        section ul li {
+          height: 200px;
+        }
+      }*/
+      /*가변(유동적) 예시
+      -'%': 부모 요소의 크기를 기준으로 크기가 변함
+      -'vw / vh' : 화면의 너비/높이를 기준으로 -> vw(가로) 를 더 많이 사용
+      - 'fr' : grid에서 남는 공간 비율로
+      - 'fm / rem' : 글자 크기를 기준으로
+      -'min(), max(), clamp()' : 조건에 따라 유동적으로
+      -'auto' : 브라우저가 상황에 맞게 계산해서 자동으로 정함*/
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

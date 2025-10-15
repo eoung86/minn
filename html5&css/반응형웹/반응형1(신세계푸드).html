@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .con {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .con ul {
+        width: 100%;
+        height: 50vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3vw;
+      }
+      .con ul li {
+        overflow: hidden; /*넘친부분 잘라서 숨기기*/
+        border-radius: 40px;
+      }
+      .con ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*요소의 크기를꽉 채우도록 비율을 유지하면서 잘라내기*/
+      }
+      @media screen and (max-width: 960px) {
+        .con ul li {
+          border-radius: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <ul>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/business/business_item_vecchiaEnuovo.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/business/business_item_olbaan.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/business/business_item_brand.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/business/business_item_recette.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

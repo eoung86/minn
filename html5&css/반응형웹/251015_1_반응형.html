@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹</title>
+    <style>
+      body {
+        background: pink;
+      }
+      @media screen and (max-width: 1024px) {
+        body {
+          background: #000;
+        }
+      } /* @mdia screen - 컴퓨터, 스마트폰 화면*/
+      /*1024px 이하일경우 변경되는 색상, 선택자는 같은이름으로 지정*/
+      @media screen and (max-width: 768px) {
+        body {
+          background: #ccc;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        body {
+          background: #f00;
+        }
+      }
+      /* and -조건부 'max-width: ;'- 이하 , 'min-width: ;'- 이상*/
+    </style>
+  </head>
+  <body></body>
+</html>

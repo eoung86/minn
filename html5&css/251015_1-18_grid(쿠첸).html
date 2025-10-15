@@ -8,7 +8,6 @@
       * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
       }
       ul {
         list-style: none;
@@ -24,7 +23,7 @@
         display: grid;
         gap: 13px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 270px 270px;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas: "item1 item2 item3 item3" "item4 item4 item5 item6";
       }
       img {
@@ -32,6 +31,11 @@
         height: 100%;
         object-fit: cover;
       }
+      .main > div {
+        width: 100%;
+        overflow: hidden;
+      }
+      ------------/*비율로 단위를 지정할 때 적용이 안될경우 overflow: hidden; 이미지 크기조정 object-fit: cover;(부모크기에 맞게 조정)*/
       .main .item1 {
         grid-area: item1;
       }

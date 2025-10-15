@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .con {
+        width: 95%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      .con ul {
+        width: 100%;
+        height: 424px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+      }
+      .con ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        position: relative;
+        color: #fff;
+      } /*텍스트 정 가운데 - justify-content: center;align-items: center;*/
+      .con ul li::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .con ul li .txt {
+        position: relative;
+        z-index: 1; /*기본 0, 0보다 커야 앞으로 나옴*/
+      }
+      .con ul li:nth-child(1) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_1.jpg);
+      }
+      .con ul li:nth-child(2) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_2.jpg);
+      }
+      .con ul li:nth-child(3) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_3.jpg);
+      }
+      @media screen and (max-width: 960px) {
+        .con ul {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      .con ul li:hover::after {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      .con ul li:hover h1 {
+        color: #f29b76;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <ul>
+        <li>
+          <div class="txt">
+            <h1>경영정보</h1>
+            <p>
+              주주 및 이사회 구성을 <br />
+              안내해 드립니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>재무정보</h1>
+            <p>
+              영업현황 및 재무제표를 <br />
+              안내해 드립니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>주식정보</h1>
+            <p>
+              주가정보를 <br />
+              안내해 드립니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

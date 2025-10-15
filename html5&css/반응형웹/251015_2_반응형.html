@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px; /*width, max(min)-width ->필수(기본)*/
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      section ul li {
+        background: #ccc;
+        flex: 1 0 40%;
+        /*height: 300px;*/
+        padding-top: 50%; /*@meida 가 없어도 가변이 일어나서 반응형 가능*/
+        background-size: cover; /*백그라운드 이미지 사이즈 부모크기에 맞춤*/
+      }
+      /*@meida screen and(max-width:1024px) {
+        section ul li {
+          height: 200px;
+        }
+      }*/
+      section ul li:nth-child(1) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg);
+      }
+      section ul li:nth-child(2) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg);
+      }
+      section ul li:nth-child(3) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg);
+      }
+      section ul li:nth-child(4) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/09/14/19/45/squirrel-9834881_640.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+  </body>
+</html>
