@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid/쿠첸</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .main {
+        margin: 0 auto;
+        width: 1340px;
+        height: 566px;
+        display: grid;
+        gap: 13px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 270px 270px;
+        grid-template-areas: "item1 item2 item3 item3" "item4 item4 item5 item6";
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main .item1 {
+        grid-area: item1;
+      }
+      .main .item2 {
+        grid-area: item2;
+      }
+      .main .item3 {
+        grid-area: item3;
+      }
+      .main .item4 {
+        grid-area: item4;
+      }
+      .main .item5 {
+        grid-area: item5;
+      }
+      .main .item6 {
+        grid-area: item6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      쿠첸 B2B 사업은 고객사와 개인의 필요에 맞는 맞춤 제품 및 서비스 제공을
+      통해 <br />
+      최상의 만족도를 제공해 드립니다.
+    </h1>
+    <p>
+      쿠첸은 2013년부터 현재까지 약 10년 이상의 전기레인지 자체 개발을 바탕으로
+      혁신적인 기술력과 신뢰성을 보유하고 있습니다. <br />
+      국내 최초 하이브리드 기술의 전기레인지 개발을 시작으로 국내 최초 분리형
+      하방 배기 후드의 제조 및 생산, 국내 최다 27종 안정장치 기능 등<br />
+      탄탄한 안정성을 기반으로 깐깐한 B2B 건설 시장을 리딩하고 있습니다.
+      <br />
+      최초 쿠첸을 경험하신 고객사는 검증된 기술, 우수한 디자인, 브랜드 신뢰를
+      바탕으로 꾸준히 쿠첸을 찾고 있습니다. <br />
+      쿠첸 B2B 비즈니스는 고객사 및 개인 소비자분들의 최상의 만족도를 달성하기
+      위해 언제나 최선을 다하겠습니다.
+    </p>
+    <div class="main">
+      <div class="item1">
+        <img src="https://www.cuchen.com/img/b2b_info_01.jpg" alt="img" />
+      </div>
+      <div class="item2">
+        <img src="https://www.cuchen.com/img/b2b_info_02.jpg" alt="img" />
+      </div>
+      <div class="item3">
+        <img src="https://www.cuchen.com/img/b2b_info_03.jpg" alt="img" />
+      </div>
+      <div class="item4">
+        <img src="https://www.cuchen.com/img/b2b_info_04.jpg" alt="img" />
+      </div>
+      <div class="item5">
+        <img src="https://www.cuchen.com/img/b2b_info_05.jpg" alt="img" />
+      </div>
+      <div class="item6">
+        <img src="https://www.cuchen.com/img/b2b_info_06.jpg" alt="img" />
+      </div>
+    </div>
+  </body>
+</html>
