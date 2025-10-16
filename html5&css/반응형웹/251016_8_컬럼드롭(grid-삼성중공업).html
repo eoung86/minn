@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성중공업-grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+        font-weight: 100;
+        font-display: swap;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0px 20px 25px 0px;
+      }
+      .con {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .con ul {
+        width: 100%;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 2fr 1fr 1fr;
+        color: #fff;
+        font-family: Pretendard;
+      }
+      .con ul li {
+        /* background-size: cover; 이미지 반복X 
+        background-position: center;*/
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+      .con ul li::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-size: cover; /*이미지 반복X*/
+        background-position: center;
+        transition: 0.5s;
+      }
+      .con ul .txt {
+        padding: 12rem 2vw 10rem 4vw;
+        z-index: 1;
+        position: relative;
+      }
+      .con ul .txt h1 {
+        padding: 0px 0px 20px;
+        font-size: 40px;
+      }
+      .con ul .txt p {
+        padding: 0px 0px 70px;
+        font-size: 20px;
+      }
+      .con ul li:hover::before {
+        transform: scale(1.1);
+      }
+      .con ul li:first-child::before {
+        background-image: url(https://www.samsungshi.com/images/main/mRecruit_bg_01.jpg);
+      }
+      .con ul li:nth-child(2)::before {
+        background-image: url(https://www.samsungshi.com/images/main/mRecruit_bg_02.jpg);
+      }
+      .con ul li:last-child::before {
+        background-image: url(https://www.samsungshi.com/images/main/mRecruit_bg_03.jpg);
+      }
+      @media screen and (max-width: 1280px) {
+        .con ul {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .con ul li:first-child {
+          grid-column: 1 / span 2;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .con ul {
+          grid-template-columns: 1fr;
+        }
+        .con ul li:first-child {
+          grid-column: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <ul>
+        <li>
+          <div class="txt">
+            <h1>채용절차</h1>
+            <p>
+              글로벌 전문가 양성을 위한 <br />
+              신입사원부터 경력사원까지
+            </p>
+            <a href="#">신입</a>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>채용공고</h1>
+            <p>
+              삼성인이 지향하는 열정과 <br />
+              도전정신을 갖춘 인재를 찾습니다.
+            </p>
+            <a href="#">자세히보기</a>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>회사생활</h1>
+            <p>
+              보다 질 높은 삶을 추구할 수 있도록 <br />
+              적극적으로 지원합니다.
+            </p>
+            <a href="#">인재육성</a>
+            <a href="#">복리후생</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

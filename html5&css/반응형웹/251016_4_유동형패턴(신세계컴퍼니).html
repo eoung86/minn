@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계컴퍼니pr-grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: NanumGothic;
+        src: url(https://www.shinsegaefood.com/font/NanumGothic-Regular.woff);
+      }
+      #pr {
+        width: 80%;
+        max-width: 940px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: #444;
+      }
+      img {
+        object-fit: cover; /*부모X 이미지 자체에*/
+        height: 100%;
+      }
+      #pr .txt {
+        overflow: hidden;
+        padding: 25px 30px 0px;
+        font-family: NanumGothic;
+      }
+      #pr .txt h4 {
+        font-size: 20px;
+      }
+      #pr .txt p {
+        margin: 15px 0;
+      }
+      #pr .txt p,
+      #pr .txt .in {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      #pr .txt .in {
+        display: flex;
+        justify-content: space-between;
+      }
+      @media screen and (max-width: 1280px) {
+        #pr {
+          width: 90%;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        #pr {
+          width: 100%;
+          grid-template-columns: 1fr; /*화면이 줄어들었을때 1열로*/
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #pr {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pr">
+      <div class="img">
+        <img
+          src="https://www.shinsegaefood.com/uimages/2025/10/16/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="txt">
+        <h4>베이커리 명가 ‘신세계푸드’와 베이커리 ‘박준서 명장’이 만나다</h4>
+        <p>
+          신세계푸드, SSG닷컴 오프라인 페스타 ‘美지엄’에 베이커리 박준서 명장
+          부스 선보여 박준서 명장, 대한민국 제과제?빵 명장으로 주요 베이커리
+          대회 다수 수상 경력 신세계푸드, 박준서 명장 베이커리 5종 선보여… 행사
+          현장 QR통해 최대 44% 할인 제공
+        </p>
+        <div class="in">
+          <p>2025.10.16</p>
+          <p>보도자료</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
