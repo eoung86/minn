@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Off Canvas</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overflow: hidden; /*  -스크롤 미생성 */
+      }
+
+      #wrap {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 400px; /* height: 400px; */
+      }
+
+      #box_a {
+        background: #aaa;
+      }
+
+      #box_b {
+        background: #bbb;
+      }
+
+      #box_c {
+        background: #ccc;
+      }
+
+      @media screen and (max-width: 768px) {
+        #wrap {
+          grid-template-columns: repeat(3, 50%);
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        #wrap {
+          grid-template-columns: repeat(3, 100%);
+          margin-left: -100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="box_a">a</div>
+
+      <div id="box_b">b</div>
+
+      <div id="box_c">c</div>
+    </div>
+  </body>
+</html>

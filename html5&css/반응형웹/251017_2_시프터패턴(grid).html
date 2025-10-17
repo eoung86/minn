@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shifter 패턴</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 20% 80%; /*repeat(2, 1fr); */
+        /* grid-template-rows: repeat(2, 1fr); */
+        grid-auto-rows: 1fr;
+      }
+      #wrap div:nth-child(1) {
+        background-color: #ffc19e;
+        grid-row: 1 / span 2;
+      }
+      #wrap div:nth-child(2) {
+        background-color: #ffe08c;
+      }
+      #wrap div:nth-child(3) {
+        background-color: #ffa7a7;
+      }
+      @media screen and (max-width: 1024px) {
+        #wrap {
+          grid-template-columns: 1fr;
+          grid-template-rows: 30% 50% 50%; /*3fr 5fr 5fr - fr로 쓸경우 넘치는 부분이 안보임, % 는 보임*/
+        }
+        #wrap div:nth-child(1) {
+          grid-row: 1;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #wrap {
+          grid-template-rows: 20% 100% 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div>GNB영역</div>
+      <div>첫 번째 content</div>
+      <div>두 번째 content</div>
+    </div>
+  </body>
+</html>

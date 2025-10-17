@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tiny Tweaks</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      #box_a {
+        height: 400px;
+        background: #aaa;
+      }
+
+      .list_man {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+      }
+
+      .list_man li {
+        width: 18%;
+        background: #fff;
+        margin: 1%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        /* li 4개 */
+
+        .list_man {
+          width: 95%;
+        }
+
+        .list_man li {
+          margin: 1%;
+          width: 23%; /*25%에 마진 양 1%씩 제외*/
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        /* li 3개 */
+
+        .list_man li {
+          margin: 1%;
+          width: 31.333%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        /* li 2개 */
+
+        .list_man li {
+          margin: 1%;
+          width: 48%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box_a">
+      <ul class="list_man">
+        <li>a</li>
+
+        <li>b</li>
+
+        <li>c</li>
+
+        <li>d</li>
+
+        <li>e</li>
+
+        <li>f</li>
+
+        <li>g</li>
+
+        <li>h</li>
+
+        <li>i</li>
+
+        <li>j</li>
+      </ul>
+    </div>
+  </body>
+</html>

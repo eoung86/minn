@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노랑풍선-flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      ul.yp {
+        margin: 0 auto;
+        gap: 40px;
+        width: 95%;
+        max-width: 1480px;
+        display: flex; /*간격주기위해 넣음*/
+        flex-direction: column;
+      }
+      ul.yp li {
+        display: flex;
+        height: 440px;
+        gap: 104px;
+        align-items: center;
+        margin: 40px 0 0;
+      }
+      ul.yp li p {
+        border-radius: 10px;
+        overflow: hidden;
+        /*overflow - 내용이 박스 크기를 넘칠때,
+        hidden - 넘친 콘텐츠를 잘라내고 보이지 않게 숨김 스크롤바X*/
+        height: 100%;
+      }
+      ul.yp li .txt {
+        width: 440px;
+        text-wrap: nowrap;
+        flex-shrink: 0;
+      }
+      ul.yp li img {
+        object-fit: cover;
+        /*미디어 요소의 크기를 조절하는 방식 / 
+        요소의 너비와 높이에 맞게 콘텐츠를 챙되 비율은 유지*/
+        height: 100%;
+        width: 100%;
+      }
+      ul.yp li:nth-child(even) {
+        text-align: right;
+        flex-direction: row-reverse;
+      } /* flex-direction: row-reverse - 반대방향으로 전환
+          row(기본값)의 반대, 자식요소들이 오른쪽 -> 왼쪽으로 배치*/
+
+      ul.yp li .txt h3 {
+        color: #777777;
+        font-size: 24px;
+      }
+      ul.yp li .txt h1 {
+        color: #222222;
+        font-size: 48px;
+      }
+      ul.yp li .txt h2 {
+        color: #ffc72c;
+        font-size: 48px;
+      }
+      @media screen and (max-width: 1024px) {
+        ul.yp li {
+          height: auto; /*자동으로 높이 설정*/
+        }
+        ul.yp li p {
+          width: 60%;
+          height: auto;
+        }
+        ul.yp li .txt {
+          width: 30%;
+        }
+        ul.yp li .txt h3 {
+          font-size: 16px;
+        }
+        ul.yp li .txt h1,
+        ul.yp li .txt h2 {
+          font-size: 22px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        ul.yp li {
+          flex-direction: column; /*자식 요소들이 위에서 아래로 정렬*/
+          align-items: flex-start;
+          gap: 40px;
+        }
+        ul.yp li:nth-child(even) {
+          flex-direction: column;
+          text-align: left;
+        }
+        ul.yp li p {
+          width: 100%;
+        }
+        ul.yp li .txt {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="yp">
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>여행의 새로운 가치를 알립니다</h3>
+          <h1>가치를 전달하는 여행</h1>
+          <h2>Value-Creating</h2>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>고객의, 고객에 의한, 고객을 위한</h3>
+          <h1>신뢰를 받는 여행</h1>
+          <h2>Trustworthy</h2>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>일상의 가장 반짝이는 순간을 만듭니다</h3>
+          <h1>즐거움을 선사하는 여행</h1>
+          <h2>Joyful</h2>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>다양한 여행상품으로 여행 문화를 선도합니다</h3>
+          <h1>혁신적인 여행</h1>
+          <h2>Innovative</h2>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
