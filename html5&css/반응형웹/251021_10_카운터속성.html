@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter 속성</title>
+    <style>
+      p {
+        counter-increment: number; /*p태그가 나올때마다 숫자 카운터 1개씩 증가*/
+      } /*counter-increment: <카운터-이름> <증가값-선택사향>; 기본값은 1*/
+      p::before {
+        content: counter(number);
+      }
+      /* 선택자::before -시작 부분(선택한 요소 내용앞에 추가적인 콘텐츠 삽입할때)에 콘텐츠를 삽입
+        content: "삽입할 내용"; - 필수 삽입
+        선택적으로 스타일 추가 
+        ::after - 요소 뒤에 콘텐츠 삽입*/
+    </style>
+  </head>
+  <body>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+    <p><a href="#">하나</a></p>
+  </body>
+</html>
