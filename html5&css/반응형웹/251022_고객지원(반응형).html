@@ -14,13 +14,7 @@
         margin: 0;
         padding: 0;
       }
-      ul {
-        list-style: none;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
+
       h1 {
         font-family: "Pretendard";
         text-align: center;
@@ -29,6 +23,7 @@
         margin: 0px 0px 100px;
       }
       ul {
+        list-style: none;
         font-family: "Pretendard";
         margin: 0 auto;
         width: 100%;
@@ -46,6 +41,8 @@
         justify-content: space-between;
       }
       ul li a {
+        text-decoration: none;
+        color: #333;
         display: block;
       }
       ul li a p {
@@ -71,7 +68,7 @@
         ul {
           gap: 20px;
           width: 100%;
-          min-height: 220px;
+          height: 220px;
         }
         ul li {
           padding: 20px;
@@ -86,6 +83,10 @@
       @media screen and (max-width: 768px) {
         ul {
           grid-template-columns: 1fr;
+          height: 120px;
+        }
+        ul li a span {
+          font-size: 13px;
         }
       }
     </style>
