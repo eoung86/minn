@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고객지원</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+          format("woff");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      h1 {
+        font-family: "Pretendard";
+        text-align: center;
+        font-size: 36px;
+        color: #000;
+        margin: 0px 0px 100px;
+      }
+      ul {
+        font-family: "Pretendard";
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1520px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        height: 220px;
+      }
+      ul li {
+        border: 1px solid #666;
+        border-radius: 10px;
+        padding: 48px;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul li a {
+        display: block;
+      }
+      ul li a p {
+        font-size: 24px;
+        color: #000;
+        font-weight: bold;
+      }
+      ul li a span::after {
+        content: "→";
+        padding: 0 0 0 16px;
+      }
+      ul li a span {
+        display: inline-block;
+        margin-top: 40px;
+        font-size: 14px;
+        color: #999;
+      }
+      ul li img {
+        width: 70px;
+        height: 80px;
+      }
+      @media screen and (max-width: 1024px) {
+        ul {
+          gap: 20px;
+          width: 100%;
+          min-height: 220px;
+        }
+        ul li {
+          padding: 20px;
+        }
+        ul li a p {
+          font-size: 20px;
+        }
+        ul li a span {
+          margin-top: 60px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        ul {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>고객마당</h1>
+    <ul>
+      <li>
+        <a href="https://cscenter.gspower.co.kr/gsp/heat/FareImpose.asp"
+          ><p>열요금정보</p>
+          <span>VIEW MORE</span> </a
+        ><img
+          src="https://www.gspower.co.kr/pub/images/icon_customer_yard01.svg"
+          alt="icon1"
+        />
+      </li>
+      <li>
+        <a href="https://cscenter.gspower.co.kr/gsp/equip/UserAdmin.asp"
+          ><p>설비정보</p>
+          <span>VIEW MORE</span>
+        </a>
+        <img
+          src="https://www.gspower.co.kr/pub/images/icon_customer_yard02.svg"
+          alt="icon2"
+        />
+      </li>
+      <li>
+        <a href="https://cscenter.gspower.co.kr/gsp/equip/UserTechPaper.asp"
+          ><p>교육정보</p>
+          <span>VIEW MORE</span> </a
+        ><img
+          src="https://www.gspower.co.kr/pub/images/icon_customer_yard03.svg"
+          alt="icon3"
+        />
+      </li>
+      <li>
+        <a href="https://cscenter.gspower.co.kr/gsp/household/SimRate.asp"
+          ><p>세대정보</p>
+          <span>VIEW MORE</span> </a
+        ><img
+          src="https://www.gspower.co.kr/pub/images/icon_customer_yard04.svg"
+          alt="icon4"
+        />
+      </li>
+      <li>
+        <a href="https://cscenter.gspower.co.kr/gsp/archives/HeatRateTable.asp"
+          ><p>자료실</p>
+          <span>VIEW MORE</span> </a
+        ><img
+          src="https://www.gspower.co.kr/pub/images/icon_customer_yard05.svg"
+          alt="icon5"
+        />
+      </li>
+      <li>
+        <a href="https://cscenter.gspower.co.kr/gsp/notice/NoticeList.asp"
+          ><p>공지사항</p>
+          <span>VIEW MORE</span> </a
+        ><img
+          src="https://www.gspower.co.kr/pub/images/icon_customer_yard06.svg"
+          alt="icon6"
+        />
+      </li>
+    </ul>
+  </body>
+</html>
