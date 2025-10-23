@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList속성</title>
+    <style></style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">하나</a></li>
+      <li><a href="#">둘</a></li>
+      <li><a href="#">셋</a></li>
+      <li><a href="#">넷</a></li>
+      <li><a href="#">다섯</a></li>
+    </ul>
+    <h1></h1>
+    <h2></h2>
+    <script>
+      document.querySelectorAll("ul li").forEach(function (value, key, ar) {
+        //console.log(value);
+        // console.log(key);
+        console.log(ar);
+        value.onclick = function () {
+          // document.querySelector("h1").innerHTML = value.innerHTML;
+          document.querySelector("h1").innerText = value.innerText;
+          document.querySelector("h2").innerText = key;
+        };
+      });
+
+      //function - 모든 요소를 하나씩 꺼내서 반복 실행할 때 사용 :메서드(){}사용
+      //key - 인덱스 번호 :객체 안에서 값을 구분하기 위한 이름(식별자)
+      //value - 요소 하나하나
+      //ar - 배열 전체
+      //innerHTML - 태그를 포함한 모든 내용을 가져옴
+      //innerText - 태그를 제외한 텍스트 내용만 가져옴
+    </script>
+  </body>
+</html>

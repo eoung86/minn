@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검사창console-보이는모습</title>
+    <style>
+      span {
+        display: none;
+      }
+    </style>
+    <script>
+      //document.getElementById메소드(demo).innerHTML속성값
+    </script>
+  </head>
+  <body>
+    <p id="demo">자바스크립스<span>시작</span></p>
+    <script>
+      console.log(document.getElementById("demo").innerHTML); //태그포함
+      console.log(document.getElementById("demo").innerText); //텍스트만 span처럼 숨어있는 텍스트는 X
+      console.log(document.getElementById("demo").textContent); //숨어있는 텍스트까지 보여줌;
+    </script>
+  </body>
+</html>

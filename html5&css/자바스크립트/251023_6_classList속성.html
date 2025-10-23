@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList속성</title>
+    <style>
+      .on {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="a1 b1 c1" id="demo">classList속성</p>
+    <h1></h1>
+    <button>toggle</button>
+    <button>클래스리스트</button>
+    <script>
+      //classList - 요소의 클래스 속성을 제어/ add - 클래스추가/ remove - 클래스제거
+      // toggle - 있으면 제거, 없으면 추가 (클릭이벤트이용)/ replace - 클래스교체
+      //document.querySelector("p").classList.add("on");
+      //document.querySelector("p").classList.remove("on");
+      document.querySelector("button").onclick = function () {
+        document.querySelector("p").classList.toggle("on");
+      };
+      //document.querySelector("p").classList.replace("on", "active");
+      console.log(document.querySelector("p").classList.length);
+      // length - 클래스 개수
+      console.log(document.querySelector("p").classList.contains("a2"));
+      // contains -클래스가 포함되어있는지 확인 참과 거짓으로
+      // document.getElementsByTagName("button")[1]
+      let list = document.getElementById("demo").classList;
+      let text = "";
+      for (let x of list.entries()) {
+        text += x + "<br>";
+      }
+      document.querySelector("h1").innerHTML = text;
+      console.log(list.value);
+      console.log(list.item(0));
+    </script>
+  </body>
+</html>
