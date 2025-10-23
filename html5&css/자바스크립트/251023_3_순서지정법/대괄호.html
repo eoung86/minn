@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <title>순서지정법</title>
+  <head>
+    <style>
+      .list {
+        background-color: blue !important;
+      }
+    </style>
+    <script>
+      //사용자가 정의되어있는 함수는 헤드,바디 어디서든 호출 가능
+      function myFunction() /*함수선언문 */ {
+        document.getElementById("demo").innerHTML = "Paragraph <br>changed.";
+      } //console - br태그 인식X
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo">A Paragraph</p>
+    <ul>
+      <li class="list">1</li>
+      <!-- <li class="list">2</li>
+      <li class="list">3</li>
+      <li class="list">4</li> -->
+    </ul>
+    <!-- <button type="button" onclick="myFunction()">Try it</button> 밑에 id랑 스크립트 사용한 것과 같음 -->
+    <button type="button" id="btn">Try it</button>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        myFunction();
+      };
+      document.getElementsByClassName("list")[0].style.fontSize = "50px";
+      document.getElementsByTagName("ul")[0].style.border = "1px solid";
+      //CSS보다 우선순위 (!important > JS > CSS)
+      //classname은 여러개 사용이 가능해서 배열([순서])을 지정해줘야함 -id(네임중복X) 제외/ class(중복O)
+      //인덱스 번호는 0부터 시작/ 무조건 사용해야함
+      // //background-color 와 같은 - 사용구조는 -를빼고 대문자로 작성
+    </script>
+  </body>
+</html>
