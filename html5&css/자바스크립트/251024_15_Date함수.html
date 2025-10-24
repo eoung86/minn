@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데이트함수/날짜.시간</title>
+  </head>
+  <body>
+    <script>
+      let now = new Date(); // now-개체
+      document.write(`${now}<br>`);
+      document.write(`년도 : ${now.getFullYear()}<br>`);
+      //.getFullYear- 년도 가져오기
+      document.write(`월 : ${now.getMonth() + 1}<br>`);
+      //.getMonth- 월 / 인덱스번호를 0부터 (0이 1월)가져옴
+      document.write(`일 : ${now.getDate()}<br>`);
+      // .getDate - 일
+      document.write(`요일 : ${now.getDay()}<br>`);
+      //.getDay - 요일/ 숫자로 변환시킴 (0이 일요일)
+      document.write(`시 : ${now.getHours()}<br>`);
+      document.write(`분 : ${now.getMinutes()}<br>`);
+      document.write(`초 : ${now.getSeconds()}<br>`);
+      document.write(`밀리초 : ${now.getMilliseconds()}<br>`);
+      document.write(`시간 : ${now.getTime()}<br>`);
+      // getTime - 시간을 밀리초로 가져옴(1970.01.01 이후)
+    </script>
+  </body>
+</html>

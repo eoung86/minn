@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+      //console 에서만 확인 가능 문서엔 X
+      var age = 20;
+      var age = 40;
+      age = 50;
+      // var - 함수/ 재선언(중복). 재할당(값) O
+      console.log(age);
+      let num = 10;
+      num = 20;
+      let num2;
+      num2 = 40;
+      {
+        let num2 = 100;
+      }
+      console.log(num);
+      console.log(num2);
+      //let - 블록/ 재선언X 재할당O
+      const num3 = 200;
+      // num3 = 300;
+      {
+        const num3 = 300;
+      }
+      // const - 블록/ 재선언, 재할당 X
+      let result = null;
+      console.log(result);
+    </script>
+  </body>
+</html>

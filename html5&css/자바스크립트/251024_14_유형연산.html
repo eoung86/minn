@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유형연산</title>
+  </head>
+  <body>
+    <script>
+      let x = 10;
+      let y = 20;
+      let z = "10";
+      let t = +z; //문자 앞 + 함수를 쓰면 숫자로 변환
+      document.write(`x의 유형은 ${typeof x} <br>`);
+      document.write("x의 유형은", typeof x, "<br>");
+      document.write("z의 유형은", typeof z, "<br>");
+      document.write("10.3.3의 유형은", typeof "10.3.3", "<br>");
+      // let a = Number("10"); // Number - 변수(또는 값)을 숫자로 변환
+      let a = Number("one");
+      document.write(`a의 유형은 ${typeof a} <br>`);
+      document.write(`a의 값은 ${a} <br>`);
+
+      document.write(`${parseFloat(123.56789)} <br>`);
+      document.write(`${parseFloat("123.56789")} <br>`);
+      //parseFloat - 문자열을 실수(소수점 유지. Flot)로 변환
+      document.write(`${parseInt(123.556789)} <br>`);
+      document.write(`${parseInt("123.556789")} <br>`);
+      //parseInt - 문자열을 구문 분석하고 정수(소수점X)를 반환. 숫자가 아닌 문자를 만나면 그 앞까지만 변환하고 나머지는 무시
+      //두 함수 모두 숫자로 시작하지 않는 문자열을 넣으면 NaN을 반환
+      document.write(`${String(100)} <br>`);
+      //String - 함수/ 어떤 값이든 문자열로 변환 (전역함수-어디서나 사용O)
+      document.write(`${(100).toString()} <br>`);
+      /*.toString - 메서드/  숫자/불리언 사용가능
+       null(값이 '없음') , undefined(값이 정의되지 않음) - 오류발생*/
+      document.write(`${String(100) + (100).toString()} <br>`);
+      // 두 함수 모두 숫자를 문자로 변환
+      let num1 = 5.3457895;
+      let num2 = 10000000;
+      document.write(`${num1.toExponential(2)}<br>`);
+      document.write(`${num2.toExponential(2)}<br>`);
+      /*지수표기법(소수점 두째자리까지 표현 나머지는 지수표기법. 반올림함)
+       .toExponential(소수자릿수) - 소수자릿수 생략가능. 지정하지않으면 자동으로 표시
+       숫자가 아닌 값에서 사용하면 에러*/
+      document.write(`${num1.toFixed(2)}<br>`);
+      document.write(`${num2.toFixed(2)}<br>`);
+      /*숫자를 문자열로 바꿀 때, 소수점 아래 몇 자리(기준)까지 표시할지 정하는 메서드
+       .toFixed(자릿수), 문자열 반환. 반올림O */
+      document.write(`${num1.toPrecision(2)}<br>`);
+      document.write(`${num2.toPrecision(2)}<br>`);
+      document.write(`${num1.toPrecision(2) + num2.toPrecision(2)}<br>`);
+      /*전체 자릿수 기준 (정수+소수) , 값이 너무 크거나 작으면 자동으로 지수표기(e)사용
+      문자열 반환, 반올림 O*/
+    </script>
+  </body>
+</html>

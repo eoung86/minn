@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할당연산</title>
+  </head>
+  <body>
+    <script>
+      let x = 10;
+      let y = 20;
+      // document.write("x+=y", (x = x + y), "<br>");
+      document.write("x+=y", (x += y), "<br>");
+      document.write("x-=y", (x -= y), "<br>");
+      document.write("x*=y", (x *= y), "<br>");
+      document.write("x/=y", (x /= y), "<br>");
+      document.write("x%=y", (x %= y), "<br>");
+      // document.write("x**=y", (x **= y), "<br>");
+      document.write("x**=y", (x = x ** y), "<br>");
+      //"x**=y", (x **= y) , "x**=y", (x = x ** y) 동일
+      let z = "템플릿리터럴" + x;
+      let a = `템플릿리터럴${x}`; // `(백틱) - tab키 위에있음
+      console.log(a);
+    </script>
+  </body>
+</html>
