@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>문자열</title>
+    <title>Document</title>
     <style>
       .con {
         position: relative;
@@ -14,7 +14,7 @@
         top: 0;
         display: none;
       }
-      .con li .on {
+      .con li.on {
         display: block;
       }
     </style>
@@ -47,8 +47,7 @@
       con[0].classList.add("on");
       btn.forEach(function (v, k, ar) {
         v.onclick = function (e) {
-          e.preventDefault();
-          //a태그가 href 경로로 가는걸 막아줌
+          e.preventDefault(); //a태그가 href 경로로 가는걸 방지
           ar.forEach(function (v) {
             v.classList.remove("on");
           });
@@ -59,7 +58,6 @@
           con[k].classList.add("on");
         };
       });
-      /*인덱스번호를 갖고오는 애 - k*/
     </script>
   </body>
 </html>

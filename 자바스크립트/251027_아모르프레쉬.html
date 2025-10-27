@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭이벤트</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .main {
+        width: 1260px;
+        margin: 20px auto;
+      }
+      .main .con {
+        width: 1210px;
+        border-top: 1px solid #d1a050;
+      }
+      .main .con li {
+        padding: 15px 20px;
+        font-size: 24px;
+        color: #d1a050;
+      }
+      .main .con li:first-child {
+        cursor: pointer;
+      }
+      .main .con span {
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .main .con span.on {
+        transform: rotateY("45dge");
+      }
+      .main .sbimg li {
+        padding: 70px 40px 80px;
+      }
+      .main .sbimg li p.on {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul class="con">
+        <li>
+          <span>+</span>
+          AMERICAN
+        </li>
+        <ul class="sbimg">
+          <li>
+            <p>
+              <img
+                src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+                alt=""
+              />
+            </p>
+          </li>
+        </ul>
+      </ul>
+      <ul class="con">
+        <li>
+          <span>+</span>
+          CHEDDAR
+        </li>
+        <ul class="sbimg">
+          <li>
+            <p>
+              <img
+                src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg"
+                alt=""
+              />
+            </p>
+          </li>
+        </ul>
+      </ul>
+      <ul class="con">
+        <li>
+          <span>+</span>
+          PROVOLONE
+        </li>
+        <ul class="sbimg">
+          <li>
+            <p>
+              <img
+                src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg"
+                alt=""
+              />
+            </p>
+          </li>
+        </ul>
+      </ul>
+      <ul class="con">
+        <li>
+          <span>+</span>
+          PEPPER JACK
+        </li>
+        <ul class="sbimg">
+          <li>
+            <p>
+              <img
+                src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg"
+                alt=""
+              />
+            </p>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <script>
+      let btn = document.querySelector(".con li");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function () {
+          ar.forEach(function (v) {
+            v.querySelector("span").classList.remove("on");
+            v.getElementsByClassName("p").classList.remove("on");
+          });
+          v.querySelector("span").classList.add("on");
+          v.querySelector("p").classList.add("on");
+        };
+      }); //-------------------------수정해야함 안됨---------------------------
+    </script>
+  </body>
+</html>

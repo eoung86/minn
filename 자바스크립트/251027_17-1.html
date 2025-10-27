@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열</title>
+    <style>
+      .con {
+        position: relative;
+      }
+      .con li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      .con li .on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">photo1</a></li>
+      <li><a href="#">photo2</a></li>
+      <li><a href="#">photo3</a></li>
+      <li><a href="#">photo4</a></li>
+    </ul>
+    <p class="con">
+      <img src="../html5&css/img/photo1.jpg" alt="" />
+    </p>
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          document.querySelector(".con img").src =
+            "../html5&css/img/photo" + (k + 1) + ".jpg";
+        };
+      });
+    </script>
+  </body>
+</html>

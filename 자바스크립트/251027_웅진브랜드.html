@@ -39,15 +39,20 @@
         position: relative;
       }
       .main .sb li {
+        display: flex;
+        gap: 20px;
         width: 100%;
-        display: none;
         position: absolute;
+        opacity: 0;
+      }
+      .main .sb li.on {
+        opacity: 1;
       }
       img {
         width: 218px;
         height: 218px;
       }
-      .on {
+      .main .con li.on {
         color: #71b200;
         padding-bottom: 9px;
         border-bottom: 3px solid #71b200;
@@ -194,20 +199,20 @@
     </div>
     <script>
       document.querySelectorAll(".con li")[0].classList.add("on");
-      document.querySelectorAll(".sb li")[0].style.display = "block";
+      document.querySelectorAll(".sb li")[0].classList.add("on");
       function myfnc() {
         document.querySelectorAll(".con li").forEach(function (v) {
           v.classList.remove("on");
         });
         document.querySelectorAll(".sb li").forEach(function (v) {
-          v.style.display = "none";
+          v.classList.remove("on");
         });
       }
       document.querySelectorAll(".con li").forEach(function (v, i) {
         v.onclick = function () {
           myfnc();
           this.classList.add("on");
-          document.querySelectorAll(".sb li")[i].style.display = "block";
+          document.querySelectorAll(".sb li")[i].classList.add("on");
         };
       });
     </script>

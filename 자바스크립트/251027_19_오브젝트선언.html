@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오브젝트</title>
+    <style>
+      .con {
+        position: relative;
+      }
+      .con li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      .con li .on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // --------하나의 변수에 여러개의 데이터 입력가능----------------
+      const car = {
+        type: "Fiat",
+        model: "500",
+        color: "white",
+        price: 1000000,
+      };
+      // 문자면 "" , 숫자면 "" 없이
+      document.write(car.type + "<br>");
+      document.write(car.model + "<br>");
+      document.write(car.color + "<br>");
+      document.write(car.price + "<br>");
+      //--------------------------------------------------
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.write(person1.fullName + "<br>");
+      //---------------------------------------------------------
+      const person2 = new object();
+      person2.firstName = "John";
+      person2.lastName = "Doe";
+      person2.age = 50;
+      person2.eyeColor = "blue";
+    </script>
+  </body>
+</html>
