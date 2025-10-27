@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>substring</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meet you";
+      let str2 = new String("How are you today?");
+      console.log(str1);
+
+      let str3 = "123456-1234567";
+      document.write(str3.substring(0) + "<br>");
+      document.write(str3.substring(3) + "<br>");
+      document.write(str3.substring(3, 8) + "<br>");
+      document.write(str3.substring(-1) + "<br>");
+      //  substring - 몇번째부터 가져올건지, 음수는 허용X
+      document.write(str3.substr(0, 5) + "<br>");
+      document.write(str3.substr(-5, 5) + "<br>");
+      // substr - 0번부터 몇개를 갖고올껀지.
+      // 갯수를 반환 음수 허용 뒤에서 부터
+      //몇개가 필요한지 필수 입력
+
+      //---------------------------------------------------------------
+
+      document.write(str3.replace(str3.slice(8), "******") + "<br>");
+      document.write(str3.replace(str3.slice(8), "*".repeat(6)) + "<br>");
+      // replace - 대체   repaeat() - ()반복
+      document.write(str3.replace(str3.substr(-6, 6), "******"));
+    </script>
+  </body>
+</html>

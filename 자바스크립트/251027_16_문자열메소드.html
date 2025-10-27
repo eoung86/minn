@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search</title>
+  </head>
+  <body>
+    <script>
+      //---------문자 선언식---------------------------------
+      let str1 = "nice to meet you";
+      let str2 = new String("How are you today?");
+      //-----------------------------------------------------
+
+      //------문자를 찾는 방법(search)-----------------------
+      document.write(str1.search("m") + "<br>");
+      //---찾고자 하는 문자를 찾아줌 'search(찾을 문자)'---
+      //인덱스 번호가 0부터 시작하므로 8번째 자리를 나타내줌(띄어쓰기도 문자로 포함)
+
+      document.write(str2.search("h") + "<br>");
+      //-------찾고자 하는 문자가 없을경우 -1 로 나타냄--------------------
+
+      document.write(str2.search("H") + "<br>");
+
+      document.write(str2.search(/h/i) + "<br>");
+      //---- '/' 슬래시가 소문자 대문자 둘다 찾아줌-----------
+
+      document.write(str2.search("a") + "<br>");
+    </script>
+  </body>
+</html>

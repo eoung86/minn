@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexOf</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meet you";
+      let str2 = new String("How are you today?");
+      console.log(str1);
+
+      // indexOf 문자열(String)이나 배열(Array)에서 특정값이 처음 나타나는 위치(인덱스)를 찾음
+      document.write(str1.indexOf("E" + "<br>"));
+      document.write(str1.indexOf("x" + "<br>"));
+      //--------lastIndexOf 뒤에서 부터 찾아줌----------
+      document.write(str1.lastIndexOf("e" + "<br>"));
+      //--------찾는값이 없으면 -1로 반환---------------
+    </script>
+  </body>
+</html>

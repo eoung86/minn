@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replace</title>
+  </head>
+  <body>
+    <script>
+      // replace - 문자열에서 처음나타나는 특정 부분을 다른 부분으로 바꿈
+      let str1 = "nice to meet you";
+      let str2 = new String("How are you today?");
+
+      document.write(str1.replace("nice", "good") + "<br>");
+      //--------nice 를 good 으로 변경-------------------------
+      console.log(str1);
+      document.write(str1.replace("Nice", "good") + "<br>");
+      document.write(str1.replace(/N/i, "N") + "<br>");
+
+      document.write(str1.replace(/e/i, "a") + "<br>");
+      //-----------------------e 라는 문자를 a로 바꿈---------------
+      document.write(str1.replace(/e/g, "a") + "<br>");
+      //--'g' - 그룹 / e 라는 문자를 a로 전부 그룹화하여 변경-------
+    </script>
+  </body>
+</html>

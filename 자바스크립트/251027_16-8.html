@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>split</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meet you";
+      let str2 = new String("How are you today?");
+      console.log(str1);
+
+      let str3 = "123456-1234567";
+      document.write(str1.split(" ")[1].length + "<br>");
+      // split -("공백or문자") 지정되어있는 문자를 배열로 반환 원래 문자열은 변경X
+
+      //---------------------------------------------------------------
+
+      document.write(str3.replace(str3.slice(8), "******") + "<br>");
+      document.write(str3.replace(str3.slice(8), "*".repeat(6)) + "<br>");
+      // replace - 대체   repaeat() - ()반복
+      document.write(str3.replace(str3.substr(-6, 6), "******") + "<br>");
+    </script>
+  </body>
+</html>
