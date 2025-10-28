@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For</title>
+  </head>
+  <body>
+    <script>
+      let cars = ["aaa", "bbb", "ccc", "ddd", "eee", "fff"];
+      let text = "";
+      text += cars[0] + "<br>"; // = text=text+cars[0]+"<br>"
+      document.write(text);
+      text += cars[1] + "<br>";
+      document.write(text);
+      text += cars[2] + "<br>";
+      document.write(text);
+      text += cars[3] + "<br>";
+      text += cars[4] + "<br>";
+      text += cars[5] + "<br>";
+
+      // a+=b = a=a+b -> '+=' a에 b를 더해서 다시 a에 저장하는 것과 같음
+      // 'a++' = 'a=a+1' 반복이 한번씩 끝날때마다 1씩증가
+      // 'a = 0 ' 반복문이 시작할 때 a 를 0으로 초기화
+      // 'a<@' 반복을 계속할지 여부 결졍, a가 @ 보다 작을 동안 반복
+
+      for (let i = 0; i < 6; i++) {
+        text += cars[i] + "<br>";
+      }
+    </script>
+  </body>
+</html>

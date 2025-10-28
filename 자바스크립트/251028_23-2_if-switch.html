@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if/switch조건문</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date(); //  = switch (new Date().getDay())
+      let day = date.getDay(); // 0~6 ->일요일부터~토요일
+      let week;
+      /* if (day == 0) {
+         week = "일요일";
+       } else if (day == 1) {
+         week = "월요일";
+       } else if (day == 2) {
+         week = "화요일";
+       } else if (day == 3) {
+         week = "수요일";
+       } else if (day == 4) {
+         week = "목요일";
+       } else if (day == 5) {
+         week = "금요일";
+       } else {
+         week = "토요일";
+       }*/ // 하나가 남았을땐 if 안씀 / 같은지(비교연산자) '==' - 타입 변환 후 값만 비교
+      // 같은지(비교연산자) '==' - 타입 변환 후 값만 비교 / 느슨한 비교
+      // '===' 엄격한 비교, 값과 타입 모두 비교
+      document.write("오늘은 " + week + " 입니다.");
+      //-----------------------------------------------------------------------------
+
+      // switch구문
+
+      //  let date = new Date();  = switch (new Date().getDay())
+
+      switch (day) {
+        case 0:
+          week = "일요일";
+          break;
+        case 1:
+          week = "월요일";
+          break;
+        case 2:
+          week = "화요일";
+          break;
+        case 3:
+          week = "수요일";
+          break;
+        case 4:
+          week = "목요일";
+          break;
+        case 5:
+          week = "금요일";
+          break;
+        default:
+          week = "토요일";
+      } // default: - 마지막 하나
+
+      // break - 반복문을 즉시 멈춤 -> while, for, switch 안에서 사용가능
+    </script>
+  </body>
+</html>

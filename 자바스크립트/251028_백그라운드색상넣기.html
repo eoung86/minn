@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드색상넣기</title>
+  </head>
+  <body>
+    <p>red</p>
+    <p>blue</p>
+    <p>gray</p>
+    <p>green</p>
+    <p>#8ac007</p>
+    <p>#ddd</p>
+    <script>
+      document.querySelectorAll("p").forEach(function (v, k) {
+        v.style.backgroundColor = v.innerText; //안에있는 텍스트를 가져다 스타일 적용
+      });
+    </script>
+  </body>
+</html>

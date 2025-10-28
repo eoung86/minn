@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여러개를 한번에</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">photo1</a></li>
+      <li><a href="#">photo2</a></li>
+      <li><a href="#">photo3</a></li>
+    </ul>
+    <p><img src="../html5&css/img/photo1.jpg" alt="" /></p>
+    <script>
+      let photo = document.querySelectorAll("ul li");
+      let photoImg = document.querySelector("p img"); //CSS처럼 선택 가능
+
+      /*photo.onclick = function (e) {
+        e.preventDefault();
+        photoImg.src = "../html5&css/img/photo1.jpg";
+      }; //실행문 - function(){} / e - 변수 / e.preventDefault - a태그 사용시 필수
+      photo1.onclick = function (e) {
+        e.preventDefault();
+        photoImg.src = "../html5&css/img/photo2.jpg";
+      };
+      photo2.onclick = function (e) {
+        e.preventDefault();
+        photoImg.src = "../html5&css/img/photo3.jpg";
+      };*/
+
+      photo.forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          //photoImg.src = `../html5&css/img/photo${k + 1}.jpg`;
+          //photoImg.src = `../html5&css/img/photo${k + 1}.jpg`;
+
+          // photoImg.src = "../html5&css/img/photo" + (k + 1) + ".jpg";
+          // k+1 -> 인덱스(k)가 0부터 시작, 필요로한 숫자는 1부터
+
+          let imgSrc = photoImg.getAttribute("src");
+          let newSrc = imgSrc.replace(imgSrc.slice(-5, -4), k + 1);
+          photoImg.setAttribute("src", newSrc);
+
+          let imgAlt = photoImg.getAttribute("alt");
+          let newAlt = imgAlt.replace(imgAlt.slice(-1), k + 1);
+          photoImg.setAttribute("alt", newAlt);
+        };
+      });
+      //setAttribute - 새로 새팅한
+      //변수랑 문자는 " " 없음
+      // v - 각 요소, k - 인덱스번호 ar - 배열 전체 e - 이벤트
+      //forEach() - 반복/ 해당경로로 이동
+    </script>
+  </body>
+</html>

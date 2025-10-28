@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if조건문</title>
+  </head>
+  <body>
+    <script>
+      //if(조건식){}
+      //if를 사용하여 지정된 조건이 참인 경우 실행할 코드 블록을 지정
+      //동일한 조건이 거짓인 경우 실행할 코드 블록을 지정하려면 else를 사용
+      //첫 번째 조건이 거짓인 경우 else if를 사용하여 테스트할 새 조건을 지정
+
+      if (false) {
+        document.write("조건이 참 입니다<br>");
+      } else {
+        document.write("조건이 거짓 입니다<br>");
+      }
+      if (10 > 20) {
+        document.write("조건이 참 입니다<br>");
+      } else {
+        document.write("조건이 거짓 입니다<br>");
+      }
+
+      if (10 > 20) {
+        document.write("10>20 입니다<br>");
+      } else if (30 < 20) {
+        document.write("10<20 입니다<br>");
+      } else {
+        document.write("조건이 거짓 입니다<br>");
+      }
+
+      //false - 거짓
+      // else{} - 거짓일때 나타나는 데이터
+    </script>
+  </body>
+</html>

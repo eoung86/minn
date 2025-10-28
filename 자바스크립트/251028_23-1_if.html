@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if조건문</title>
+  </head>
+  <body>
+    <p>이미지 보이기</p>
+    <p id="demo"></p>
+    <script>
+      let imgShow = true; //" " 들어가면 안됨
+      document.querySelector("p").onclick = function () {
+        if (imgShow) {
+          document.getElementById("demo").innerHTML =
+            '<img src="../html5&css/img/photo1.jpg" alt="photo1" />';
+          this.innerText = "이미지 숨기기";
+        } else {
+          document.getElementById("demo").innerHTML = "";
+          this.innerText = "이미지 보이기";
+        }
+        imgShow = !imgShow;
+      };
+      // imgShow = !imgShow -> 참 과 거짓을 반복(토글)
+    </script>
+  </body>
+</html>
