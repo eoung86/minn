@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>청리움/이미지</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .main {
+        padding: 48px 96px;
+      }
+      .main .con {
+        display: flex;
+        padding: 23px 0 73px;
+        justify-content: space-between;
+      }
+      .main .txt h1 {
+        font-size: 64px;
+      }
+      .main .txt p {
+        font-size: 22px;
+      }
+      .main .btn {
+        display: flex;
+      }
+      .btn li {
+        padding: 0 15px;
+        font-size: 16px;
+      }
+      .main .img {
+        width: 1714px;
+      }
+      .main .img li {
+        width: 100%;
+        display: none;
+        position: relative;
+      }
+      .main .img li p {
+        width: 100%;
+
+        overflow: hidden;
+        position: absolute;
+      }
+      .img li.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="con">
+        <div class="txt">
+          <h1>공간안내</h1>
+          <p>
+            고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을
+            안내합니다
+          </p>
+        </div>
+        <ul class="btn">
+          <li><button>강당동</button></li>
+          <li><button>연수동</button></li>
+          <li><button>카페테리아</button></li>
+          <li><button>잔디마당</button></li>
+          <li><button>오하산방</button></li>
+          <li><button>약초원</button></li>
+          <li><button>명당 기도터</button></li>
+          <li><button>녹차·포도밭</button></li>
+        </ul>
+      </div>
+      <ul class="img">
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_2.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_3.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_4.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_5.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_8.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_9.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.cheongrium.com/static/images/spaceinfo/main_space_10.jpg"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let buttons = document.querySelectorAll(".btn li button");
+      let images = document.querySelectorAll(".img li");
+
+      buttons.forEach(function (v, k) {
+        v.onclick = function () {
+          // 모든 이미지 숨기기
+          images.forEach(function (img) {
+            img.classList.remove("on");
+          });
+          // 클릭한 버튼에 해당하는 이미지 보이기
+          images[k].classList.add("on");
+        };
+      });
+
+      // 처음 로드될 때 첫 번째 이미지 보여주기
+      images[0].classList.add("on");
+    </script>
+  </body>
+</html>

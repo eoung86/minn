@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드버튼</title>
+  </head>
+  <body>
+    <button>빨강</button>
+    <button>노랑</button>
+    <button>파랑</button>
+    <button>그린</button>
+    <script>
+      let color = ["red", "yellow", "blue", "green"];
+      let btn = document.querySelectorAll("button");
+
+      //btn.forEach → 버튼 배열을 하나씩 순회
+      //클릭하면 color[k] 색으로 배경 변경
+      //v → 현재 버튼
+      // k → 버튼 순서
+      btn.forEach(function (v, k) {
+        v.style.backgroundColor = color[k];
+        v.onclick = function () {
+          document.querySelector("body").style.backgroundColor = color[k];
+        };
+      });
+
+      //forEach - 배열(arr)에 있는 모든 요소를 하나씩 순회하면서 반복 작업을 하고싶을때 사용
+      //------> 값을 반환하지 않음
+      // ----> 배열.forEach(function(요소, 인텍스, 배열){반복 실행할 코드})
+      // 요소(v) - 현재 반복 중인 배열의 값 / 인덱스(k)- 현재 값의 위치 / 배열- 원본 배열자체(생략가능)
+    </script>
+  </body>
+</html>

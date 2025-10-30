@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>청리움/이미지 백그라운드</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      .main {
+        padding: 48px 96px;
+      }
+      .main .con {
+        display: flex;
+        padding: 23px 0 73px;
+        justify-content: space-between;
+      }
+      .main .txt h1 {
+        font-size: 64px;
+      }
+      .main .txt p {
+        font-size: 22px;
+      }
+      .main .btn {
+        display: flex;
+      }
+      .btn li {
+        padding: 0 15px;
+        font-size: 16px;
+      }
+      .main .img {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        transition: 0.4s height;
+      }
+      .main .img li {
+        position: absolute;
+        width: 1713px;
+        opacity: 1;
+      }
+
+      .main .img li:first-child {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_1.jpg);
+      }
+      .main .img li:nth-child(2) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_2.jpg);
+      }
+      .main .img li:nth-child(3) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_3.jpg);
+      }
+      .main .img li:nth-child(4) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_4.jpg);
+      }
+      .main .img li:nth-child(5) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_5.jpg);
+      }
+      .main .img li:nth-child(6) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_8.jpg);
+      }
+      .main .img li:nth-child(7) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_9.jpg);
+      }
+      .main .img li:nth-child(8) {
+        background-image: url(https://www.cheongrium.com/static/images/spaceinfo/main_space_10.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="con">
+        <div class="txt">
+          <h1>공간안내</h1>
+          <p>
+            고즈넉한 자연 속 사계절의 아름다운 정취가 있는 청리움의 공간을
+            안내합니다
+          </p>
+        </div>
+        <ul class="btn">
+          <li><button>강당동</button></li>
+          <li><button>연수동</button></li>
+          <li><button>카페테리아</button></li>
+          <li><button>잔디마당</button></li>
+          <li><button>오하산방</button></li>
+          <li><button>약초원</button></li>
+          <li><button>명당 기도터</button></li>
+          <li><button>녹차·포도밭</button></li>
+        </ul>
+      </div>
+      <ul class="img">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script>
+      let img = ["red", "yellow", "blue", "green"];
+      let btn = document.querySelectorAll("button");
+    </script>
+  </body>
+</html>

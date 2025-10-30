@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구구단</title>
+    <style>
+      div {
+        float: left;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //for 구문안에 같은 변수 사용X
+      //-------1단씩--------------------------------------
+      /* for (let i = 1; i <= 9; i++) {
+        document.write(`2X${i}=${2 * i}<br>`);
+      }
+      for (let i = 1; i <= 9; i++) {
+        document.write(`3X${i}=${3 * i}<br>`);
+      }
+      for (let i = 1; i <= 9; i++) {
+        document.write(`4X${i}=${4 * i}<br>`);
+      }
+      //------------한번에 19단까지-------------------------
+      for (let i = 2; i <= 19; i++) {
+        for (let j = 1; j <= 9; j++) {
+          document.write(`${i}X${j}=${i * j}<br>`);
+        }
+      }*/
+      //-----------가로로-------------------------------------
+      let str = "";
+      for (let i = 2; i <= 19; i++) {
+        str += `<div>`;
+        str += `<h1>${i}단</h1>`;
+        for (let j = 1; j <= 9; j++) {
+          str += `${i}X${j}=${i * j}<br>`;
+        }
+        str += `</div>`;
+      }
+      document.write(str);
+    </script>
+  </body>
+</html>
