@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로딩시점 - 로드</title>
+  </head>
+  <body>
+    <script>
+      //웹페이지 로딩시점에 관련된 이벤트
+
+      //load, onload - 문서를 모두 로드한 후 실행(가장 늦게 실행됨)
+      //---->이미지, css, iframe, js 등 전부 로드한 후 실행
+      //  window.onload - 한번만 실행됨/ 여러 개 등록시 마지막것만 실행
+
+      window.onload = function () {
+        console.log("onload");
+      };
+
+      //window.addEventListener('load') - 모든요소, 이미지, CSS, js, 폰트까지 완전히 로드 후 실행
+      window.addEventListener("load", function () {
+        console.log("load");
+      });
+
+      //---------------------------------------------------------------------------------
+
+      //DOMContentLoaded - HTML문서의 DOM 구조만 파싱(이미지/스타일은 로드 안 돼도 실행됨)
+      //HTML, DOM(구조)가 완성되면 바로 실행
+      // 이미지, 폰트, CSS 가 로드되기 전에도 실행
+
+      window.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMContentLoaded");
+      });
+    </script>
+  </body>
+</html>

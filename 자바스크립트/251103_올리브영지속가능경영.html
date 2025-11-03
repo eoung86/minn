@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>후버했을때, 떠낫을때</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url(../webfonts/PretendardVariable.woff2);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .list {
+        width: 95%;
+        max-width: 1420px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .list li {
+        flex: 1;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+      }
+      .list li img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .list li .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        color: #fff;
+        font-family: "Pretendard";
+      }
+      .list li .text > p {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .list li .sb {
+        display: none;
+        line-height: 1.4;
+        font-weight: 700;
+      }
+      .list li .text .sb h1 {
+        font-size: 30px;
+      }
+      .list li .text .sb p{ 
+        margin-top: 28px;
+        font-size: 20px;
+      }
+      .list li:hover .text > h1 {
+        display: none;
+      }
+      .list li:hover .sb {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <img
+          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_1.jpg"
+          alt=""
+        />
+        <div class="text">
+          <h1>협력사 상생</h1>
+          <div class="sb">
+            <h1>협력사 상생</h1>
+            <p>입점 브랜드의 성장과<br />글로벌 진출을 <br />함께하는 파트너</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img
+          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_2.jpg"
+          alt=""
+        />
+        <div class="text">
+          <h1>ME:RACLE</h1>
+          <div class="sb">
+            <h1>ME:RACLE</h1>
+            <p>더 건강하고 <br> 아름다운 세상을 만들기 위한 <br> 올리브영의 노력</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img
+          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_3.jpg"
+          alt=""
+        />
+        <div class="text">
+          <h1>환경경영</h1>
+          <div class="sb">
+            <h1>환경경영</p>
+            <p>자원순환 가치를 바탕으로 <br> 지속가능한 뷰티&헬스 <br> 생태계 구축</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <img
+          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_4.jpg"
+          alt=""
+        />
+        <div class="text">
+          <h1>품질경영</h1>
+          <div class="sb">
+            <h1>품질경영</h1>
+            <p>믿을 수 있는 <br> 제품과 서비스로 <br> 고객 가치 창출</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <script>
+      //https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_1_1.jpg
+      // document.querySelectorAll(".list li").forEach(function(v,k){
+      document.querySelectorAll(".list li").forEach((v, k, ar) => {
+        v.onmouseenter = () => {
+          ar.forEach(function (v, i) {
+            v.querySelector(
+              "img"
+            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_hover_${
+              k + 1
+            }_${i + 1}.jpg`;
+          });
+        };
+
+        v.onmouseleave = () => {
+          ar.forEach(function (v, i) {
+            v.querySelector(
+              "img"
+            ).src = `https://corp.oliveyoung.com/img/sustain/img_sustain_pc_${
+              i + 1
+            }.jpg`;
+          });
+        };
+      });
+    </script>
+  </body>
+</html>

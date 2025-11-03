@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keydown</title>
+  </head>
+  <body>
+    <script>
+      /*document.onkeydown = function (e) {
+        console.log(e.keyCode);
+      }; 키를 누르는 순간 발생 / 길게 누르면 여러번 반복해서 발생*/
+
+      //------------------------------------------------------------
+
+      /*document.onkeyup = function (e) {
+        console.log(e.keyCode);
+      }; 키에서 손을 뗄 때 방생 / 글자가 입력된 후 실행 / 입력값 체크할 때 많이 사용*/
+
+      //-------------------------------------------------------------
+
+      document.onkeypress = function (e) {
+        console.log(e.keyCode);
+      }; // 문자 입력 키에서만 발생(특수문자 포함) / 기능키(컨트롤 등) 동작X keydown보단 조금 뒤에 발생
+    </script>
+  </body>
+</html>

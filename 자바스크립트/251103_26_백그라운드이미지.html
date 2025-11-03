@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지랜덤</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        /* background-image: url(../html5&css/img/photo1.jpg); */
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //1,2,3,4,5,6
+      let num = 1;
+      num = Math.ceil(Math.random() * 6);
+      console.log(num);
+      // let bg = "url(../html5&css/img/photo1.jpg)";
+      document.querySelector(
+        "body"
+      ).style.backgroundImage = `url(../html5&css/img/photo${num}.jpg)`;
+    </script>
+  </body>
+</html>
