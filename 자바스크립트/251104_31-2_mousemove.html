@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우지커피/마우스커서 만들기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        cursor: pointer;
+      }
+      .customPointer {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        background-image: url(https://cdn.imweb.me/upload/S20240112577c82953a84f/a28527ef71348.png);
+        background-repeat: no-repeat; /*이미지 반복X*/
+        background-size: 45px 57px;
+        background-position: right bottom;
+        z-index: 999;
+        /* z-index - 요소의 앞뒤 순서를 정함(클수록 앞(위), 작을수록 뒤(아래))/
+         부모요소에도 영향받음 - 부모 레이어 안에섬나 위아래가 결정됨 
+         포지션 없이 사용X */
+        /* border: 1px solid;//*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="customPointer"></div>
+    <script>
+      let cursor = document.querySelector(".customPointer");
+      // e - 이벤트의 약자(event) , 객체
+      document.onmousemove = (e) => {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      };
+      //마우스 손가락 모양 안가리고 이미지가 따라다니게/ x,y 좌표값이 계속바뀜
+    </script>
+  </body>
+</html>

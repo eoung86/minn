@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자동전환</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #loading {
+        background: #0bd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+        transition: 3s;
+        position: fixed;
+        width: 100%;
+      }
+      #content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div>
+        <h1>잠시만 기다려주세요</h1>
+        <p>3초후 메인페이지로 이동</p>
+      </div>
+    </div>
+    <div id="content">
+      <h1>메인페이지</h1>
+    </div>
+    <script>
+      //3000ms / href -> 링크가 연결되는 URL 또는 파일의 경로
+      setTimeout(() => {
+        // window.location.href = "http:///www.naver.com";
+        window.location.href =
+          "http://127.0.0.1:5500/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/251104_31-4_%EC%9E%90%EC%BD%94%EB%AA%A8.html";
+      }, 3000);
+    </script>
+  </body>
+</html>

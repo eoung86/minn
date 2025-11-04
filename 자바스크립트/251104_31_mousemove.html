@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스움직임</title>
+    <style>
+      body {
+        margin: 1000px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>clientX : <input type="text" id="clientX" /></p>
+    <p>clientY : <input type="text" id="clientY" /></p>
+    <p>pageX : <input type="text" id="pageX" /></p>
+    <p>pageY : <input type="text" id="pageY" /></p>
+    <p>screenX : <input type="text" id="screenX" /></p>
+    <p>screenY : <input type="text" id="screenY" /></p>
+    <script>
+      document.onmousemove = (e) => {
+        document.querySelector("#clientX").value = e.clientX;
+        document.querySelector("#clientY").value = e.clientY;
+        //client - 스크롤 상관없이 화면 안 위치만
+
+        document.querySelector("#pageX").value = e.pageX;
+        document.querySelector("#pageY").value = e.pageY;
+        //page - ㅔ이지 전체에서의 정확한 좌표가 필요할 때
+
+        document.querySelector("#screenX").value = e.screenX;
+        document.querySelector("#screenY").value = e.screenY;
+        //screen - 모니터 기준으로 프로그램 간 위치 비교할 때
+      };
+    </script>
+  </body>
+</html>

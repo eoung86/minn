@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사진전환</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #slide {
+        position: relative;
+        width: 1200px;
+        height: 300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      #slide .slides {
+        position: absolute;
+        left: 0;
+        display: flex;
+        /* transition: 0.5s; */
+      }
+      #slide .slides img {
+        width: 1200px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .btn li {
+        cursor: pointer;
+      }
+      /* .page li.on {
+        color: red;
+      } */
+      .page {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .page li {
+        text-indent: -9999px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+      }
+      .page li.on {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideAni">
+      <div id="slide">
+        <ul class="slides">
+          <li><img src="../html5&css/img/photo1.jpg" alt="photo1" /></li>
+          <li><img src="../html5&css/img/photo2.jpg" alt="photo2" /></li>
+          <li><img src="../html5&css/img/photo3.jpg" alt="photo3" /></li>
+          <li><img src="../html5&css/img/photo4.jpg" alt="photo3" /></li>
+          <li><img src="../html5&css/img/photo5.jpg" alt="photo3" /></li>
+          <li><img src="../html5&css/img/photo6.jpg" alt="photo3" /></li>
+        </ul>
+      </div>
+      <div class="controller">
+        <ul class="btn">
+          <li id="prev">이전으로</li>
+          <li id="next">다음으로</li>
+        </ul>
+        <ul class="page">
+          <li>photo1</li>
+          <li>photo2</li>
+          <li>photo3</li>
+          <li>photo4</li>
+          <li>photo5</li>
+          <li>photo6</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      let slide = document.querySelector("#slide");
+      let slides = document.querySelector(".slides");
+      let slideLi = document.querySelectorAll(".slides li");
+      let page = document.querySelectorAll(".page li");
+      let current = 0;
+      //현재 슬라이드 번호
+      let slidewidth = slide.offsetWidth;
+      //슬라이드 하나의 너비 (offsetWidth → border 포함 실제 너비)
+      page[0].classList.add("on");
+      //처음 페이지 점에 on 표시
+      let len = slideLi.length;
+      //슬라이드 개수
+      //console.log(len);
+
+      //-----------복제 슬라이드 만들기(무한루프용)------------------------
+      function makeClone() {
+        let clone_first = slideLi[0].cloneNode(true);
+        slides.append(clone_first);
+        let clone_last = slideLi[len - 1].cloneNode(true);
+        slides.prepend(clone_last);
+      }
+      //cloneNode - li의 내부까지 그대로 복제(true -> 깊은복사)
+      //slides.append - 맨뒤에 첫 번째 슬라이드 복사본 추가
+      // slides.prepend - 맨 앞에 마지막 슬라이드 복사본 추가
+
+      makeClone();
+      //---------------------------------------------------------------------
+
+      //slides.style.left = "-1200px";
+
+      //-----초기 위치 설정------------------------------------------------
+      slides.style.left = -slidewidth + "px";
+      //복제된 첫 번째 가짜 슬라이드를 뛰어넘고 실제 첫 번째 슬라이드가 보이게 위치조정
+      //------------------------------------------------------------------------
+
+      //----------------------------일반 이동 구간---------------------------------------
+      //document.querySelector("#next").onclick = function () {} -> next 버튼 클릭이벤트
+      document.querySelector("#next").onclick = function () {
+        if (current <= 5) {
+          slides.style.left = -(current + 2) * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        //-----------------------------------------------------------------------------
+
+        //---------마지막 슬라이드에서 다음으로 이동할 때(무한루프 처리-)-----------------
+        if (current == 5) {
+          setTimeout(function () {
+            slides.style.left = -slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = -1;
+        }
+        //-------------------------------------------------------------------------------
+        current++; //current = current +1 -> current 증가
+
+        //--------페이지 버튼 on처리----------------------------------------------------
+        for (let i = 0; i < 6; i++) {
+          page[i].classList.remove("on");
+        }
+        page[current].classList.add("on");
+      };
+      //------------------------------------------------------------------------------
+
+      //console.log(current);
+
+      //---document.querySelector("#prev").onclick = function (){}- prev 버튼 클릭이벤트---
+      document.querySelector("#prev").onclick = function () {
+        //console.log(current);
+
+        //-------일반이동-------
+        if (current >= 0) {
+          slides.style.left = -current * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        //------------------------
+        //첫 번째 슬라이드에서 prev 누른 경우 (무한 루프 처리)--------
+        if (current == 0) {
+          setTimeout(function () {
+            //slides.style.left = "-7200px";
+            slides.style.left = -slidewidth * len + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = 6;
+        }
+        //--------------------------------------------------
+        current--; //current = current-1;
+        for (let i = 0; i < 6; i++) {
+          page[i].classList.remove("on");
+        }
+        page[current].classList.add("on");
+      };
+      //--------------------------------------------------------------------------------
+
+      //----------showSlide(n) -특정페이지로이동 ------------------------------------
+      function showSlide(n) {
+        for (let i = 0; i < 6; i++) {
+          page[i].classList.remove("on");
+        }
+        page[n].classList.add("on");
+        slides.style.left = -(n + 1) * slidewidth + "px";
+        slides.style.transition = "0.5s";
+      }
+      //페이지 번호 n을 받아서 그 번호의 슬라이드로 이동, (+1하는 이유-> 맨앞 가짜슬라이드 1개 존재해서)
+      //-----------------------------------------------------------------------------
+
+      //---페이지 버튼 클릭 이벤트 ---------------------------------------------------
+      page.forEach(function (v, k) {
+        v.onclick = function () {
+          console.log(k);
+          showSlide((current = k));
+        };
+      });
+      //각페이지 점(li)을 클릭하면 showSlide 실행->해당슬라이드로 이동 current도 그 번호로 변경
+      //-------------------------------------------------------------------------------
+
+      //------------자동 슬라이드-----------------------------------------------------
+      let interval = setInterval(function () {
+        document.querySelector("#next").onclick();
+      }, 1500);
+      //1.5초마다 next버튼을 강제로 실행 / 자동 슬라이드 기능
+      //-----------------------------------------------------------------------------
+
+      let slideAni = document.querySelector(".slideAni");
+      //----------마우스 올리면 자동 멈춤-----------------------------------------------------
+      slideAni.onmouseenter = function () {
+        clearInterval(interval);
+      };
+      //마우스를 슬라이드 영역 위에 올리면 자동슬라이드 정지
+      //-------------------------------------------------------------------------------------
+
+      //-------마우스 나가면 자동 실행-------------------------------------------------
+      slideAni.onmouseleave = function () {
+        interval = setInterval(function () {
+          document.querySelector("#next").onclick();
+        }, 1500);
+      };
+    </script>
+  </body>
+</html>

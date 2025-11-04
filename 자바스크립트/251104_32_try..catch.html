@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try/catch</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Please input a number between 5 and 10:</p>
+
+    <input id="demo" type="text" />
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+
+    <script>
+      /*try {
+             에러가 날 수도 있는 코드
+        } catch (error) {
+             에러가 발생했을 때 실행되는 부분
+        }*/
+      //finally(선택) - 에러 여부 상관없이 무조건 실행되는 부분
+      //에러가 날 수 있는 코드를 try 안에 넣고, 문제가 생기면 catch가 받아서 처리
+
+      //에러가 나도 코드가 멈추지 않게해주는 문법
+      function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo").value;
+        try {
+          if (x == "") throw "is empty";
+          if (isNaN(x)) throw "is not a number";
+          x = Number(x);
+          if (x > 10) throw "is too high";
+          if (x < 5) throw "is too low";
+        } catch (err) {
+          message.innerHTML = "Input " + err;
+        } finally {
+          document.getElementById("demo").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>
