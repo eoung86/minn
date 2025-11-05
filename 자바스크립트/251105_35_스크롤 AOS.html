@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤 애니메이션</title>
+    <!------------------------------- 기본세팅 -------------------------------->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!------------------------------------------------------------------------>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+      }
+      section > div {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- 첫 페이지 들어갔을때만 -->
+      <div
+        data-aos="fade-right"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-out-cubic"
+        data-aos-delay="1000"
+      >
+        fade-right
+      </div>
+      <!-- delay - " 초" 후 재생 -->
+      <!-- data-aos-easing - 처음.중간.끝이 각각 어떻게 변화하는지 정해주는 가속도 곡선 -->
+      <!-- ease-in-out-cubic - 천천히 - 빨라짐 -천천히 (ease-in-out 보다 더 부드럽게 가속/감속) -->
+      <!-- 왼쪽에서 오른쪽 -->
+
+      <div data-aos="fade-left">fade-left</div>
+      <!-- 오른쪽에서 왼쪽 -->
+    </section>
+
+    <section>
+      <!-- 스크롤시 -->
+      <div data-aos="fade-left">fade-left</div>
+      <div data-aos="fade-right">fade-right</div>
+
+      <div data-aos="fade-down">fade-down</div>
+      <!-- 위에서 아래 -->
+
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-out"
+      >
+        fade-up
+      </div>
+      <!-- "ease-in-out" - 천천히 - 빠름 - 천천히 (부드러운 ui에 많이 사용) -->
+      <!-- 아래에서 위 / duration(속도)=" ms"-->
+    </section>
+    <section>
+      <div></div>
+    </section>
+    <section>
+      <div></div>
+    </section>
+
+    <!-------------------------- 기본세팅 --------------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script>
+      AOS.init();
+    </script> -->
+    <!-------------------------------------------------------------->
+
+    <script>
+      //----------- 전체 적용------------------------------------------
+      AOS.init({
+        // offset: 120, 기본값
+        delay: 1000,
+        easing: "ease",
+        duration: 2000,
+      });
+      //--------------------------------------------------------------
+    </script>
+  </body>
+</html>
