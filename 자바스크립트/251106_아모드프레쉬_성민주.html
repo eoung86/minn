@@ -101,12 +101,11 @@
       let main = document.querySelectorAll(".con ul");
 
       main.forEach(function (ul) {
-        let txt = ul.querySelector("li:first-child"); // 제목 li
-        let con = ul.querySelector("li:last-child"); // 이미지 li
-        let icon = txt.querySelector("span"); // + 아이콘
+        let txt = ul.querySelector("li:first-child");
+        let con = ul.querySelector("li:last-child");
+        let icon = txt.querySelector("span");
 
         txt.onclick = function () {
-          // 토글만 수행 (다른 항목을 닫지 않음)
           con.classList.toggle("on");
           icon.classList.toggle("on");
         };
