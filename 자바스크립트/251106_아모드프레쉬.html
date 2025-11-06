@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <search></search>
+    <script>
+      window.addEventListener("wheel", (e) => {
+        console.log(e.deltaY);
+        if (e.deltaY > 0) {
+          console.log("마우스를 내리고 있어요.");
+        } else if (e.deltaY < 0) {
+          console.log("마우스를 올리고 있어요.");
+        }
+      });
+    </script>
+  </body>
+</html>
