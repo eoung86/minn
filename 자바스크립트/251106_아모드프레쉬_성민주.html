@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아모드프레쉬</title>
+    <style>
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            ul {
+              list-style: none;
+            }
+            .con {
+              width: 1210px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin: 50px auto;
+            }
+            .con h1 {
+              width: 100%;
+              color: #d1a050;
+              font-size: 42px;
+              padding: 0 0px 20px;
+            }
+            .con ul li {
+              /**/
+            }
+            .con ul > li:last-child {
+              height: 0;
+              padding: 0;
+              overflow: hidden;
+              transition: 0.5s;
+
+            }
+            .con ul > li:first-child {
+              font-size: 24px;
+              color: #d1a050;
+              border-top: 1px solid #d1a050;
+              cursor: pointer;padding: 15px 20px;
+            }
+            .con ul li span {
+              padding-right: 20px;
+              transition: 0.5s;
+              display: inline-block;
+            }
+
+            .con ul li span.on {
+              transform: rotate(45deg);
+            }
+            .con ul > li:last-child.on {
+              height: 444px;
+              padding: 40px 0 0 0;
+      /      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <h1>Slices - Almond Base</h1>
+      <ul>
+        <li><span>+</span>AMERICAN</li>
+        <li>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul>
+        <li><span>+</span>CHEDDAR</li>
+        <li>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul>
+        <li><span>+</span>PROVOLONE</li>
+        <li>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul>
+        <li><span>+</span>PEPPER JACK</li>
+        <li>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+    <script>
+      let main = document.querySelectorAll(".con ul");
+
+      main.forEach(function (ul) {
+        let txt = ul.querySelector("li:first-child"); // 제목 li
+        let con = ul.querySelector("li:last-child"); // 이미지 li
+        let icon = txt.querySelector("span"); // + 아이콘
+
+        txt.onclick = function () {
+          // 토글만 수행 (다른 항목을 닫지 않음)
+          con.classList.toggle("on");
+          icon.classList.toggle("on");
+        };
+      });
+    </script>
+  </body>
+</html>
