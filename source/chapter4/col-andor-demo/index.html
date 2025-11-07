@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>여러 개의 조건을 조합할 수 있는 논리 연산자</title>
+</head>
+<body>
+    <script>
+        const hour = 9;
+
+        // 9시에서 12시까지는 '모닝 회원'
+        if(hour >= 9 && hour < 12){
+            console.log('모닝 회원');
+        }
+
+        // 8시, 또는 23시면 '조조＆야간 회원'
+        if(hour === 8 || hour === 23){
+            console.log('조조＆야간 회원');
+        }
+    </script>
+</body>
+</html>

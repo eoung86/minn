@@ -1,0 +1,1 @@
+document.querySelector('#colorText').textContent = `컬러 코드：${document.querySelector('#colorPicker').value}`;

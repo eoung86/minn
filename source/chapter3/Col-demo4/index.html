@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수에서 파라미터 설정도 가능(처리 결과를 반환하기)</title>
+</head>
+<body>
+    <script>
+        const message = (name, weather) => {
+            return `${name}님, 안녕하세요! 오늘은 ${weather}입니다.`;
+        }
+        console.log(message('Mana', '좋은 날씨'));
+        alert(message('타츠야', '비가 오는 날'));
+    </script>
+</body>
+</html>

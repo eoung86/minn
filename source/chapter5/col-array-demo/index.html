@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열을 다루는 메소드</title>
+</head>
+<body>
+    <script>
+        // 배열 마지막 요소 삭제
+        const items1 = ['커피', '홍차', '주스'];
+        items1.pop();
+        console.log(items1);
+
+        // 배열 마지막에 요소 추가
+        const items2 = ['커피', '홍차', '주스'];
+        items2.push('물');
+        console.log(items2);
+
+        // 배열 처음 요소 삭제
+        const items3 = ['커피', '홍차', '주스'];
+        items3.shift();
+        console.log(items3);
+
+        // 배열 처음에 요소 추가
+        const items4 = ['커피', '홍차', '주스'];
+        items4.unshift('물');
+        console.log(items4);
+
+        // 배열 순서를 거꾸로 바꿈
+        const items5 = ['커피', '홍차', '주스'];
+        console.log(items5.reverse());
+
+        // 배열 요소를 합쳐서 문자열 리턴
+        const items6 = ['커피', '홍차', '주스'];
+        console.log(items6.join('와'));
+
+        // 문자열에서 지정한 구분 문자로 나누어 배열 생성
+        console.log('주스와홍차와커피'.split('와'));
+    </script>
+</body>
+</html>
