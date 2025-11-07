@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>컬러 피커</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <p id="colorText">컬러 코드 검색</p>
-        <input id="colorPicker" type="color">
+      <p id="colorText">컬러 코드 검색</p>
+      <input id="colorPicker" type="color" />
     </div>
-</body>
+    <script>
+      let color = document.querySelector("#colorPicker");
+      let txt = document.querySelector("#colorText");
+
+      color.addEventListener("input", function () {
+        console.log(color.value);
+        txt.innerHTML = `컬러 코드 검색 : ${color.value}`;
+        document.querySelector("body").style.backgroundColor = color.value;
+      });
+    </script>
+  </body>
 </html>
