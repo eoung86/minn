@@ -10,6 +10,12 @@ a {
   text-decoration: none;
   color: #333;
 }
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* bg */
 .bg {
   position: fixed;
   top: 0;
@@ -43,13 +49,13 @@ a {
   padding: 8px 20px;
   font-size: 13px;
   color: #777;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #ccc;
   gap: 10px;
   cursor: pointer;
 }
 
 .bg .rogin > li:first-child {
-  border-right: 1px solid;
+  border-right: 1px solid #ccc;
   padding-right: 10px;
 }
 
@@ -151,7 +157,7 @@ a {
   color: #5f4c41;
   font-size: 48px;
 }
-/* top end */
+/* ----------top end------------- */
 
 /* mdl1 */
 #meddle .mdl1 {
@@ -164,7 +170,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #333;
+  border: 1px solid #ccc;
   padding: 80px 0;
 }
 #meddle .mdl1 li {
@@ -172,6 +178,10 @@ a {
   color: #666;
   font-size: 16px;
   line-height: 2;
+  border-left: 1px solid #ccc;
+}
+#meddle .mdl1 li:first-child {
+  border-left: none;
 }
 
 /* mdl2 */
@@ -207,6 +217,7 @@ a {
   padding: 0 80px;
 }
 #meddle .mdl3 .sb3 .sv .sv-txt {
+  width: 584px;
   height: 297px;
   border-bottom: 1px solid #ccc;
   display: flex;
@@ -216,6 +227,10 @@ a {
 #meddle .mdl3 .sb3 .sv:nth-child(2) {
   flex-direction: row-reverse;
   text-align: right;
+  transform: translateX(70px);
+}
+#meddle .mdl3 .sb3 .sv:nth-child(odd) {
+  transform: translateX(-70px);
 }
 #meddle .mdl3 .sb3 .sv .sv-txt h1 {
   color: #5f4c41;
@@ -233,3 +248,147 @@ a {
   color: #666;
   font: 18px;
 }
+
+/* mdl4 */
+#meddle .mdl4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 80px;
+}
+#meddle .mdl4 .sb4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 80px 0;
+}
+#meddle .mdl4 li {
+  padding: 0px 80px;
+  line-height: 2;
+  border-left: 1px solid #ccc;
+}
+#meddle .mdl4 .sb4 > li {
+  border-left: none;
+}
+#meddle .mdl4 .sb4 .sv-txt h1 {
+  font-size: 25px;
+  color: #5f4c41;
+}
+#meddle .mdl4 .sb4 .sv-txt p {
+  font-size: 20px;
+  color: #8a7365;
+}
+#meddle .mdl4 .sb4 .sv-txt span {
+  font-size: 16px;
+  color: #666;
+}
+
+/* mdl5 */
+#meddle .mdl5 .sb5 {
+  display: flex;
+  flex-direction: column;
+}
+#meddle .mdl5 .sb5 .sv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 80px 0 0;
+}
+#meddle .mdl5 .sb5 .sv .sv-img {
+  padding: 0 80px;
+}
+#meddle .mdl5 .sb5 .sv .sv-txt {
+  width: 584px;
+  height: 297px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#meddle .mdl5 .sb5 .sv:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+  transform: translateX(70px);
+}
+#meddle .mdl5 .sb5 .sv:nth-child(2) {
+  transform: translateX(-70px);
+}
+#meddle .mdl5 .sb5 .sv .sv-txt h1 {
+  color: #5f4c41;
+  font-size: 25px;
+}
+#meddle .mdl5 .sb5 .sv .sv-txt li p.txt {
+  color: #222;
+  /* font-size: 20x; */
+}
+#meddle .mdl5 .sb5 .sv .sv-txt li p small {
+  color: #bbb;
+  font-size: 13px;
+}
+#meddle .mdl5 .sb5 .sv .sv-txt li span {
+  color: #666;
+  font: 18px;
+}
+#meddle .mdl5 .sb5 .sv:nth-child(3) {
+  margin-bottom: 50px;
+}
+/* ----------------meddle end----------------- */
+
+/* footer */
+#footer {
+  position: relative;
+}
+#footer .foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 75px 20px;
+  line-height: 2;
+  font-size: 13px;
+  color: #8a7365;
+}
+#footer .foot::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(138, 115, 101, 0.1);
+}
+#footer .foot .txt1 li span:first-child {
+  border-left: none;
+  padding-right: 10px;
+}
+#footer .foot .txt1 li span:nth-child(2),
+#footer .foot .txt1 li span:nth-child(3) {
+  border-left: 1px solid #ccc;
+  padding: 0 10px;
+}
+#footer .foot .txt2 {
+  display: flex;
+  gap: 20px;
+}
+#footer .foot .txt2 li a {
+  color: #8a7365;
+}
+#footer .foot .txt2 .hvr > li::after {
+  content: " ∧";
+  cursor: pointer;
+}
+#footer .foot .txt2 .hvr {
+  position: relative;
+}
+#footer .foot .txt2 .hvr .hv {
+  /* display: none; */
+  position: absolute;
+  bottom: 100%;
+  left: 5px;
+  background: #5f4c41;
+  padding: 10px 20px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+#footer .foot .txt2 .hvr .hv li a {
+  color: #fff;
+  line-height: 2;
+}
+/* footer end */
