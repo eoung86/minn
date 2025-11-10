@@ -119,6 +119,35 @@ a {
 .bg .nav .icon img {
   vertical-align: middle;
 }
+.bg .nav .icon .hover {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.bg .nav .icon .hover .sv {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #5f4c41;
+  border-radius: 15px;
+  padding: 3px 7px;
+  margin-top: 3px;
+}
+.bg .nav .icon .hover .sv p {
+  color: #fff;
+}
+.bg .nav .icon .hover:hover .sv {
+  display: block;
+}
+.bg .nav .icon .hover:hover .sv p:hover {
+  color: #b89a5a;
+}
+/* .hover:hover .sv,
+.hover .sv:hover {
+  display: block;
+} - 후버시 고정예정*/
+
 /* -----------------bg end------------------- */
 
 #mainTxt {
@@ -147,6 +176,7 @@ a {
   }
 }
 /* -----------------top end------------------ */
+
 #meddle {
   background-image: url("http://www.chai797.co.kr/chai/images/main/bg_2.jpg");
 }
@@ -173,6 +203,7 @@ a {
   height: 240px;
   object-fit: cover;
 }
+/* ------------------------------------------ */
 
 #footer {
   background-image: url("http://www.chai797.co.kr/chai/images/main/bg_3.jpg");
