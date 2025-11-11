@@ -166,10 +166,10 @@ body {
 /* search */
 #meddle {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
-#meddle .mdl1 {
+#meddle .mdl {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,8 +181,8 @@ body {
   padding: 20px;
   margin: 80px 0;
 }
-#meddle .mdl1 .search h4,
-#meddle .mdl1 .search .input {
+#meddle .mdl .search h4,
+#meddle .mdl .search .input {
   border: 1px solid #ccc;
   height: 35px;
   font-size: 15px;
@@ -194,10 +194,10 @@ body {
   position: relative;
   border-radius: 4px;
 }
-#meddle .mdl1 .search h4 {
+#meddle .mdl .search h4 {
   width: 150px;
 }
-#meddle .mdl1 .search h4::after {
+#meddle .mdl .search h4::after {
   content: " ";
   /* position: absolute;
   right: 25px;
@@ -206,22 +206,22 @@ body {
   transform-origin: center;
   color: #fff; */
 }
-#meddle .mdl1 .search ul {
+#meddle .mdl .search ul {
   width: 150px;
 }
 
-#meddle .mdl1 .search ul li {
+#meddle .mdl .search ul li {
   display: none;
   color: #fff;
   background-color: #cbb7a8;
   height: 28px;
 }
 
-#meddle .mdl1 .search ul li:hover {
+#meddle .mdl .search ul li:hover {
   color: #fff;
   background-color: #6a4b3b;
 }
-#meddle .mdl1 .search .input {
+#meddle .mdl .search .input {
   text-align: center;
   width: 300px;
   outline: none;
