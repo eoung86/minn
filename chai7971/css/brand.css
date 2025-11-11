@@ -1,0 +1,397 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* bg */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 103px;
+  z-index: 2000;
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: bg 2s ease-out forwards;
+  /* forwards = 애니 끝난 상태 유지 */
+}
+@keyframes bg {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6); /* 하얀색 60% 투명 */
+  z-index: -1; /* nav 내용 뒤에 배치 */
+}
+
+/* rogin */
+.bg .rogin {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #777;
+  border-bottom: 1px solid #ccc;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.bg .rogin > li:first-child {
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+/* nav */
+.bg .nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding-left: 30px;
+}
+
+.bg .nav > li {
+  margin-right: 35px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* text */
+.bg .nav .text {
+  margin-right: auto;
+}
+.bg .nav .text .txt {
+  display: flex;
+  gap: 40px;
+}
+.bg .nav .text .txt li a {
+  font-size: 18px;
+  transition: 0.2s;
+}
+.bg .nav .text .txt li a:hover {
+  color: #b89a5a;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+/* icon */
+.bg .nav .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 20px 20px 0;
+  line-height: 25px;
+}
+.bg .nav .icon li {
+  transition: 0.2s;
+}
+.bg .nav .icon li:hover {
+  color: #b89a5a;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.bg .nav .icon img {
+  vertical-align: middle;
+}
+.bg .nav .icon .hover {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.bg .nav .icon .hover .sv {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  background: #5f4c41;
+  border-radius: 15px;
+  padding: 3px 7px;
+  margin-top: 3px;
+  width: 75px;
+  text-align: center;
+  /* 후버시 클릭전까지 멈춤 */
+}
+.bg .nav .icon .hover .sv p {
+  color: #fff;
+}
+.bg .nav .icon .hover:hover .sv {
+  display: block;
+}
+.bg .nav .icon .hover:hover .sv p:hover {
+  color: #b89a5a;
+}
+/* .hover:hover .sv,
+.hover .sv:hover {
+  display: block;
+} - 후버시 고정예정*/
+
+/* -----------------bg end------------------- */
+#brand {
+  width: 100%;
+}
+
+#top {
+  background-image: url("http://www.chai797.co.kr/chai/images/sub/sub-visual-01.jpg");
+  height: 374px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top h1 {
+  color: #5f4c41;
+  font-size: 48px;
+}
+/* ----------top end------------- */
+
+/* mdl1 */
+#meddle .mdl1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 160px;
+}
+#meddle .mdl1 .sb1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 80px 0;
+}
+#meddle .mdl1 li {
+  padding: 0px 80px;
+  color: #666;
+  font-size: 16px;
+  line-height: 2;
+  border-left: 1px solid #ccc;
+}
+#meddle .mdl1 li:first-child {
+  border-left: none;
+}
+
+/* mdl2 */
+#meddle .mdl2 .sb2 {
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0;
+}
+#meddle .mdl2 .sb2 ul {
+  width: 400px;
+}
+#meddle .mdl2 .sb2 li:nth-child(2) {
+  margin: 20px 0;
+  color: #5f4c41;
+  font-size: 20px;
+}
+#meddle .mdl2 .sb2 li:nth-child(3) {
+  color: #666;
+  font-size: 15px;
+}
+
+/* mdl3 */
+#meddle .mdl3 .sb3 .sv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px 0 0;
+}
+#meddle .mdl3 .sb3 .sv .sv-img {
+  padding: 0 80px;
+}
+#meddle .mdl3 .sb3 .sv .sv-txt {
+  width: 584px;
+  height: 297px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#meddle .mdl3 .sb3 .sv:nth-child(2) {
+  flex-direction: row-reverse;
+  text-align: right;
+  transform: translateX(70px);
+}
+#meddle .mdl3 .sb3 .sv:nth-child(odd) {
+  transform: translateX(-70px);
+}
+#meddle .mdl3 .sb3 .sv .sv-txt h1 {
+  color: #5f4c41;
+  font-size: 25px;
+}
+#meddle .mdl3 .sb3 .sv .sv-txt li p.txt {
+  color: #222;
+  /* font-size: 20x; */
+}
+#meddle .mdl3 .sb3 .sv .sv-txt li p small {
+  color: #bbb;
+  font-size: 13px;
+}
+#meddle .mdl3 .sb3 .sv .sv-txt li span {
+  color: #666;
+  font: 18px;
+}
+
+/* mdl4 */
+#meddle .mdl4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 80px;
+}
+#meddle .mdl4 .sb4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 80px 0;
+}
+#meddle .mdl4 li {
+  padding: 0px 80px;
+  line-height: 2;
+  border-left: 1px solid #ccc;
+}
+#meddle .mdl4 .sb4 > li {
+  border-left: none;
+}
+#meddle .mdl4 .sb4 .sv-txt h1 {
+  font-size: 25px;
+  color: #5f4c41;
+}
+#meddle .mdl4 .sb4 .sv-txt p {
+  font-size: 20px;
+  color: #8a7365;
+}
+#meddle .mdl4 .sb4 .sv-txt span {
+  font-size: 16px;
+  color: #666;
+}
+
+/* mdl5 */
+#meddle .mdl5 .sb5 {
+  display: flex;
+  flex-direction: column;
+}
+#meddle .mdl5 .sb5 .sv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 80px 0 0;
+}
+#meddle .mdl5 .sb5 .sv .sv-img {
+  padding: 0 80px;
+}
+#meddle .mdl5 .sb5 .sv .sv-txt {
+  width: 584px;
+  height: 297px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#meddle .mdl5 .sb5 .sv:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+  transform: translateX(70px);
+}
+#meddle .mdl5 .sb5 .sv:nth-child(2) {
+  transform: translateX(-70px);
+}
+#meddle .mdl5 .sb5 .sv .sv-txt h1 {
+  color: #5f4c41;
+  font-size: 25px;
+}
+#meddle .mdl5 .sb5 .sv .sv-txt li p.txt {
+  color: #222;
+  /* font-size: 20x; */
+}
+#meddle .mdl5 .sb5 .sv .sv-txt li p small {
+  color: #bbb;
+  font-size: 13px;
+}
+#meddle .mdl5 .sb5 .sv .sv-txt li span {
+  color: #666;
+  font: 18px;
+}
+#meddle .mdl5 .sb5 .sv:nth-child(3) {
+  margin-bottom: 50px;
+}
+/* ----------------meddle end----------------- */
+
+/* footer */
+#footer {
+  position: relative;
+}
+#footer .foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 75px 20px;
+  line-height: 2;
+  font-size: 13px;
+  color: #8a7365;
+}
+#footer .foot::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(138, 115, 101, 0.1);
+}
+#footer .foot .txt1 li span:first-child {
+  border-left: none;
+  padding-right: 10px;
+}
+#footer .foot .txt1 li span:nth-child(2),
+#footer .foot .txt1 li span:nth-child(3) {
+  border-left: 1px solid #ccc;
+  padding: 0 10px;
+}
+#footer .foot .txt2 {
+  display: flex;
+  gap: 20px;
+}
+#footer .foot .txt2 li a {
+  color: #8a7365;
+}
+#footer .foot .txt2 .hvr > li::after {
+  content: " ∧";
+  cursor: pointer;
+}
+#footer .foot .txt2 .hvr {
+  position: relative;
+}
+#footer .foot .txt2 .hvr .hv {
+  /* display: none; */
+  position: absolute;
+  bottom: 100%;
+  left: 5px;
+  background: #5f4c41;
+  padding: 10px 20px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+#footer .foot .txt2 .hvr .hv li a {
+  color: #fff;
+  line-height: 2;
+}
+/* footer end */
