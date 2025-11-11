@@ -144,12 +144,13 @@ body {
 } - 후버시 고정예정*/
 
 /* -----------------bg end------------------- */
-#brand {
+
+#branch {
   width: 100%;
 }
 
 #top {
-  background-image: url("http://www.chai797.co.kr/chai/images/sub/sub-visual-01.jpg");
+  background-image: url("http://chai797.co.kr/chai/images/sub/sub-visual-03.jpg");
   height: 374px;
   display: flex;
   justify-content: center;
@@ -160,186 +161,81 @@ body {
   color: #5f4c41;
   font-size: 48px;
 }
-/* ----------top end------------- */
+/* ----------------top end------------------ */
 
-/* mdl1 */
+/* search */
+#meddle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 #meddle .mdl1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 0 160px;
-}
-#meddle .mdl1 .sb1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  padding: 80px 0;
-}
-#meddle .mdl1 li {
-  padding: 0px 80px;
-  color: #666;
-  font-size: 16px;
-  line-height: 2;
-  border-left: 1px solid #ccc;
-}
-#meddle .mdl1 li:first-child {
-  border-left: none;
-}
-
-/* mdl2 */
-#meddle .mdl2 .sb2 {
-  background: #f7f7f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 80px 0;
+  gap: 15px;
+  width: 1160px;
+  height: 34px;
+  background: rgba(138, 115, 101, 0.1);
+  padding: 20px;
+  margin: 80px 0;
 }
-#meddle .mdl2 .sb2 ul {
-  width: 400px;
-}
-#meddle .mdl2 .sb2 li:nth-child(2) {
-  margin: 20px 0;
-  color: #5f4c41;
-  font-size: 20px;
-}
-#meddle .mdl2 .sb2 li:nth-child(3) {
-  color: #666;
-  font-size: 15px;
-}
-
-/* mdl3 */
-#meddle .mdl3 .sb3 .sv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 80px 0 0;
-}
-#meddle .mdl3 .sb3 .sv .sv-img {
-  padding: 0 80px;
-}
-#meddle .mdl3 .sb3 .sv .sv-txt {
-  width: 584px;
-  height: 297px;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#meddle .mdl3 .sb3 .sv:nth-child(2) {
-  flex-direction: row-reverse;
-  text-align: right;
-  transform: translateX(70px);
-}
-#meddle .mdl3 .sb3 .sv:nth-child(odd) {
-  transform: translateX(-70px);
-}
-#meddle .mdl3 .sb3 .sv .sv-txt h1 {
-  color: #5f4c41;
-  font-size: 25px;
-}
-#meddle .mdl3 .sb3 .sv .sv-txt li p.txt {
-  color: #222;
-  /* font-size: 20x; */
-}
-#meddle .mdl3 .sb3 .sv .sv-txt li p small {
-  color: #bbb;
-  font-size: 13px;
-}
-#meddle .mdl3 .sb3 .sv .sv-txt li span {
-  color: #666;
-  font: 18px;
-}
-
-/* mdl4 */
-#meddle .mdl4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 120px 0 80px;
-}
-#meddle .mdl4 .sb4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#meddle .mdl1 .search h4,
+#meddle .mdl1 .search .input {
   border: 1px solid #ccc;
-  padding: 80px 0;
-}
-#meddle .mdl4 li {
-  padding: 0px 80px;
-  line-height: 2;
-  border-left: 1px solid #ccc;
-}
-#meddle .mdl4 .sb4 > li {
-  border-left: none;
-}
-#meddle .mdl4 .sb4 .sv-txt h1 {
-  font-size: 25px;
-  color: #5f4c41;
-}
-#meddle .mdl4 .sb4 .sv-txt p {
-  font-size: 20px;
-  color: #8a7365;
-}
-#meddle .mdl4 .sb4 .sv-txt span {
-  font-size: 16px;
-  color: #666;
-}
-
-/* mdl5 */
-#meddle .mdl5 .sb5 {
-  display: flex;
-  flex-direction: column;
-}
-#meddle .mdl5 .sb5 .sv {
+  height: 35px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #8c6f5e;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  border-radius: 4px;
+}
+#meddle .mdl1 .search h4 {
+  width: 150px;
+}
+#meddle .mdl1 .search h4::after {
+  content: " ";
+  /* position: absolute;
+  right: 25px;
+  font-size: 12px;
+  transform: rotate(90deg);
+  transform-origin: center;
+  color: #fff; */
+}
+#meddle .mdl1 .search ul {
+  width: 150px;
+}
 
-  margin: 80px 0 0;
+#meddle .mdl1 .search ul li {
+  display: none;
+  color: #fff;
+  background-color: #cbb7a8;
+  height: 28px;
 }
-#meddle .mdl5 .sb5 .sv .sv-img {
-  padding: 0 80px;
+
+#meddle .mdl1 .search ul li:hover {
+  color: #fff;
+  background-color: #6a4b3b;
 }
-#meddle .mdl5 .sb5 .sv .sv-txt {
-  width: 584px;
-  height: 297px;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#meddle .mdl1 .search .input {
+  text-align: center;
+  width: 300px;
+  outline: none;
 }
-#meddle .mdl5 .sb5 .sv:nth-child(odd) {
-  flex-direction: row-reverse;
-  text-align: right;
-  transform: translateX(70px);
-}
-#meddle .mdl5 .sb5 .sv:nth-child(2) {
-  transform: translateX(-70px);
-}
-#meddle .mdl5 .sb5 .sv .sv-txt h1 {
-  color: #5f4c41;
-  font-size: 25px;
-}
-#meddle .mdl5 .sb5 .sv .sv-txt li p.txt {
-  color: #222;
-  /* font-size: 20x; */
-}
-#meddle .mdl5 .sb5 .sv .sv-txt li p small {
-  color: #bbb;
+.input::placeholder {
+  color: #fff;
   font-size: 13px;
 }
-#meddle .mdl5 .sb5 .sv .sv-txt li span {
-  color: #666;
-  font: 18px;
+.input:focus {
+  border-color: #fff;
 }
-#meddle .mdl5 .sb5 .sv:nth-child(3) {
-  margin-bottom: 50px;
-}
-/* ----------------meddle end----------------- */
 
-/* footer */
+/* ---------------meddle end----------------- */
+
 #footer {
   position: relative;
 }
