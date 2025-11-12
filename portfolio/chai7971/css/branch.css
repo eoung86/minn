@@ -3,6 +3,15 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "BookkGothic";
+  src: url("/webfonts/BookkGothic_Light.woff") format("woff2");
+}
+
+@font-face {
+  font-family: "BookkGothic";
+  src: url("/webfonts/BookkGothic_Bold.woff") format("woff2");
+}
 ul {
   list-style: none;
 }
@@ -49,6 +58,8 @@ body {
   padding: 8px 20px;
   font-size: 13px;
   color: #777;
+  font-family: "BookkGothic";
+  font-weight: 700;
   border-bottom: 1px solid #ccc;
   gap: 10px;
   cursor: pointer;
@@ -86,10 +97,14 @@ body {
 .bg .nav .text .txt li a {
   font-size: 18px;
   transition: 0.2s;
+  font-family: "BookkGothic";
+  font-weight: 700;
 }
 .bg .nav .text .txt li a:hover {
   color: #b89a5a;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  font-family: "BookkGothic";
+  font-weight: 700;
+  /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
 }
 
 /* icon */
@@ -106,7 +121,7 @@ body {
 }
 .bg .nav .icon li:hover {
   color: #b89a5a;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
 }
 .bg .nav .icon img {
   vertical-align: middle;
@@ -137,12 +152,13 @@ body {
 }
 .bg .nav .icon .hover:hover .sv p:hover {
   color: #b89a5a;
+  font-family: "BookkGothic";
+  font-weight: 700;
 }
 /* .hover:hover .sv,
 .hover .sv:hover {
   display: block;
 } - 후버시 고정예정*/
-
 /* -----------------bg end------------------- */
 
 #branch {
@@ -160,6 +176,8 @@ body {
 #top h1 {
   color: #5f4c41;
   font-size: 48px;
+  font-family: "BookkGothic";
+  font-style: italic;
 }
 /* ----------------top end------------------ */
 
@@ -240,8 +258,81 @@ body {
   border-color: #fff;
 }
 
+/* map */
+#meddle .map {
+  border: 1px solid #8c6f5e;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 500px;
+}
+
+/* place */
+#meddle .place {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  /* margin: 150px 0; */
+  font-family: "BookkGothic";
+}
+#meddle .place .plc {
+  margin-top: 100px;
+}
+#meddle .place .plc img {
+  border-radius: 15px;
+  border: 1px solid #8c6f5e;
+  cursor: pointer;
+}
+#meddle .place .txt {
+  margin: 20px;
+  line-height: 1.3;
+  font-size: 13px;
+  color: #333;
+  /* cursor: pointer; */
+}
+#meddle .place .txt h4 {
+  font-size: 19px;
+  font-weight: bold;
+  color: #6a4b3b;
+  padding: 0 0 5px 0;
+}
+#meddle .place .hvr {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  gap: 25px;
+  max-height: 0;
+  opacity: 0;
+}
+#meddle .place .hvr p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#meddle .place .hvr p img {
+  width: 180px;
+  border: none;
+}
+#meddle .place .hvr .sb {
+  display: flex;
+  flex-direction: column;
+}
+#meddle .place .hvr .sb-txt {
+  display: flex;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#meddle .place .hvr .sb h4 {
+  width: 88px;
+  font-weight: bold;
+  color: #6a4b3b;
+}
+#meddle .place .hvr .sb ul li {
+  color: #333;
+}
+
 /* ---------------meddle end----------------- */
 
+/* footer */
 #footer {
   position: relative;
 }
@@ -251,7 +342,9 @@ body {
   padding: 25px 75px 20px;
   line-height: 2;
   font-size: 13px;
-  color: #8a7365;
+  color: #333;
+  font-family: "BookkGothic";
+  font-weight: 300;
 }
 #footer .foot::after {
   position: absolute;
@@ -266,7 +359,7 @@ body {
 }
 #footer .foot .txt1 li span:nth-child(2),
 #footer .foot .txt1 li span:nth-child(3) {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #333;
   padding: 0 10px;
 }
 #footer .foot .txt2 {
@@ -277,6 +370,8 @@ body {
 }
 #footer .foot .txt2 li a {
   color: #333;
+  font-family: "BookkGothic";
+  font-weight: 300;
 }
 #footer .foot .txt2 .hvr {
   position: absolute;
@@ -309,5 +404,7 @@ body {
 #footer .foot .txt2 .hvr .hv li a {
   color: #fff;
   line-height: 2;
+  font-family: "BookkGothic";
+  font-weight: 300;
 }
 /* footer end */

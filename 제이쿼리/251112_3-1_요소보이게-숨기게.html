@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소의 보이기/숨기기</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+    <style>
+      p {
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <p>제이쿼리</p>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="toggle">toggle</button>
+    <script>
+      $("#hide").click(function () {
+        $("p").hide(1000, "swing", function () {
+          alert("hide작업완료");
+        });
+        //hide - 시간,속도(기본값-swing/생략가능),콜백함수(생략가능)
+        //요소를 숨기기
+      });
+      $("#show").click(function () {
+        $("p").show(1000, "swing", function () {
+          alert("show작업완료");
+        });
+        // 요소를 보이게
+      });
+      $("#toggle").click(function () {
+        $("p").toggle(1000, "easeInOutBounce");
+      });
+      // toggle - 요소를 숨기고,보이게 (hide, show를 번갈아가며 실행)
+    </script>
+  </body>
+</html>
