@@ -302,6 +302,14 @@ body {
   gap: 25px;
   max-height: 0;
   opacity: 0;
+  overflow: hidden;
+  transform: translateY(-15px);
+  transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+}
+#meddle .place .plc img:hover ~ .hvr {
+  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0);
 }
 #meddle .place .hvr p {
   display: flex;
