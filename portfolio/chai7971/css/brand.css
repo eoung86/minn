@@ -356,6 +356,7 @@ body {
   content: "";
   inset: 0;
   background: rgba(138, 115, 101, 0.1);
+  z-index: -1;
 }
 #footer .foot .txt1 li span:first-child {
   border-left: none;
@@ -367,27 +368,40 @@ body {
   padding: 0 10px;
 }
 #footer .foot .txt2 {
+  position: relative;
   display: flex;
   gap: 20px;
+  color: #333;
 }
 #footer .foot .txt2 li a {
-  color: #8a7365;
+  color: #333;
+}
+#footer .foot .txt2 .hvr {
+  position: absolute;
+  right: -50px;
+  bottom: 90px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background: #5f4c41;
+  z-index: 100;
+  border-radius: 10px;
+  /* top: -100%; */
 }
 #footer .foot .txt2 .hvr > li::after {
   content: " ∧";
   cursor: pointer;
 }
-#footer .foot .txt2 .hvr {
-  position: relative;
-}
 #footer .foot .txt2 .hvr .hv {
   /* display: none; */
-  position: absolute;
-  bottom: 100%;
-  left: 5px;
-  background: #5f4c41;
+  /* position: absolute;
+  bottom: 50px;
+  right: 0px;*/
+  /* height: 0; */
+  /* overflow: hidden; */
+
   padding: 10px 20px;
-  border-radius: 10px;
+
   white-space: nowrap;
 }
 #footer .foot .txt2 .hvr .hv li a {

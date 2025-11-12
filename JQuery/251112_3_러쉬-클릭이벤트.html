@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러쉬-클릭이벤트</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      div {
+        height: 720px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover; /*배경이미지 꽉채우기*/
+      }
+      /* display: flex; align-items: center; justify-content: center; - 가운데정렬*/
+      div ul.list {
+        width: 894px;
+        height: 454px;
+        display: flex;
+        gap: 94px 177px;
+        flex-wrap: wrap;
+      }
+      div ul.list li {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bg {
+        background-color: #222;
+      }
+      .bg1 {
+        background-image: url(https://weare.lush.co.kr/images/main_value01.jpg);
+      }
+      .bg2 {
+        background-image: url(https://weare.lush.co.kr/images/main_value02.jpg);
+      }
+      .bg3 {
+        background-image: url(https://weare.lush.co.kr/images/main_value03.jpg);
+      }
+      .bg4 {
+        background-image: url(https://weare.lush.co.kr/images/main_value04.jpg);
+      }
+      .bg5 {
+        background-image: url(https://weare.lush.co.kr/images/main_value06.jpg);
+      }
+      .bg6 {
+        background-image: url(https://weare.lush.co.kr/images/main_value05.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="list">
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value01.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value02.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value03.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value04.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value05.svg"
+              alt=""
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://weare.lush.co.kr/images/ico_main_value06.svg"
+              alt=""
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      //v - 클릭한(할) 'li' k - 매개변수
+      /* document.querySelectorAll(".list li").forEach(function (v, k, ar) {
+        v.classList.add("bg");
+
+        v.onclick = function () {
+          ar.forEach(function (v) {
+            v.classList.remove("bg");
+          });
+          v.classList.add("bg");
+      'v.onclick부터)  클릭한 배경 제외한 나머지 없애기'
+          ar.forEach - ar 이 배열일 때 하나씩 꺼내서 반복 실행
+          Function(실행할값){코드입력} 는 코드를 한 덩어리로 묶어서 나중에 실행할 수 있게 하는 것
+
+          document
+            .querySelector("div")
+            .classList.remove("bg1", "bg2", "bg3", "bg4", "bg5", "bg6"); //제거
+          document.querySelector("div").classList.add("bg" + (k + 1)); //생성
+        };
+      }); - 자바스크립트*/
+      // -------------------------------------------------------------------------------------
+
+      // 제이쿼리
+      $(".list li").addClass("bg");
+      $(".list li").hover(function () {
+        let i = $(this).index();
+        console.log(i);
+      });
+    </script>
+  </body>
+</html>
