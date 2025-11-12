@@ -136,23 +136,14 @@
 
       // 제이쿼리
       $(".list li").addClass("bg");
-      $(".list li").hover(
-        function () {
-          let i = $(this).index();
-          console.log(i);
-          $(".list li").removeClass("bg");
-          $(this).addClass("bg");
-          $(".div").removeClass();
-          $(".div").addClass("bg" + (i + 1));
-        },
-        function () {
-          $(".list li").addClass("bg");
-        }
-      );
-      $("div").hover(
-        function () {},
-        function () {}
-      );
+      $(".list li").hover(function () {
+        let i = $(this).index();
+        console.log(i);
+        $(".list li").removeClass("bg");
+        $(this).addClass("bg");
+        $(".div").removeClass();
+        $(".div").addClass("bg" + (i + 1));
+      });
     </script>
   </body>
 </html>
