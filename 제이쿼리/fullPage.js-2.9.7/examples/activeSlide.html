@@ -28,20 +28,8 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $("#fullpage").fullpage({
-          sectionsColor: [
-            "#1bbc9b",
-            "#4BBFC3",
-            "#7BAABE",
-            "whitesmoke",
-            "#ccddff",
-          ],
-          anchors: [
-            "firstPage",
-            "secondPage",
-            "3rdPage",
-            "4thpage",
-            "lastPage",
-          ],
+          sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
+          anchors: ["firstPage", "secondPage", "3rdPage", "4rdPage"],
           menu: "#menu",
         });
       });
@@ -56,6 +44,7 @@
         <a href="#secondPage">Second slide</a>
       </li>
       <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+      <li data-menuanchor="4rdPage"><a href="#4rdPage">4번째 slide</a></li>
     </ul>
 
     <div id="fullpage">
@@ -82,6 +71,12 @@
         </div>
       </div>
       <div class="section" id="section2">
+        <div class="intro">
+          <h1>Scroll Down</h1>
+          <p>And it will animate down to the first section</p>
+        </div>
+      </div>
+      <div class="section fp-auto-height" id="section3">
         <div class="intro">
           <h1>Scroll Down</h1>
           <p>And it will animate down to the first section</p>

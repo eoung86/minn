@@ -7,7 +7,6 @@
   font-family: "BookkGothic";
   src: url("/webfonts/BookkGothic_Light.woff") format("woff2");
 }
-
 @font-face {
   font-family: "BookkGothic";
   src: url("/webfonts/BookkGothic_Bold.woff") format("woff2");
@@ -19,11 +18,23 @@ a {
   text-decoration: none;
   color: #333;
 }
+html {
+  overflow-y: hidden;
+}
 html,
 body {
-  scroll-behavior: smooth;
   height: 100%;
-  /* overflow: visible; */
+}
+
+/* Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* top */
@@ -36,10 +47,7 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
-
-/* bg */
-/* bg */
+} /* bg */
 .bg {
   position: fixed;
   top: 0;
@@ -49,8 +57,7 @@ body {
   z-index: 2000;
   transform: translateY(-50px);
   opacity: 0;
-  animation: bg 2s ease-out forwards;
-  /* forwards = 애니 끝난 상태 유지 */
+  animation: bg 2s ease-out forwards; /* forwards = 애니 끝난 상태 유지 */
 }
 @keyframes bg {
   to {
@@ -64,28 +71,23 @@ body {
   inset: 0;
   background: rgba(255, 255, 255, 0.6); /* 하얀색 60% 투명 */
   z-index: -1; /* nav 내용 뒤에 배치 */
-}
-
-/* rogin */
+} /* rogin */
 .bg .rogin {
   display: flex;
   justify-content: flex-end;
   padding: 8px 20px;
-  font-size: 13px;
-  color: #777;
+  font-size: 14px;
   font-family: "BookkGothic";
   font-weight: 700;
+  color: #777;
   border-bottom: 1px solid #ccc;
   gap: 10px;
   cursor: pointer;
 }
-
 .bg .rogin > li:first-child {
   border-right: 1px solid #ccc;
   padding-right: 10px;
-}
-
-/* nav */
+} /* nav */
 .bg .nav {
   width: 100%;
   display: flex;
@@ -94,14 +96,11 @@ body {
   gap: 50px;
   padding-left: 30px;
 }
-
 .bg .nav > li {
   margin-right: 35px;
   cursor: pointer;
   white-space: nowrap;
-}
-
-/* text */
+} /* text */
 .bg .nav .text {
   margin-right: auto;
 }
@@ -116,13 +115,10 @@ body {
   font-weight: 700;
 }
 .bg .nav .text .txt li a:hover {
-  color: #b89a5a;
+  color: #b89a5a; /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
   font-family: "BookkGothic";
   font-weight: 700;
-  /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
-}
-
-/* icon */
+} /* icon */
 .bg .nav .icon {
   display: flex;
   align-items: center;
@@ -135,8 +131,7 @@ body {
   transition: 0.2s;
 }
 .bg .nav .icon li:hover {
-  color: #b89a5a;
-  /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
+  color: #b89a5a; /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
 }
 .bg .nav .icon img {
   vertical-align: middle;
@@ -145,6 +140,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  font-family: "BookkGothic";
+  font-weight: 700;
 }
 .bg .nav .icon .hover .sv {
   display: none;
@@ -154,29 +151,17 @@ body {
   background: #5f4c41;
   border-radius: 15px;
   padding: 3px 7px;
-  margin-top: 3px;
+  margin-top: 13px;
   width: 75px;
-  text-align: center;
-  /* 후버시 클릭전까지 멈춤 */
 }
 .bg .nav .icon .hover .sv a {
   color: #fff;
-}
-.bg .nav .icon .hover:hover .sv a {
-  display: block;
-}
+} /* .bg .nav .icon .hover:hover .sv { display: block; } */
 .bg .nav .icon .hover:hover .sv a:hover {
   color: #b89a5a;
   font-family: "BookkGothic";
   font-weight: 700;
-}
-/* .hover:hover .sv,
-.hover .sv:hover {
-  display: block;
-} - 후버시 고정예정*/
-
-/* -----------------bg end------------------- */
-
+} /* .hover:hover .sv, .hover .sv:hover { display: block; } - 후버시 고정예정*/ /* -----------------bg end------------------- */
 #mainTxt {
   position: absolute;
   bottom: 0;
@@ -193,17 +178,14 @@ body {
   object-fit: cover;
   transform: translateY(-50px);
   opacity: 0;
-  animation: slide 2.5s ease-out forwards;
-  /* forwards = 애니 끝난 상태 유지 */
+  animation: slide 2.5s ease-out forwards; /* forwards = 애니 끝난 상태 유지 */
 }
 @keyframes slide {
   to {
     transform: translateY(0);
     opacity: 1;
   }
-}
-/* -----------------top end------------------ */
-
+} /* -----------------top end------------------ */
 #meddle,
 #footer {
   width: 100%;
@@ -229,7 +211,7 @@ body {
   height: 240px;
   object-fit: cover;
 }
-/* ---------------middle&footer--------------------- */
+/* ---------------meddle&footer--------------------- */
 
 #footer {
   position: relative;
@@ -288,23 +270,15 @@ body {
   transition: 0.5s;
   background: #5f4c41;
   z-index: 100;
-  border-radius: 10px;
-  /* top: -100%; */
+  border-radius: 10px; /* top: -100%; */
 }
 #footer .foot .txt2 .hvr > li::after {
   content: " ∧";
   cursor: pointer;
 }
 #footer .foot .txt2 .hvr .hv {
-  /* display: none; */
-  /* position: absolute;
-  bottom: 50px;
-  right: 0px;*/
-  /* height: 0; */
-  /* overflow: hidden; */
-
+  /* display: none; */ /* position: absolute; bottom: 50px; right: 0px;*/ /* height: 0; */ /* overflow: hidden; */
   padding: 10px 20px;
-
   white-space: nowrap;
 }
 #footer .foot .txt2 .hvr .hv li a {
@@ -312,8 +286,7 @@ body {
   line-height: 2;
   font-family: "BookkGothic";
   font-weight: 700;
-}
-/* footer end */
+} /* footer end */
 
 /* dot navigation */
 .dot-nav {
@@ -339,50 +312,14 @@ body {
   transform: scale(1.3);
 }
 
-/* mid-img, foot-img 위에서 아래로 등장 */
-.mid-img img,
-.foot-img img {
+.med-img img,
+.foot-img img,
+#mainTxt p img {
   opacity: 0;
   transform: translateY(-50px);
-  transition: 1.2s ease;
+  transition: 1.5s ease;
 }
 .show-img img {
   opacity: 1;
   transform: translateY(0);
-}
-/* dot navigation */
-.dot-nav {
-  position: fixed;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 3000;
-}
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-  transition: 0.3s;
-}
-.dot.active {
-  background: #b89a5a;
-  transform: scale(1.3);
-}
-
-/* 이미지 등장 애니메이션 */
-.mid-img img,
-.foot-img img,
-#mainTxt img {
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: 1.2s ease;
-}
-.show-img {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
 }

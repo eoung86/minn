@@ -24,6 +24,9 @@
       section:nth-child(3) {
         background: #00f;
       }
+      #foot {
+        height: 500px;
+      }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
@@ -48,7 +51,7 @@
                   ht = $(current).prev().offset().top;
                 } catch (error) {}
             }
-            $("html,body").stop().animate({ scrollTop: ht }, 500);
+            $("html,body").stop().animate({ scrollTop: ht }, 1000);
           });
         });
       });
