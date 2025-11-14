@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        /* overflow: hidden; */
+      }
+      section {
+        height: 100vh;
+      }
+      section:first-child {
+        background: #f00;
+      }
+      section:nth-child(2) {
+        background: #0f0;
+      }
+      section:nth-child(3) {
+        background: #00f;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      // each - 선택되어있는 선택자한테 직접적으로 적용
+      $(function () {
+        $("section").each(function (k) {
+          $(this).on("wheel", function () {
+            console.log(event.wheelDelta);
+            let ht = $(window).scrollTop();
+            let current = $("section").eq(k);
+            if (event.wheelDelta < 0) {
+              //마우스휠을 아래로
+              if ($(current).next() != undefined) {
+                try {
+                  ht = $(current).next().offset().top;
+                } catch (error) {}
+              }
+            } else {
+              //마우스휠을 위로
+              if ($(current).prev() != undefined)
+                try {
+                  ht = $(current).prev().offset().top;
+                } catch (error) {}
+            }
+            $("html,body").stop().animate({ scrollTop: ht }, 500);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section></section>
+    <section></section>
+    <section></section>
+  </body>
+</html>
