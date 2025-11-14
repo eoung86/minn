@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 500px;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 1s;
+      }
+      p.bg {
+        background: #f00;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- <script src="jquery-ui.min.js"></script> -->
+    <script>
+      $(function () {});
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>제이쿼리</p>
+    </div>
+    <button id="slideleft">slideleft</button>
+    <button id="slideright">slideright</button>
+    <button id="slide">slidetoggle</button>
+    <button id="bg">백그라운드색변경</button>
+    <script>
+      $("#slideleft").click(function () {
+        $("p").animate({ width: "0" }, 1000);
+      });
+      $("#slideright").click(function () {
+        $("p").animate({ width: "100%" }, 1000);
+      });
+      $("#slide").click(function () {
+        if ($("p").width() > 0) {
+          $("p").animate({ width: "0" }, 1000);
+        } else {
+          $("p").animate({ width: "100%" }, 1000);
+        }
+      });
+      $("#bg").click(function () {
+        //$("p").animate({ backgroundColor: "#f00" }, 1000);
+        $("p").addClass("bg");
+      });
+    </script>
+  </body>
+</html>

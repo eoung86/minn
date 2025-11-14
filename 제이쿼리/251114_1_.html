@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      nav > ul {
+        display: flex;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $(".sub").slideUp();
+        $("nav>ul>li").hover(
+          function () {
+            $(".sub").stop().slideDown();
+          },
+          function () {
+            $(".sub").stop().slideUp();
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="">메인메뉴1</a>
+          <ul class="sub">
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴1</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">메인메뉴2</a>
+          <ul class="sub">
+            <li><a href="">메뉴2</a></li>
+            <li><a href="">메뉴2</a></li>
+            <li><a href="">메뉴2</a></li>
+            <li><a href="">메뉴2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">메인메뉴3</a>
+          <ul class="sub">
+            <li><a href="">메뉴3</a></li>
+            <li><a href="">메뉴3</a></li>
+            <li><a href="">메뉴3</a></li>
+            <li><a href="">메뉴3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">메인메뉴4</a>
+          <ul class="sub">
+            <li><a href="">메뉴4</a></li>
+            <li><a href="">메뉴4</a></li>
+            <li><a href="">메뉴4</a></li>
+            <li><a href="">메뉴4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
