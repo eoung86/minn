@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 50px;
+        height: 50px;
+        background: #ccc;
+        position: relative;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("p").animate({ left: "500px" }, 3000).animate({ top: "500px" }, 3000);
+        $("#stop1").click(function () {
+          $("p").stop(true, true);
+        });
+        $("#stop2").click(function () {
+          $("p").stop(true, false);
+        });
+        $("#stop3").click(function () {
+          $("p").stop(false, true);
+        });
+        $("#stop4").click(function () {
+          //$("p").stop(false, false);//기본값
+          $("p").stop();
+        });
+        console.log($("input").val());
+        $("div").attr("class", "con").after("뒤에추가").empty();
+        console.log($("div").attr("id", "change"));
+        console.log($("button").data("num"));
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="stop1" data-num="10">truetrue</button>
+    <button id="stop2">truefalse</button>
+    <button id="stop3">falsetrue</button>
+    <button id="stop4">falsefalse</button>
+    <input type="text" value="input태그" />
+    <div id="demo">dfhdfhdhdfh</div>
+  </body>
+</html>
