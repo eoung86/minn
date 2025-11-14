@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* button:nth-child(1) {
+        background-color: #f00;
+      }*/
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("button").each(function (k, v) {
+          console.log(v);
+          $(v).css({ "background-color": $(v).text() });
+          $(v).click(function () {
+            $("body").css({ "background-color": $(v).text() });
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="stop1">#f00</button>
+    <button id="stop2">#0f0</button>
+    <button id="stop3">#00f</button>
+  </body>
+</html>
