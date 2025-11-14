@@ -308,7 +308,7 @@ body {
   transition: 0.3s;
 }
 .dot.active {
-  background: #b89a5a;
+  background: #8f7035;
   transform: scale(1.3);
 }
 
