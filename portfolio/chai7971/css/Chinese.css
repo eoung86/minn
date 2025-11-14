@@ -158,13 +158,13 @@ body {
   margin-top: 13px;
   width: 75px;
 }
-.bg .nav .icon .hover .sv p {
+.bg .nav .icon .hover .sv a {
   color: #fff;
 }
 /* .bg .nav .icon .hover:hover .sv {
   display: block;
 } */
-.bg .nav .icon .hover:hover .sv p:hover {
+.bg .nav .icon .hover:hover .sv a:hover {
   color: #b89a5a;
   font-family: "BookkGothic";
   font-weight: 700;

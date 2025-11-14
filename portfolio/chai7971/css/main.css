@@ -21,7 +21,9 @@ a {
 }
 html,
 body {
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
+  /* overflow: visible; */
 }
 
 /* top */
@@ -158,13 +160,13 @@ body {
   margin-top: 13px;
   width: 75px;
 }
-.bg .nav .icon .hover .sv p {
+.bg .nav .icon .hover .sv a {
   color: #fff;
 }
 /* .bg .nav .icon .hover:hover .sv {
   display: block;
 } */
-.bg .nav .icon .hover:hover .sv p:hover {
+.bg .nav .icon .hover:hover .sv a:hover {
   color: #b89a5a;
   font-family: "BookkGothic";
   font-weight: 700;
@@ -313,3 +315,39 @@ body {
   font-weight: 700;
 }
 /* footer end */
+
+/* dot navigation */
+.dot-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 3000;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dot.active {
+  background: #b89a5a;
+  transform: scale(1.3);
+}
+
+/* mid-img, foot-img 위에서 아래로 등장 */
+.mid-img img,
+.foot-img img {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: 1.2s ease;
+}
+.show-img img {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -133,7 +133,7 @@ body {
 .bg .nav .icon li {
   transition: 0.2s;
 }
-.bg .nav .icon li :hover {
+.bg .nav .icon li:hover {
   color: #b89a5a;
   /* text-shadow: 0 0 4px rgba(0, 0, 0, 0.15); */
 }
@@ -158,13 +158,13 @@ body {
   margin-top: 13px;
   width: 75px;
 }
-.bg .nav .icon .hover .sv p a {
+.bg .nav .icon .hover .sv a {
   color: #fff;
 }
 /* .bg .nav .icon .hover:hover .sv {
   display: block;
 } */
-.bg .nav .icon .hover:hover .sv p a:hover {
+.bg .nav .icon .hover:hover .sv a:hover {
   color: #b89a5a;
   font-family: "BookkGothic";
   font-weight: 700;
