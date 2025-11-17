@@ -11,18 +11,17 @@ a {
   color: #333;
 }
 #woodin {
-  width: 1920px;
+  width: 1897px;
   height: 100vh;
   background: #f3f3f3;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 /* nav */
 #nav {
-  width: 1920px;
+  width: 100%;
   display: flex;
   cursor: pointer;
-  padding-top: 30px;
   position: fixed;
   top: 0;
   left: 0;
@@ -52,14 +51,14 @@ a {
 #nav .menu span {
   display: inline-block;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 20px;
+  /* font-weight: bold; */
+  font-size: 18px;
 }
 #nav .drop {
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 8px;
+  padding: 13px;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -68,9 +67,10 @@ a {
   display: flex;
   gap: 50px;
   background: transparent;
-  background-color: rgba(243, 243, 243, 0.7);
+  background-color: rgba(243, 243, 243, 0.9);
   width: auto;
   border-radius: 15px;
+  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.1);
 }
 #nav .menu:hover .drop {
   opacity: 1;
@@ -96,10 +96,7 @@ a {
 #nav .nav-icon {
   display: flex;
   padding-right: 50px;
-  /* gap: 25px; */
-}
-#nav .nav-icon .lang {
-  width: 100px;
+  gap: 25px;
 }
 #nav .nav-icon img {
   width: 23px;
@@ -116,13 +113,13 @@ a {
   text-align: left;
   font-size: 18px;
   opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
   transform: translateY(5px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 #nav .nav-icon .lang:hover .lang-sv {
   opacity: 1;
-  visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
 }
 #nav .nav-icon .lang-sv a:hover {
@@ -132,7 +129,7 @@ a {
 /* ---------------nav end----------------- */
 
 #top {
-  width: 1920px;
+  width: 100%;
   height: 800px;
   background-image: url("http://www.wood.co.kr/data/main/file1_16450763511qly671qvc.jpg");
   border-radius: 20px;
@@ -223,11 +220,31 @@ a {
   left: 0;
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
 }
 #meddle1 .img-txt p {
   padding-left: 40px;
+}
+
+#meddle1 h1,
+#meddle2 h1,
+#meddle3 h1 {
+  font-size: 22px;
+  font-weight: lighter;
+}
+#meddle1 .med1-txt p,
+#meddle2 p,
+#meddle3 p {
+  font-size: 56px;
+  font-weight: lighter;
+  margin: 30px 0 25px;
+  line-height: 1.2;
+}
+#meddle1 span,
+#meddle2 span {
+  font-size: 15px;
+  color: #555;
 }
 /* -----------------meddle1 end-------------------- */
 
@@ -246,6 +263,20 @@ a {
   gap: 20px;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+#meddle2 .med2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  width: 450px;
+  height: 450px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
 }
 #meddle2 .med2-img {
   width: 430px;
@@ -269,4 +300,88 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* ------------------meddel2 end------------------- */
+
+#meddle3 {
+  width: 100%;
+  height: 100vh;
+  background: #111;
+}
+#meddle3 .med3 {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#meddle3 .med3-txt {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+#meddle3 .med3-txt span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+#meddle3 .med3-txt a {
+  position: relative;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 15px;
+  padding-bottom: 3px;
+}
+#meddle3 .med3-txt a::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: width 0.5s ease;
+}
+#meddle3 .med3-txt a:hover::after {
+  width: 100%;
+}
+#meddle3 .med3-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#meddle3 .med3-img img {
+  width: auto;
+  height: 80%;
+  border-radius: 8px;
+}
+/* -------------meddle3 end-------------- */
+
+#meddle4 {
+  width: 100%;
+  height: 100vh;
+}
+#meddle4 .med4 {
+  color: #333;
+}
+#meddle4 .med4-txt {
+  margin: 300px 0 0 20px;
+}
+#meddle4 .med4-txt p {
+  font-size: 20px;
+}
+#meddle4 .med4-txt h1 {
+  font-size: 56px;
+}
+#meddle4 .med4-img {
+  display: flex;
+}
+#meddle4 .med4-item {
+  margin: 20px 20px 0;
+}
+#meddle4 .med4-item p {
+  margin-top: 10px;
+  font-size: 18px;
 }
