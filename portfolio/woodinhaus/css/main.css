@@ -129,7 +129,7 @@ a {
   color: #467f5a;
   font-weight: bold;
 }
-/* nav end */
+/* ---------------nav end----------------- */
 
 #top {
   width: 1920px;
@@ -150,7 +150,7 @@ a {
   line-height: 1.5;
   font-size: 55px;
 }
-/* top end */
+/* ---------------top end------------------- */
 
 /* meddle1 */
 #meddle1 {
@@ -228,4 +228,45 @@ a {
 }
 #meddle1 .img-txt p {
   padding-left: 40px;
+}
+/* -----------------meddle1 end-------------------- */
+
+/* meddle2 */
+#meddle2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#meddle2 .med2 {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#meddle2 .med2-img {
+  width: 430px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+#meddle2 .med2-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 1s ease;
+}
+#meddle2 .med2-img:hover img {
+  transform: scale(1.2);
+}
+#meddle2 .med2-txt {
+  grid-column: span 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
