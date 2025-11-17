@@ -28,6 +28,20 @@
     <div class="box red"></div>
   </body>
   <script>
-    gsap.from(".green", { x: 500, duration: 5 });
+    //gsap.메소드("타겟",{베얼})
+    //repeat: -1 = animation-iteration-count: infinite  -->무한반복
+    gsap.from(".green", {
+      x: 500,
+      duration: 5,
+      rotation: 360,
+      // repeat: -1,
+      // yoyo: true,
+    });
+    gsap.set(".blue", { x: 40, backgroundColor: "pink" });
+    gsap.fromTo(
+      ".red",
+      /*from-->*/ { X: 100 },
+      /*To-->*/ { y: 500, duration: 5 }
+    );
   </script>
 </html>
