@@ -14,3 +14,4 @@ document.addEventListener("DOMContentLoaded", function () {
     showFirst = !showFirst;
   }, 2500);
 });
+// ----------------------- med1-img ---------------------------

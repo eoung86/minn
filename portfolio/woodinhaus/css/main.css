@@ -105,15 +105,25 @@ a {
   width: 23px;
   height: 23px;
 }
+#nav .nav-icon .lang {
+  position: relative;
+}
 #nav .nav-icon .lang .lang-sv {
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100px;
   text-align: left;
-  padding-top: 10px;
   font-size: 18px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 #nav .nav-icon .lang:hover .lang-sv {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 #nav .nav-icon .lang-sv a:hover {
   color: #467f5a;
@@ -142,8 +152,8 @@ a {
 }
 /* top end */
 
-/* med1 */
-#meddle {
+/* meddle1 */
+#meddle1 {
   width: 100%;
   height: 100vh;
   background-color: #f3f3f3;
@@ -151,48 +161,48 @@ a {
   justify-content: center;
   align-items: center;
 }
-#meddle .med1 {
+#meddle1 .med1 {
   display: flex;
   width: 100%;
   height: 550px;
   gap: 50px;
   padding: 0 370px;
 }
-#meddle .med1-txt {
-  width: 588px;
-  height: 550px;
+#meddle1 .med1-txt {
+  width: 50%;
+  /* height: 550px; */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#meddle .med1-txt h1 {
+#meddle1 .med1-txt h1 {
   font-size: 18px;
 }
-#meddle .med1-txt p {
+#meddle1 .med1-txt p {
   font-size: 50px;
   margin: 20px 0;
 }
-#meddle .med1-txt span {
+#meddle1 .med1-txt span {
   font-size: 17px;
 }
-#meddle .med1-img {
-  height: 550px;
+#meddle1 .med1-img {
+  /* height: 550px; */
   display: flex;
   position: relative;
 }
-#meddle .med1-img1 {
+#meddle1 .med1-img1 {
   background-image: url("http://www.wood.co.kr/data/main/file1_1644378955plisylqeof.jpg");
   z-index: 1;
 }
-#meddle .med1-img2 {
+#meddle1 .med1-img2 {
   background-image: url("http://www.wood.co.kr/data/main/file1_16443788194yu100nyd2.jpg");
   z-index: 0;
   opacity: 0;
 }
-#meddle .med1-img1,
-#meddle .med1-img2 {
+#meddle1 .med1-img1,
+#meddle1 .med1-img2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -203,7 +213,7 @@ a {
   border-radius: 20px;
   transition: opacity 1s ease-in-out;
 }
-#meddle .img-txt {
+#meddle1 .img-txt {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0 0 20px 20px;
   width: 588px;
@@ -216,6 +226,6 @@ a {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
-#meddle .img-txt p {
+#meddle1 .img-txt p {
   padding-left: 40px;
 }

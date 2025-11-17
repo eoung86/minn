@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stagger</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <style>
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+
+      .box {
+        cursor: pointer;
+        opacity: 1;
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .purple {
+        background: purple;
+      }
+      .orange {
+        background: orange;
+      }
+      .purple {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="box green"></div>
+      <div class="box purple"></div>
+      <div class="box orange"></div>
+      <div class="box purple"></div>
+      <div class="box green"></div>
+    </div>
+    <!--  -->
+    <button class="play">play</button>
+  </body>
+  <script>
+    let ani = gsap.to(".box", {
+      duration: 5,
+      rotation: 360,
+      opacity: 1,
+      // delay: 0.5,
+      //stagger: 1, // stagger in from the left with a 0.1 second gap in between animations
+      // stagger - 일정 시간 간격으로 순차적으로 실행
+      //----------------------------------------------------------
+
+      stagger: {
+        from: "random", //어디서부터인지
+        amount: 1, //가운데서부터 1초있다가 양 옆으로 ->시간을 지정해서 자동으로 간격 계산
+      },
+      ease: "sine.out",
+      paused: true,
+    });
+    //-----------------------------------------------------------
+
+    document.querySelector(".play").onclick = function () {
+      ani.play();
+    };
+    // play - 현재 위치에서 앞으로 재생 (pause 여부 상관 없음)
+    //resume() - pause() 했던 지점부터 그대로 이어서 재생 (pause 상태에서만 의미 있음)
+    //-->pause 중이면 → resume() = play() / pause 중이 아니면 play만 정상 작동
+
+    // -------------------------------
+    /*from 값	의미
+    "start"	첫 요소부터 시작 (default)
+    "end"	마지막 요소부터 시작
+    "center"	가운데 요소부터 → 양쪽 확산
+    "edges"	양쪽 끝에서 → 가운데로 모임
+    숫자(index)	지정한 요소에서 시작*/
+  </script>
+</html>

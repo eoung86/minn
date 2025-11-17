@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stagger</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- gsap -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- jquery -->
+
+    <style>
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+
+      .box {
+        cursor: pointer;
+        opacity: 1;
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .purple {
+        background: purple;
+      }
+      .orange {
+        background: orange;
+      }
+      .purple {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+  </body>
+  <script>
+    let ani = gsap.to(".box", {
+      scale: 0.5,
+      repeat: 1,
+      yoyo: ture,
+      paused: true,
+    });
+    /*document.querySelector(".green").onmouseenter = function () {
+      ani.restart();
+    };
+    document.querySelector(".green").onmouseenter = function () {
+      ani.pause();
+    };*/
+    $(".green").hover(
+      function () {
+        ani.restart();
+      },
+      function () {
+        ani.pause();
+      }
+    );
+  </script>
+</html>

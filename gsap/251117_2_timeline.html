@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>timeline</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .blue {
+        background: blue;
+      }
+      .red {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box red"></div>
+
+    <!-- ---------------------------------- -->
+    <button class="pause">pause</button>
+    <!-- 현재위치에서 멈춤 -->
+    <button class="resume">resume</button>
+    <!-- pause 했던 지점부터 다시 재생 -->
+    <button class="restart">restart</button>
+    <!-- 처음(0초)부터 다시시작 -->
+    <button class="seek">seek</button>
+    <!-- 특정시간으로 점프 -->
+    <button class="reverse">reverse</button>
+    <!-- 현재 위치에서 반대로 재생 -->
+  </body>
+  <script>
+    //gsap.메소드("타겟",{베얼})
+    //repeat: -1 = animation-iteration-count: infinite  -->무한반복
+
+    //timeline - 여러 애니메이션을 시간 순서대로 정렬, 한 번에 제어 -> delay 줄 필요X
+    let tl = gsap.timeline();
+    tl.to(".green", {
+      x: 500,
+      duration: 5,
+      rotation: 360,
+    })
+      .to(
+        ".blue",
+        {
+          x: 500,
+          duration: 5,
+          rotation: 360,
+          // delay: 2,
+        },
+        1 //"+=시간" 끝난 뒤 2초 후 실행
+        //숫자만 쓰는 경우 ->절대위치 타임라인 -> "시간"초 지점에서 시작
+      )
+      .to(".red", {
+        x: 500,
+        duration: 5,
+        rotation: 360,
+        // delay: 4,
+      });
+
+    // ------------------------------------------------------------------------
+    document.querySelector(".pause").onclick = function () {
+      tl.pause();
+    };
+    document.querySelector(".resume").onclick = function () {
+      tl.resume();
+    };
+    document.querySelector(".restart").onclick = function () {
+      tl.restart();
+    };
+    document.querySelector(".seek").onclick = function () {
+      tl.seek(3);
+    };
+    document.querySelector(".reverse").onclick = function () {
+      tl.reverse();
+    };
+  </script>
+</html>

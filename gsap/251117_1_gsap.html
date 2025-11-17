@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>gsap</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
     <style>
@@ -28,6 +28,11 @@
     <div class="box red"></div>
   </body>
   <script>
+    //from - 시작값만 지정 / 시작값 → 원래값
+    //to - 끝값만 지정 / 현재값 → 끝값
+    //fromTo - 시작값 + 끝값 지정 / 시작값 → 끝값
+    //set - 즉시 설정 / 애니메이션 없음
+
     //gsap.메소드("타겟",{베얼})
     //repeat: -1 = animation-iteration-count: infinite  -->무한반복
     gsap.from(".green", {
@@ -41,7 +46,14 @@
     gsap.fromTo(
       ".red",
       /*from-->*/ { X: 100 },
-      /*To-->*/ { y: 500, duration: 5 }
+      /*To-->*/ { y: 500, duration: 5, ease: "bounce.out" }
     );
+    //ease - 가속,감속 패턴
+    //duration - 시간
+    //reoeat - 반복 횟수
+    /*let square = document.querySelector(".square");
+      let circle = document.querySelector(".circle");
+                                      
+      gsap.to([square, circle], { x: 200 }) -->변수로 주며 사용가능*/
   </script>
 </html>
