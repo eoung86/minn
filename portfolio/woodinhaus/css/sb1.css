@@ -1,0 +1,395 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Interop";
+  src: url("https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2")
+      format("woff2"),
+    url("https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff")
+      format("woff");
+  font-weight: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#woodin {
+  width: 100%;
+  max-width: 1920px;
+  /* height: 100vh; */
+  margin: 0 auto;
+  background: #f3f3f3;
+  padding-top: 0;
+  scroll-behavior: smooth;
+  font-family: "Pretendard";
+}
+
+/* nav */
+#nav {
+  font-family: "Pretendard";
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  position: static;
+  top: auto;
+  left: auto;
+  z-index: 9999;
+  background: transparent;
+  padding: 30px 0;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  margin-bottom: 100px;
+}
+#nav.hide-nav {
+  opacity: 0;
+  transform: translateY(-100px);
+  pointer-events: none;
+}
+#nav .logo img {
+  width: 150px;
+  height: 28px;
+  margin: 0 80px 0 40px;
+}
+#nav .nav-sb {
+  display: flex;
+  width: 1640px;
+  justify-content: space-between;
+}
+#nav .nav-txt {
+  display: flex;
+  align-items: flex-end;
+}
+#nav .menu {
+  display: flex;
+  position: relative;
+  padding-right: 45px;
+}
+#nav .menu span {
+  display: inline-block;
+  cursor: pointer;
+  /* font-weight: bold; */
+  font-size: 18px;
+  font-family: "Pretendard";
+}
+#nav .drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 13px;
+  padding: 13px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.35s ease;
+  display: flex;
+  gap: 50px;
+  background: transparent;
+  background-color: rgba(243, 243, 243, 0.9);
+  width: auto;
+  border-radius: 15px;
+  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.1);
+}
+#nav .menu:hover .drop {
+  opacity: 1;
+  max-height: 500px;
+  transform: translateY(0);
+}
+#nav .sbmenu {
+  width: auto;
+  white-space: nowrap;
+  font-family: none;
+}
+#nav .sbmenu .sb-tit {
+  font-size: 17px;
+  font-weight: bold;
+}
+#nav .sbmenu li {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+#nav .sbmenu li a:hover {
+  color: #467f5a;
+  font-weight: bold;
+}
+#nav .nav-icon {
+  display: flex;
+  padding-right: 50px;
+  gap: 25px;
+}
+#nav .nav-icon img {
+  width: 23px;
+  height: 23px;
+}
+#nav .nav-icon .lang {
+  position: relative;
+}
+#nav .nav-icon .lang .lang-sv {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100px;
+  text-align: left;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#nav .nav-icon .lang:hover .lang-sv {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#nav .nav-icon .lang-sv a:hover {
+  color: #467f5a;
+  font-weight: bold;
+}
+/* ---------------nav end----------------- */
+
+#woodin {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+#wood {
+  width: 100%;
+  display: flex;
+}
+#wood .wood-main {
+  width: 100%;
+  margin: 0 40px 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+#wood #btn ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 30px 30px;
+}
+#wood #btn li {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-right: 1px solid #999;
+}
+#wood #btn li:last-child {
+  border-right: none;
+  cursor: pointer;
+}
+#wood #btn .click {
+  width: 100px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.35s ease;
+  border: none;
+  margin: 3px 0 0 11px;
+}
+#wood #btn .click.show {
+  max-height: 300px; /* 내용 크기만큼 넉넉하게 */
+  opacity: 1;
+  transform: translateY(0);
+  border: 1px solid #ddd;
+}
+#wood #btn .click p {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  background: #fff;
+  padding-left: 10px;
+  color: #111;
+}
+#wood #btn .click p:hover {
+  background: #ddd;
+}
+/* btn end */
+
+#wood #top {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 80px 0 130px;
+  gap: 20px;
+  overflow: hidden;
+}
+#wood #top h1 {
+  font-size: 65px;
+}
+#wood #top p {
+  font-size: 25px;
+}
+#top h1,
+#top p {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+/* p 먼저 등장 */
+#top.show-p p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* h1 나중에 등장 */
+#top.show-h1 h1 {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* top end */
+
+#meddle {
+  width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#meddle ul {
+  position: relative;
+  width: 420px;
+  height: 440px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 0 100px 0;
+}
+#meddle .med-hov {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+  z-index: 2;
+}
+#meddle .med-hov span {
+  font-size: 16px;
+  margin-top: 20px;
+}
+#meddle .med-hov:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+#meddle ul {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+#meddle ul.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#meddle .med1 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img1.jpg);
+}
+#meddle .med2 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img2.png);
+}
+#meddle .med3 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img3.png);
+}
+#meddle .med4 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img4.jpg);
+}
+#meddle .med5 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img5.jpg);
+}
+#meddle .med6 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img6.jpg);
+}
+#meddle .med7 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img7.jpg);
+}
+#meddle .med8 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img8.jpg);
+}
+#meddle .med9 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img9.jpg);
+}
+#meddle .med10 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img10.jpg);
+}
+#meddle .med11 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img11.jpg);
+}
+#meddle .med12 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img12.jpg);
+}
+#meddle .med13 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img13.jpg);
+}
+#meddle .med14 {
+  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img14.jpg);
+}
+/* meddle end */
+
+#footer {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+}
+#footer .foot {
+  width: 100%;
+  display: flex;
+  height: 160px;
+}
+#footer .foot-icon {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer .foot-sbicon {
+  display: flex;
+  gap: 18px;
+  padding-top: 20px;
+}
+#footer .foot-txt {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+#footer .foot-sbtxt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-size: 16px;
+}
+#footer .foot-txt .foot-sbtxt p {
+  margin: 4px 0;
+}
+/* footer end */
