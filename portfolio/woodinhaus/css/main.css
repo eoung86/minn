@@ -25,8 +25,10 @@ a {
   color: #333;
 }
 #woodin {
-  width: 1897px;
+  width: 100%;
+  max-width: 1920px;
   /* height: 100vh; */
+  margin: 0 auto;
   background: #f3f3f3;
   padding-top: 0;
   scroll-behavior: smooth;
@@ -875,4 +877,537 @@ a {
 #meddle5.show-ani .med5-txt {
   opacity: 1;
   transform: translateY(0);
+}
+/* ---------------------------------------------------------- */
+
+/* 반응형 */
+
+/* ============================================================
+    1280px 반응형 (노트북 기준)
+============================================================ */
+@media (max-width: 1280px) {
+  /* 공통 가로패딩 */
+  #meddle1,
+  #meddle2,
+  #meddle3,
+  #meddle4,
+  #meddle5 {
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+
+  /* =========================
+        #meddle1 
+     ========================= */
+  #meddle1 .med1 {
+    gap: 20px;
+  }
+
+  /* 텍스트 크기 살짝 축소 */
+  #meddle1 .med1-txt h1 {
+    font-size: 16px;
+  }
+  #meddle1 .med1-txt p {
+    font-size: 40px;
+  }
+  #meddle1 .med1-txt span {
+    font-size: 15px;
+  }
+
+  /* 이미지 크기 ↓ */
+  #meddle1 .med1-img1,
+  #meddle1 .med1-img2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  #meddle1 .img-txt {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  /* =========================
+        #meddle2 
+     ========================= */
+  #meddle2 .med2 {
+    transform: scale(0.8);
+    transform-origin: center top;
+  }
+
+  /* 텍스트 크기 30% 축소 */
+  #meddle2 .med2-txt h1 {
+    font-size: calc(22px * 0.8);
+  }
+
+  #meddle2 .med2-txt p {
+    font-size: calc(56px * 0.8);
+  }
+
+  #meddle2 .med2-txt span {
+    font-size: calc(18px * 0.8);
+  }
+
+  /* 이미지도 30% 축소한 넓이 적용 */
+  #meddle2 .med2-img {
+    width: calc(430px * 0.8);
+  }
+  /* =========================
+        #meddle3 
+     ========================= */
+  #meddle3 .med3 {
+    gap: 40px;
+  }
+
+  #meddle3 .med3-img img {
+    height: 600px; /* 기존보다 20~25% 축소 */
+  }
+
+  #meddle3 .med3-txt p {
+    font-size: 45px;
+  }
+
+  /* =========================
+         #meddle4 
+     ========================= */
+  #meddle4 .med4-img {
+    animation: slideLeft 35s linear infinite; /* 속도 완화 */
+    gap: 25px;
+  }
+
+  #meddle4 .med4-item img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  #meddle4 .med4-txt h1 {
+    font-size: 42px;
+  }
+  #meddle4 .med4-txt p {
+    font-size: 18px;
+  }
+  #meddle4 {
+    padding-top: 180px; /* 원래 여백 + center */
+    margin-top: 30px; /* ⭐ nav와 30px 더 띄움 */
+  }
+
+  #meddle4 .med4-txt {
+    margin-left: 0;
+    text-align: center; /* 가운데 정렬 */
+  }
+
+  #meddle4 .med4-img-wrapper {
+    margin-top: 40px;
+  }
+
+  /* 전체 세로 배치 */
+  #meddle5 .med5 {
+    display: flex;
+    flex-direction: column; /* ← 세로 정렬 */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transform: scale(0.9);
+    transform-origin: top center;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  /* 유튜브 영상 크기 축소 */
+  #meddle5 .video {
+    position: relative;
+    width: 80%; /* ← 20% 축소 효과 */
+    max-width: 900px;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  #meddle5 .video iframe {
+    width: 100%;
+    height: 400px; /* 비율 유지하면서 높이 조정 */
+  }
+
+  /* 텍스트 박스도 아래에서 줄이기 */
+  #meddle5 .med5-txt {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  /* 텍스트 전체 20% 축소 */
+  #meddle5 .med5-sbtxt p {
+    font-size: 28px;
+  }
+
+  #meddle5 .med5-sbtxt h1 {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+
+  #meddle5 .med5-sbtxt span {
+    font-size: 20px;
+  }
+
+  #media-desc {
+    font-size: 20px;
+  }
+
+  #meddle5 .arrow {
+    font-size: 38px;
+  }
+}
+@media (max-width: 768px) {
+  /* 컨테이너 전체 세로 레이아웃 */
+  #meddle5 {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  #meddle5 .med5 {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px; /* 유튜브 ↔ 텍스트 간격 */
+    transform: scale(0.9); /* 전체 10% 축소 */
+    transform-origin: top center;
+    height: auto;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  /* ----------------------
+     📌 유튜브 영역
+  ----------------------- */
+  #meddle5 .video {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 95%; /* 화면 폭에 맞춤 */
+    max-width: 95%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #meddle5 .video iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* ----------------------
+     📌 텍스트 박스
+  ----------------------- */
+  #meddle5 .med5-txt {
+    position: relative;
+    width: 92%;
+    height: auto;
+    padding: 32px 24px;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 14px;
+  }
+
+  /* 텍스트 사이즈 축소 (20%) */
+  #meddle5 .med5-sbtxt p {
+    font-size: 22px;
+  }
+  #meddle5 .med5-sbtxt h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  #meddle5 .med5-sbtxt span {
+    font-size: 16px;
+  }
+  #media-desc {
+    font-size: 16px;
+  }
+
+  /* ----------------------
+     📌 Progress Bar
+  ----------------------- */
+  #meddle5 .progress-box {
+    height: 8px;
+    margin: 15px 0;
+  }
+
+  /* ----------------------
+     📌 화살표 버튼
+  ----------------------- */
+  #meddle5 .arrow-box {
+    gap: 10px;
+  }
+  #meddle5 .arrow {
+    font-size: 30px;
+    padding: 6px 12px;
+  }
+}
+@media (max-width: 1024px) {
+  /* NAV */
+  #nav {
+    padding: 20px 0;
+  }
+  #nav .logo img {
+    width: 120px;
+  }
+  #nav .nav-sb {
+    width: 100%;
+    padding: 0 30px;
+  }
+  #nav .menu span {
+    font-size: 16px;
+  }
+
+  /* TOP */
+  #top h1 {
+    font-size: 45px;
+  }
+
+  /* ---------------- meddle1 ---------------- */
+  #meddle1 .med1 {
+    padding: 0 60px;
+    gap: 30px;
+  }
+  #meddle1 .med1-txt p {
+    font-size: 40px;
+  }
+  #meddle1 .med1-img1,
+  #meddle1 .med1-img2 {
+    width: 450px;
+    height: 420px;
+  }
+
+  /* ---------------- meddle2 ---------------- */
+  #meddle2 .med2 {
+    transform: scale(0.85);
+    transform-origin: center top;
+  }
+  #meddle2 .med2-img {
+    width: 380px;
+  }
+
+  /* ---------------- meddle3 ---------------- */
+  #meddle3 .med3 {
+    padding: 0 40px;
+    gap: 40px;
+  }
+  #meddle3 .med3-img img {
+    height: 600px;
+  }
+
+  /* ---------------- meddle4 ---------------- */
+  #meddle4 {
+    padding-top: 120px;
+  }
+  #meddle4 .med4-txt h1 {
+    font-size: 46px;
+  }
+  #meddle4 .med4-img-wrapper {
+    margin-top: 40px;
+    transform: scale(0.9);
+    transform-origin: center top;
+  }
+
+  /* ---------------- meddle5 ---------------- */
+  #meddle5 .med5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    transform: scale(0.9);
+    transform-origin: top center;
+    height: auto;
+    padding: 50px 0;
+  }
+
+  #meddle5 .video {
+    position: relative;
+    left: 0;
+    width: 85%;
+    max-width: 850px;
+    height: auto;
+  }
+  #meddle5 .video iframe {
+    width: 100%;
+    height: 420px;
+  }
+
+  #meddle5 .med5-txt {
+    width: 85%;
+    max-width: 650px;
+    padding: 40px;
+    height: auto;
+  }
+
+  #meddle5 .med5-sbtxt p {
+    font-size: 28px;
+  }
+  #meddle5 .med5-sbtxt h1 {
+    font-size: 44px;
+  }
+  #meddle5 .med5-sbtxt span {
+    font-size: 20px;
+  }
+}
+
+/* ============================================================
+   📱 768px (모바일) 반응형
+   — 모든 섹션 세로 배치 / 텍스트 + 이미지 크기 재조정
+============================================================ */
+@media (max-width: 768px) {
+  /* NAV */
+  #nav {
+    padding: 16px 0;
+  }
+  #nav .logo img {
+    width: 90px;
+  }
+  #nav .nav-sb {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #nav .menu span {
+    font-size: 15px;
+  }
+
+  /* TOP */
+  #top {
+    margin-top: 110px;
+    height: 70vh;
+  }
+  #top h1 {
+    font-size: 34px;
+  }
+
+  /* ---------------- meddle1 ---------------- */
+  #meddle1 .med1 {
+    flex-direction: column;
+    height: auto;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  #meddle1 .med1-txt p {
+    font-size: 35px;
+  }
+  #meddle1 .med1-img1,
+  #meddle1 .med1-img2 {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* ---------------- meddle2 ---------------- */
+  #meddle2 {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  #meddle2 .med2 {
+    grid-template-columns: repeat(2, 1fr);
+    transform: scale(1);
+    gap: 15px;
+  }
+  #meddle2 .med2-img {
+    width: 100%;
+  }
+  #meddle2 .med2-txt p {
+    font-size: 32px;
+  }
+
+  /* ---------------- meddle3 ---------------- */
+  #meddle3 {
+    height: auto;
+    padding: 80px 20px;
+  }
+  #meddle3 .med3 {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  #meddle3 .med3-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------------- meddle4 ---------------- */
+  #meddle4 {
+    height: auto;
+    padding: 80px 0 40px;
+  }
+  #meddle4 .med4-txt {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #meddle4 .med4-img-wrapper {
+    margin-top: 30px;
+  }
+  #meddle4 .med4-img {
+    flex-direction: column;
+    gap: 20px;
+    transform: none;
+  }
+
+  /* ---------------- meddle5 ---------------- */
+  #meddle5 {
+    height: auto;
+    padding: 50px 0 70px;
+  }
+  #meddle5 .med5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: none;
+    width: 100%;
+    gap: 20px;
+  }
+
+  #meddle5 .video {
+    width: 92%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  #meddle5 .video iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  #meddle5 .med5-txt {
+    width: 92%;
+    padding: 28px 22px;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  /* 텍스트 크기 */
+  #meddle5 .med5-sbtxt p {
+    font-size: 22px;
+  }
+  #meddle5 .med5-sbtxt h1 {
+    font-size: 34px;
+  }
+  #meddle5 .med5-sbtxt span {
+    font-size: 16px;
+  }
+  #media-desc {
+    font-size: 16px;
+  }
+
+  /* 버튼 */
+  #meddle5 .arrow-box {
+    gap: 10px;
+  }
+  #meddle5 .arrow {
+    font-size: 32px;
+    padding: 6px 12px;
+  }
 }

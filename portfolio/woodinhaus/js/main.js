@@ -138,7 +138,7 @@ function init() {
   videos.forEach((vid, idx) => {
     vid.style.display = idx === 0 ? "block" : "none";
   });
-  mediaDesc.textContent = "Opening the Value of Space | 30 sec";
+  mediaDesc.textContent = "공간의 가치를 열다 | 30초";
   progressBar.style.width = "0%";
 }
 
