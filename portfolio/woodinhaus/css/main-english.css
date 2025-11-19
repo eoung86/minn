@@ -211,7 +211,6 @@ a {
 #meddle1 .med1-txt p {
   font-size: 50px;
   margin: 20px 0;
-  font-family: "Interop";
 }
 #meddle1 .med1-txt span {
   font-size: 17px;
@@ -263,6 +262,7 @@ a {
 #meddle2 h1,
 #meddle3 h1 {
   font-size: 22px;
+  font-weight: lighter;
   /* font-family: "Interop"; */
   font-family: "Pretendard";
 }
@@ -270,6 +270,7 @@ a {
 #meddle2 p,
 #meddle3 p {
   font-size: 56px;
+  font-weight: lighter;
   font-family: "Pretendard";
   margin: 30px 0 25px;
   line-height: 1.2;
@@ -278,7 +279,7 @@ a {
 #meddle2 span {
   font-size: 18px;
   color: #333;
-  font-family: none;
+  font-family: "Pretendard";
 }
 /* -----------------meddle1 end-------------------- */
 
@@ -613,7 +614,7 @@ a {
 #footer .foot-txt .foot-sbtxt p {
   margin: 4px 0;
 }
-/* --------------footer end---------------------- */
+/* footer end */
 
 #top-btn {
   position: fixed;
