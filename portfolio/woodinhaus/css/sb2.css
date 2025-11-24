@@ -159,7 +159,6 @@ a {
   font-weight: bold;
 }
 /* ---------------nav end----------------- */
-
 #woodin {
   width: 100%;
   background-color: #f5f5f5;
@@ -173,6 +172,15 @@ a {
   margin: 0 40px 0;
   background-color: #fff;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#wood #btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 #wood #btn ul {
   display: flex;
@@ -220,14 +228,16 @@ a {
 /* btn end */
 
 #wood #top {
-  width: 100%;
+  width: 1100px;
+  border-bottom: 1px solid #333;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 80px 0 130px;
+  margin: 80px 0 20px;
   gap: 20px;
   overflow: hidden;
+  padding-bottom: 30px;
 }
 #wood #top h1 {
   font-size: 65px;
@@ -240,6 +250,11 @@ a {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 1.2s ease, transform 1.2s ease;
+}
+#wood .top-sb {
+  padding-left: 10px;
+  font-size: 24px;
+  color: #222;
 }
 
 /* p 먼저 등장 */
@@ -254,104 +269,6 @@ a {
   transform: translateX(0);
 }
 /* top end */
-
-#meddle {
-  width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#meddle ul {
-  position: relative;
-  width: 420px;
-  height: 440px;
-  border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 0 100px 0;
-}
-#meddle .med-hov {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 20px;
-  color: #fff;
-  opacity: 0;
-  z-index: 2;
-}
-#meddle .med-hov span {
-  font-size: 16px;
-  margin-top: 20px;
-}
-#meddle .med-hov:hover {
-  opacity: 1;
-  cursor: pointer;
-  transition: opacity 0.5s ease;
-}
-#meddle ul {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease-out;
-}
-#meddle ul.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-#meddle .med1 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img1.jpg);
-}
-#meddle .med2 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img2.png);
-}
-#meddle .med3 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img3.png);
-}
-#meddle .med4 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img4.jpg);
-}
-#meddle .med5 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img5.jpg);
-}
-#meddle .med6 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img6.jpg);
-}
-#meddle .med7 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img7.jpg);
-}
-#meddle .med8 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img8.jpg);
-}
-#meddle .med9 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img9.jpg);
-}
-#meddle .med10 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img10.jpg);
-}
-#meddle .med11 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img11.jpg);
-}
-#meddle .med12 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img12.jpg);
-}
-#meddle .med13 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img13.jpg);
-}
-#meddle .med14 {
-  background-image: url(/portfolio/woodinhaus/woodinhaus-img/sb1-med-img14.jpg);
-}
-/* meddle end */
 
 #footer {
   width: 100%;
