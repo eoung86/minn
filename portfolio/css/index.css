@@ -44,10 +44,11 @@ a {
   color: #eaeaea;
 }
 #portfolio .main h1 {
-  font-size: 250px;
+  font-size: 200px;
   border-top: 3px solid #333;
   border-bottom: 3px solid #333;
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -82,26 +83,26 @@ a {
 #portfolio .about .poto h1 {
   width: 420px;
   text-align: center;
-  position: absolute;
-  top: 40px;
-  font-size: 80px;
+  /* position: absolute;
+  top: 40px; */
+  font-size: 5em;
   box-shadow: inset 0 -30px 0 0 #fff;
 }
 #portfolio .about .poto p {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 #portfolio .about .poto img {
   border-radius: 50%;
   border: 2px solid #fff;
 }
 #portfolio .about .poto span {
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
-  font-size: 27px;
+  /* position: absolute;
+  bottom: 2em;
+  left: 100px; */
+  font-size: 1.6875em;
   font-family: "Interop";
   font-weight: bold;
   color: #111;
@@ -123,55 +124,57 @@ a {
 #portfolio .about .poto-txt .sb-wrapper {
   width: auto;
   display: flex;
-  gap: 60px;
+  gap: 3.75em;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1.2em;
+  position: relative;
 }
 
 #portfolio .about .poto-txt .sb-txt1 {
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 800;
   font-family: "Montserrat";
   border-right: 2px solid #333;
-  padding-right: 50px;
+  padding-right: 3em;
   line-height: 1.8;
-  height: 640px;
+  /* height: 40em; */
   color: #333;
 }
 #portfolio .about .poto-txt .sb-txt1 li:first-child {
-  margin-bottom: 25px;
+  margin: 0.4em 0 2em 0;
 }
 #portfolio .about .poto-txt .sb-txt1 li:nth-child(2) {
-  margin-bottom: 100px;
+  margin-bottom: 2em;
 }
 #portfolio .about .poto-txt .sb-txt1 li:last-child {
-  margin-top: 100px;
+  margin: 2em 0 3.8em 0;
 }
 #portfolio .about .poto-txt .sb-txt2 {
-  font-size: 20px;
-  line-height: 2;
+  font-size: 1.25em;
+  line-height: 1.3;
   font-family: "Interop";
   font-weight: bold;
 }
 #portfolio .about .poto-txt .sb-txt2 li {
-  margin-bottom: 35px;
+  margin-bottom: 2.1875em;
 }
 #portfolio .about .poto-txt .sb-txt2 li:first-child {
-  margin-top: 30px;
-  font-size: 30px;
+  margin-top: 1em;
+  font-size: 1.875em;
 }
 
 #portfolio .about .sb-icon {
-  font-size: 19px;
+  font-size: 1.1875em;
   position: absolute;
-  left: 50px;
-  bottom: 40px;
+  left: 0;
+  top: 100%;
 }
 
 #portfolio .about .sb-icon img {
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
+  width: 1.875em;
+  height: 1.875em;
+  margin-right: 0.5em;
 }
 /* ------------------about end-------------------- */
 
@@ -187,31 +190,32 @@ a {
 }
 #porjt .con-tit span {
   color: #eaeaea;
-  font-size: 30px;
+  font-size: 1.875em;
   text-align: right;
   margin: 20px 20px 0 0;
 }
 #porjt .con-tit h1 {
-  width: 1200px;
-  font-size: 280px;
+  width: 50%;
+  font-size: 12.5em;
   text-align: center;
   margin: 120px 0 0 100px;
-  box-shadow: inset 0 -80px 0 0 #fff;
+  box-shadow: inset 0 -60px 0 0 #fff;
 }
 #porjt .con-tit p {
-  font-size: 70px;
+  font-size: 3.75em;
   text-align: center;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
-  margin: 70px 70px 0 0;
+  margin: 70px 90px 0 0;
   color: #222;
 }
 #porjt .con-icons {
   display: flex;
   gap: 30px;
   margin-left: 40px;
-  margin-top: 80px;
+  padding-top: 80px;
+  /* margin-top: 80px; */
 }
 #porjt .con-icons img {
   width: 60px;
@@ -226,59 +230,69 @@ a {
 #chai797 .chai {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
+  align-items: space-between;
+  justify-content: space-between;
 }
 #chai797 .chai-txt {
   width: 100%;
-  height: 800px;
+  height: 50em;
   background: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 #chai797 .chai-txt .txt-tit {
-  padding: 90px 0 0 85px;
+  /* padding-top: 100px; */
   color: #111;
-  font-family: "Interop";
-  font-weight: bold;
-  font-size: 25px;
+  font-family: "Montserrat";
+  /* font-weight: bold; */
+  font-size: 20px;
 }
 #chai797 .chai-txt .txt-tit h3 {
-  font-family: none;
-  font-size: 35px;
+  font-family: "Montserrat";
+  font-size: 28px;
   line-height: 1.5;
   padding: 40px 0;
 }
 #chai797 .chai-txt .txt-tit p {
   line-height: 2;
 }
+#chai797 .chai-txt .txt-img {
+  /* height: 50em; */
+  width: 30%;
+}
 #chai797 .chai-txt .txt-img img {
-  height: 980px;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
 }
 #chai797 .chai-logo {
   display: flex;
   justify-content: space-between;
   background: #facd64;
-  height: 100%;
+  /* height: 132px; */
   align-items: center;
-  bottom: 0;
+  /* bottom: 0; */
   padding: 0 40px;
 }
 #chai797 .chai-logo img {
-  width: 50px;
-  height: 50px;
+  width: 3.125em;
+  height: 3.125em;
 }
 #chai797 .chai-logo .logo-icons {
   display: flex;
   gap: 40px;
 }
 #chai797 .chai-logo .logo-tit {
-  width: 610px;
-  font-size: 55px;
+  height: 100%;
+  font-size: 3.125em;
   font-family: "Montserrat";
-  box-shadow: inset 0 -40px 0 0 #fff;
   text-align: center;
   color: #333;
   white-space: nowrap;
+  box-shadow: inset 0 -45px 0 0 #fff;
+  margin-bottom: 0.6em;
 }
 /* -----------------------chai797 end----------------- */
 #woodin {
@@ -298,12 +312,12 @@ a {
 }
 #woodin .logo-tit {
   color: #333;
-  font-size: 55px;
+  font-size: 3.125em;
   white-space: nowrap;
   text-align: left;
-  box-shadow: inset 0 -50px 0 0 #fff;
+  box-shadow: inset 0 -40px 0 0 #fff;
   margin-bottom: 10px;
-  width: 810px;
+  /* width: 810px; */
 }
 #woodin .logo-icons {
   display: flex;
@@ -311,28 +325,35 @@ a {
   padding-top: 20px;
 }
 #woodin .logo-icons img {
-  width: 50px;
-  height: 50px;
+  width: 3.125em;
+  height: 3.125em;
 }
 #woodin .woodin-txt {
-  height: 840px;
+  /* height: 100%; */
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #woodin .txt-tit {
   color: #111;
-  height: auto;
+  height: 100%;
 }
 #woodin .txt-tit p {
   line-height: 1.8;
   font-size: 20px;
 }
+#woodin .txt-img {
+  width: 40%;
+}
 #woodin .txt-img img {
-  height: 870px;
+  /* height: 50em; */
+  width: 100%;
+  object-fit: cover;
 }
 #woodin .txt-tit1 {
   display: flex;
-  margin-top: 50px;
+  margin-top: 3.125em;
   color: #444;
 }
 #woodin .txt-tit1 .tit-1 {
@@ -361,7 +382,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 830px;
+  width: 530px;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -369,25 +390,21 @@ a {
   gap: 40px;
   border-top: 3px solid #333;
   border-bottom: 3px solid #333;
+  font-size: 5em;
 }
 #footer .foot .th {
-  font-size: 250px;
-  box-shadow: inset 0 -90px 0 0 #fff;
-}
-
-#footer .foot .yu {
-  font-size: 250px;
+  box-shadow: inset 0 -50px 0 0 #fff;
 }
 
 #footer .foot p {
-  font-size: 30px;
+  font-size: 1.875em;
   position: absolute;
   top: 20px;
   left: 20px;
   color: #eaeaea;
 }
 #footer .foot span {
-  font-size: 30px;
+  font-size: 1.875em;
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -429,8 +446,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
-/* h1은 항상 보임 (숨기지 않음) */
 .main h1 {
   position: relative;
   z-index: 2;
@@ -440,37 +455,26 @@ body {
   transition: filter 1.3s ease-out, transform 1.3s ease-out,
     opacity 1.3s ease-out;
 }
-
-/* h1 선명해지는 시점 */
 .main-h1-reveal h1 {
   filter: blur(0);
   transform: scale(1);
   opacity: 1;
 }
-
-/* 🔥 중앙에서 바깥으로 퍼지는 원형 마스크 */
 .main-h1-mask {
   position: absolute;
   left: 50%;
   top: 50%;
   width: 0px;
   height: 0px;
-  background: #f0c146; /* 메인 배경과 동일 */
+  background: #f0c146;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   z-index: 3;
   transition: transform 1.2s ease-out;
 }
-
-/* 중앙 작은 원 → 점점 커져서 사라짐 */
 .main-h1-mask.reveal {
-  transform: translate(-50%, -50%) scale(25); /* 바깥쪽으로 확산 */
+  transform: translate(-50%, -50%) scale(25);
 }
-
-/* ===========================================
-   🔥 MAIN — p, span 등장
-   =========================================== */
-
 .main p,
 .main span {
   opacity: 0;
@@ -488,13 +492,117 @@ body {
   transform: translateX(-40px);
 }
 
+/* about 애니메이션 */
 .about-drop {
   opacity: 0;
   transform: translateY(-40px);
-  transition: all 0.9s ease-out;
+  transition: all 1.3s ease-out;
 }
 
 .about-drop-show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* porjt 애니메이션 */
+#porjt h1,
+#porjt .con-icons,
+#porjt .con-tit p {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 1.2s ease;
+}
+#porjt.on h1 {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+#porjt.on .con-icons {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.6s;
+}
+
+#porjt.on .con-tit p {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.8s;
+}
+
+/* chai 애니메이션 */
+#chai797 .txt-tit p,
+#chai797 .txt-tit h3:first-child,
+#chai797 .txt-tit h3:last-child {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 1.2s ease-out;
+}
+#chai797 .txt-img {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1.2s ease-out;
+}
+#chai797.show .txt-img {
+  opacity: 1;
+  transform: translateX(0px);
+  transition-delay: 0.2s;
+}
+#chai797.show .txt-tit h3:first-child {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+#chai797.show .txt-tit p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+#chai797.show .txt-tit h3:last-child {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+
+/* woodin 애니메이션 */
+#woodin .txt-img {
+  opacity: 0;
+  transform: translateX(-60px); /* 왼쪽에서 등장 */
+  transition: all 1s ease-out;
+}
+
+#woodin .txt-tit p:first-child,
+#woodin .txt-tit p:nth-child(2),
+#woodin .tit-1,
+#woodin .tit-2 {
+  opacity: 0;
+  transform: translateY(-40px); /* 위쪽에서 등장 */
+  transition: all 1s ease-out;
+}
+
+/* 등장 상태 */
+#woodin.show .txt-img {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+#woodin.show .txt-tit p:first-child {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+#woodin.show .txt-tit p:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+#woodin.show .tit-1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s;
+}
+#woodin.show .tit-2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.4s;
 }

@@ -1,4 +1,5 @@
 // 스크롤
+
 const container = document.getElementById("portfolio");
 let isScrolling = false;
 
@@ -71,10 +72,6 @@ function runMainIntro() {
 // 첫 로딩 실행
 window.addEventListener("load", runMainIntro);
 
-/* ======================================
-   🔥 MAIN — 스크롤로 돌아와도 intro 반복
-   ====================================== */
-
 const mainObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -86,10 +83,7 @@ const mainObserver = new IntersectionObserver(
 
 mainObserver.observe(main);
 
-/* ======================================
-   🔥 ABOUT — .poto → .sb-txt1 → .sb-txt2 → .sb-icon
-   ====================================== */
-
+// about
 const about = document.querySelector(".about");
 
 if (about) {
@@ -122,3 +116,53 @@ if (about) {
 
   aboutObserver.observe(about);
 }
+
+// porjt
+const porjt = document.querySelector("#porjt");
+
+function porjtScrollEvent() {
+  if (!porjt) return;
+
+  const rect = porjt.getBoundingClientRect();
+  const triggerPoint = window.innerHeight * 0.8;
+
+  if (rect.top < triggerPoint) {
+    porjt.classList.add("on");
+  }
+}
+
+container.addEventListener("scroll", porjtScrollEvent);
+window.addEventListener("load", porjtScrollEvent);
+
+// ----------------- chai797 애니메이션 -----------------
+const chai797 = document.querySelector("#chai797");
+
+function chai797Event() {
+  if (!chai797) return;
+
+  const rect = chai797.getBoundingClientRect();
+  const triggerPoint = window.innerHeight * 0.8;
+
+  if (rect.top < triggerPoint) {
+    chai797.classList.add("show");
+  }
+}
+
+container.addEventListener("scroll", chai797Event);
+window.addEventListener("load", chai797Event);
+
+// ----------------- woodin 애니메이션 -----------------
+const woodin = document.querySelector("#woodin");
+
+function woodinEvent() {
+  if (!woodin) return;
+
+  const rect = woodin.getBoundingClientRect();
+  const triggerPoint = window.innerHeight * 0.8;
+
+  if (rect.top < triggerPoint) {
+    woodin.classList.add("show");
+  }
+}
+container.addEventListener("scroll", woodinEvent);
+window.addEventListener("load", woodinEvent);

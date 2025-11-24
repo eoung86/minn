@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* ---------반응형 */
+@media (max-width: 1280px) {
+  #portfolio .main h1 {
+    font-size: 10vw;
+  }
+  #portfolio > div {
+    height: auto;
+    min-height: 100vh;
+  }
+  #portfolio .main {
+    display: flex;
+    align-items: center;
+  }
+
+  /* main---- */
+
+  #portfolio .about {
+    font-size: 75%;
+  }
+  #portfolio .about .poto h1 {
+    width: auto;
+  }
+  #portfolio .about .poto img #portfolio .about .poto p {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+  }
+  #portfolio .about .poto img {
+    max-width: 100%;
+    height: auto;
+  }
+  #portfolio .about .poto span {
+    bottom: 4em;
+    left: calc(100px * 0.8);
+  }
+  /* about---- */
+
+  #porjt {
+    font-size: 80%;
+  }
+  /* porjt end---- */
+
+  #chai797 {
+    font-size: 80%;
+  }
+  /* chai797----- */
+
+  #woodin .logo-tit h1 {
+    font-size: calc(55px * 0.9);
+  }
+  #woodin img {
+    width: calc(100% * 0.9);
+    height: auto;
+  }
+  #woodin .txt-tit > p:first-child img {
+    width: calc(100% * 0.8);
+    height: auto;
+  }
+  #woodin .txt-tit h4,
+  #woodin .txt-tit p {
+    font-size: calc(100% * 0.85);
+  } /* woodin--- */
+
+  #footer {
+    font-size: 80%;
+  }
+  #footer .foot .foot-center {
+    width: calc(530px * 0.8);
+  }
+}
+
+@media (max-width: 1048px) {
+  #portfolio .about {
+    flex-direction: column;
+    height: auto;
+  }
+  #portfolio .about .poto {
+    width: 100%;
+    height: 50%;
+  }
+  #portfolio .about .poto > p {
+    width: 20%;
+  }
+  #portfolio .about .poto > p img {
+    width: 100%;
+    object-fit: cover;
+  }
+  #portfolio .about-sb {
+    width: 100%;
+  }
+  #portfolio .about .poto-txt {
+    height: 50vh;
+  }
+  #portfolio .about .poto span {
+    left: calc(100px * 0.4);
+    font-size: 18px;
+  }
+  #portfolio .about .poto-txt .sb-txt1 {
+    padding: 0 40px 0 30px;
+  }
+  #portfolio .about .poto-txt .sb-txt1 li:first-child {
+    margin: 0;
+  }
+  #portfolio .about .poto-txt .sb-txt1 li:nth-child(2) {
+    margin: 0;
+  }
+  #portfolio .about .poto-txt .sb-txt1 li:last-child {
+    margin: 0;
+  }
+  #portfolio .about .poto-txt .sb-txt2 li {
+    margin-bottom: 0;
+  }
+  #porjt .con-tit p {
+    margin: 0 auto;
+  }
+
+  #porjt .con-tit h1 {
+    font-size: 10vw;
+  }
+  #porjt .con-icons {
+    margin-left: 0;
+    gap: 5px;
+  }
+  #chai797 .chai-txt .txt-img {
+    width: 70%;
+    /* height: 40%; */
+  }
+  #chai797 .chai {
+    font-size: 100%;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  #chai797 .chai-txt {
+    flex-direction: column;
+  }
+  #chai797 .chai-txt .txt-tit h3 {
+    font-size: calc(28px * 0.7);
+  }
+  #chai797 .chai-txt .txt-tit p {
+    font-size: calc(20px * 0.7);
+  }
+  #chai797 .chai-logo {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #chai797 .chai-logo .logo-icons {
+    gap: 0;
+  }
+  #chai797 .chai-logo .logo-tit {
+    /* box-shadow: none; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; */
+    font-size: 20px;
+  }
+  #woodin {
+    width: 100%;
+    height: 100vh;
+  }
+  #woodin .woodin-txt {
+    margin-top: 40px;
+    /* height: 80vh; */
+    flex-direction: column;
+  }
+  #woodin .txt-tit1 {
+    margin-top: 10px;
+  }
+
+  #woodin.show .txt-img {
+    width: 80%;
+    text-align: center;
+  }
+  #woodin .txt-tit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #woodin img {
+    width: calc(100% * 0.7);
+    height: auto;
+  }
+  #woodin .txt-img img {
+    width: 70%;
+    height: 80%;
+  }
+  #woodin .logo-tit h1 {
+    font-size: 20px;
+  }
+  #woodin .logo-icons {
+    gap: 0;
+  }
+  #footer {
+    font-size: 60%;
+  }
+  /* #footer .foot .foot-center {
+    width: calc(530px * 0.6);
+  } */
+}
