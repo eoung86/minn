@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>25.11.27-성민주</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main1 {
+        background-image: url(https://www.shinsegae-lnb.com/upload/banner/202303152224573G78B6.png);
+      }
+      .main2 {
+        background-image: url(https://www.shinsegae-lnb.com/upload/banner/20230315222505P3VV6G.png);
+      }
+      .main3 {
+        background-image: url(https://www.shinsegae-lnb.com/upload/banner/20230315222515PXZVHW.png);
+      }
+      .main4 {
+        background-image: url(https://www.shinsegae-lnb.com/upload/banner/202303152225255MESJT.png);
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        color: #fff;
+        font-size: 60px;
+      }
+      .swiper-button-next {
+        right: 25px;
+      }
+      .swiper-button-prev {
+        left: 25px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        opacity: 0.4;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+      .swiper-pagination-bullet-active {
+        width: 40px;
+        height: 10px;
+        background: #fff;
+        opacity: 1;
+        border-radius: 20px;
+      }
+      .custom-pagination-wrap {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        z-index: 9999;
+        height: 20px;
+      }
+      .play-btn {
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        font-size: 20px;
+        color: #fff;
+        padding: 7px 14px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .custom-pagination-wrap .swiper-pagination {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .swiper-pagination {
+        position: relative;
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide main1"></div>
+        <div class="swiper-slide main2"></div>
+        <div class="swiper-slide main3"></div>
+        <div class="swiper-slide main4"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="custom-pagination-wrap">
+        <div class="play-btn" id="playBtn">❚❚</div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      /* 재생/일시정지 기능 */
+      const playBtn = document.getElementById("playBtn");
+      let isPlaying = true;
+
+      playBtn.addEventListener("click", () => {
+        if (isPlaying) {
+          swiper.autoplay.stop();
+          playBtn.textContent = "▶";
+          isPlaying = false;
+        } else {
+          swiper.autoplay.start();
+          playBtn.textContent = "❚❚";
+          isPlaying = true;
+        }
+      });
+    </script>
+  </body>
+</html>
