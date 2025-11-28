@@ -39,3 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // -------------------------------------------------------------
+
+// TOP 버튼 → #nav로 이동
+document.getElementById("top-btn").addEventListener("click", () => {
+  const navTop = document.getElementById("nav").offsetTop;
+  window.scrollTo({ top: navTop, behavior: "smooth" });
+});
+//----------------------------------------------------------------

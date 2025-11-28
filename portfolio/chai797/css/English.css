@@ -41,7 +41,7 @@ body {
 #top {
   width: 100%;
   height: 100vh;
-  background-image: url("http://www.chai797.co.kr/chai/images/main/bg_1.jpg");
+  background-image: url("../chai797-img/main-bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -197,7 +197,7 @@ body {
   z-index: 1;
 }
 #meddle {
-  background-image: url("http://www.chai797.co.kr/chai/images/main/bg_2.jpg");
+  background-image: url("../chai797-img/main-bg2.jpg");
 }
 #meddle .med-img,
 #footer .foot-img {
@@ -219,7 +219,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  background-image: url("http://www.chai797.co.kr/chai/images/main/bg_3.jpg");
+  background-image: url("../chai797-img/main-bg3.jpg");
 }
 #footer .foot {
   position: relative;

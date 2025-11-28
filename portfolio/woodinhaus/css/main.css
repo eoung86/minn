@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
     format("woff2");
 }
 @font-face {
@@ -18,9 +18,8 @@
 }
 body {
   scrollbar-width: none;
-}
-body {
   -ms-overflow-style: none;
+  font-family: "Pretendard";
 }
 * {
   margin: 0;
@@ -176,7 +175,7 @@ a {
 #top {
   width: 100%;
   height: 15-vh;
-  background-image: url("http://www.wood.co.kr/data/main/file1_16450763511qly671qvc.jpg");
+  background-image: url("../woodinhaus-img/top-bg.jpg");
   border-radius: 20px;
   position: relative;
   background-size: cover;
@@ -237,11 +236,11 @@ a {
   position: relative;
 }
 #meddle1 .med1-img1 {
-  background-image: url("http://www.wood.co.kr/data/main/file1_1644378955plisylqeof.jpg");
+  background-image: url("../woodinhaus-img/med1-img1.png");
   z-index: 1;
 }
 #meddle1 .med1-img2 {
-  background-image: url("http://www.wood.co.kr/data/main/file1_16443788194yu100nyd2.jpg");
+  background-image: url("../woodinhaus-img/med1-img2.png");
   z-index: 0;
   opacity: 0;
 }
@@ -278,8 +277,8 @@ a {
 #meddle2 h1,
 #meddle3 h1 {
   font-size: 22px;
-  /* font-family: "Interop"; */
   font-family: "Pretendard";
+  color: #444;
 }
 #meddle1 .med1-txt p,
 #meddle2 p,
@@ -380,6 +379,10 @@ a {
   align-items: flex-end;
   text-align: right;
 }
+#meddle3 .med3-txt h1 {
+  color: #fff;
+  font-weight: lighter;
+}
 #meddle3 .med3-txt span {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
@@ -426,7 +429,7 @@ a {
 }
 #meddle4 .med4 {
   color: #333;
-  background: url("http://www.wood.co.kr/images/main/sec5_bg.png");
+  background: url("../woodinhaus-img/image\ 23.png");
   background-repeat: no-repeat;
   background-position: right top;
 }
@@ -590,15 +593,16 @@ a {
   background-color: #f5f5f5;
   display: flex;
   /* align-items: center; */
-  background-image: url("http://www.wood.co.kr/images/main/sec8_text.png");
+  /* background-image: url(""); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #333;
 }
 #footer .foot {
   width: 100%;
   display: flex;
-  height: 160px;
+  height: 140px;
 }
 #footer .foot-icon {
   width: 200px;
@@ -624,9 +628,12 @@ a {
   flex-direction: column;
   margin-left: 20px;
   font-size: 16px;
+  margin-bottom: 0 auto;
+  gap: 5px;
 }
-#footer .foot-txt .foot-sbtxt p {
-  margin: 4px 0;
+#footer .foot-sbtxt:last-child {
+  margin-top: -32px;
+  line-height: -5px;
 }
 /* --------------footer end---------------------- */
 
@@ -635,9 +642,9 @@ a {
   right: 20px;
   bottom: 40px;
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  /* text-orientation: upright; */
   color: #333;
-  padding: 10px 5px;
+  padding: 0 5px;
   cursor: pointer;
   font-weight: bold;
   z-index: 9999;
@@ -699,7 +706,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("http://www.wood.co.kr/data/main/file1_16450763511qly671qvc.jpg");
+  background-image: url("../woodinhaus-img/top-bg.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0;

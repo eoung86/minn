@@ -1,7 +1,7 @@
 @charset "utf-8";
 @font-face {
   font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
     format("woff2");
 }
 @font-face {
@@ -10,7 +10,6 @@
       format("woff2"),
     url("https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff")
       format("woff");
-  font-weight: normal;
 }
 * {
   margin: 0;
@@ -21,7 +20,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #111;
 }
 
 #woodin {
@@ -162,16 +161,21 @@ a {
 #woodin {
   width: 100%;
   background-color: #f5f5f5;
+  height: auto;
 }
 #wood {
   width: 100%;
+  height: auto;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 #wood .wood-main {
-  width: 100%;
+  height: auto;
   margin: 0 40px 0;
   background-color: #fff;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,6 +190,7 @@ a {
   display: flex;
   justify-content: flex-end;
   margin: 30px 30px 30px;
+  color: #111;
 }
 #wood #btn li {
   width: 100px;
@@ -253,8 +258,8 @@ a {
 }
 #wood .top-sb {
   padding-left: 10px;
-  font-size: 24px;
-  color: #222;
+  font-size: 22px;
+  color: #a6a6a6;
 }
 
 /* p 먼저 등장 */
@@ -270,15 +275,54 @@ a {
 }
 /* top end */
 
+#meddle {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#meddle .med {
+  padding-top: 200px;
+  gap: 60px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#meddle .med-foot {
+  width: 80%;
+  height: 180px;
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+#meddle .med-foot > p {
+  margin: 0 auto;
+}
+#meddle .med-foot .med-foot-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+#meddle .med-foot .med-foot-txt p:first-child {
+  font-weight: bold;
+}
 #footer {
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: rgba(50, 77, 51, 0.8);
   display: flex;
+  color: #acb7ad;
 }
 #footer .foot {
   width: 100%;
   display: flex;
-  height: 160px;
+  height: 140px;
 }
 #footer .foot-icon {
   width: 200px;
@@ -304,8 +348,57 @@ a {
   flex-direction: column;
   margin-left: 20px;
   font-size: 16px;
+  margin-bottom: 0 auto;
+  gap: 5px;
 }
-#footer .foot-txt .foot-sbtxt p {
-  margin: 4px 0;
+#footer .foot-sbtxt:last-child {
+  margin-top: -32px;
+  line-height: -5px;
 }
 /* footer end */
+
+#top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  writing-mode: vertical-rl;
+  /* text-orientation: upright; */
+  color: #333;
+  padding: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  font-size: 20px;
+}
+#top-btn {
+  opacity: 1;
+}
+#top-btn:hover {
+  opacity: 1;
+}
+/* 하단버튼 */
+
+/* 등장 전 */
+#meddle .med p img {
+  opacity: 0;
+  transform: translateY(50px);
+}
+/* 등장 후 */
+#meddle .med p img {
+  opacity: 1;
+  transform: translateY(0);
+  animation: up 1.5s ease-out forwards;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

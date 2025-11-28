@@ -1,0 +1,400 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Interop";
+  src: url("https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2")
+      format("woff2"),
+    url("https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff")
+      format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+#woodin {
+  width: 100%;
+  max-width: 1920px;
+  /* height: 100vh; */
+  margin: 0 auto;
+  background: #f3f3f3;
+  padding-top: 0;
+  scroll-behavior: smooth;
+  font-family: "Pretendard";
+}
+
+/* nav */
+#nav {
+  font-family: "Pretendard";
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  position: static;
+  top: auto;
+  left: auto;
+  z-index: 9999;
+  background: transparent;
+  padding: 30px 0;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  margin-bottom: 100px;
+}
+#nav.hide-nav {
+  opacity: 0;
+  transform: translateY(-100px);
+  pointer-events: none;
+}
+#nav .logo img {
+  width: 150px;
+  height: 28px;
+  margin: 0 80px 0 40px;
+}
+#nav .nav-sb {
+  display: flex;
+  width: 1640px;
+  justify-content: space-between;
+}
+#nav .nav-txt {
+  display: flex;
+  align-items: flex-end;
+}
+#nav .menu {
+  display: flex;
+  position: relative;
+  padding-right: 45px;
+}
+#nav .menu span {
+  display: inline-block;
+  cursor: pointer;
+  /* font-weight: bold; */
+  font-size: 18px;
+  font-family: "Pretendard";
+}
+#nav .drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 13px;
+  padding: 13px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.35s ease;
+  display: flex;
+  gap: 50px;
+  background: transparent;
+  background-color: rgba(243, 243, 243, 0.9);
+  width: auto;
+  border-radius: 15px;
+  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.1);
+}
+#nav .menu:hover .drop {
+  opacity: 1;
+  max-height: 500px;
+  transform: translateY(0);
+}
+#nav .sbmenu {
+  width: auto;
+  white-space: nowrap;
+  font-family: none;
+}
+#nav .sbmenu .sb-tit {
+  font-size: 17px;
+  font-weight: bold;
+}
+#nav .sbmenu li {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+#nav .sbmenu li a:hover {
+  color: #467f5a;
+  font-weight: bold;
+}
+#nav .nav-icon {
+  display: flex;
+  padding-right: 50px;
+  gap: 25px;
+}
+#nav .nav-icon img {
+  width: 23px;
+  height: 23px;
+}
+#nav .nav-icon .lang {
+  position: relative;
+}
+#nav .nav-icon .lang .lang-sv {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100px;
+  text-align: left;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#nav .nav-icon .lang:hover .lang-sv {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#nav .nav-icon .lang-sv a:hover {
+  color: #467f5a;
+  font-weight: bold;
+}
+/* ---------------nav end----------------- */
+#woodin {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: auto;
+}
+#wood {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#wood .wood-main {
+  height: auto;
+  margin: 0 40px 0;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#wood #btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#wood #btn ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 30px 30px;
+  color: #111;
+}
+#wood #btn li {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-right: 1px solid #999;
+}
+#wood #btn li:last-child {
+  border-right: none;
+  cursor: pointer;
+}
+#wood #btn .click {
+  width: 100px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.35s ease;
+  border: none;
+  margin: 3px 0 0 11px;
+}
+#wood #btn .click.show {
+  max-height: 300px; /* 내용 크기만큼 넉넉하게 */
+  opacity: 1;
+  transform: translateY(0);
+  border: 1px solid #ddd;
+}
+#wood #btn .click p {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  background: #fff;
+  padding-left: 10px;
+  color: #111;
+}
+#wood #btn .click p:hover {
+  background: #ddd;
+}
+/* btn end */
+
+#wood #top {
+  width: 1100px;
+  border-bottom: 1px solid #333;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 80px 0 20px;
+  gap: 20px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+#wood #top h1 {
+  font-size: 65px;
+}
+#wood #top p {
+  font-size: 25px;
+}
+#top h1,
+#top p {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+#wood .top-sb {
+  padding-left: 10px;
+  font-size: 22px;
+  color: #a6a6a6;
+}
+
+/* p 먼저 등장 */
+#top.show-p p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* h1 나중에 등장 */
+#top.show-h1 h1 {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* top end */
+
+#meddle {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#meddle .med {
+  padding-top: 200px;
+  gap: 60px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#meddle .med-foot {
+  width: 80%;
+  height: 180px;
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+#meddle .med-foot .med-foot-txt {
+  text-align: right;
+}
+#meddle .med-foot-txt .sb-tit {
+  text-align: left;
+}
+#meddle .med-foot .med-foot-txt p:first-child {
+  font-weight: bold;
+}
+#footer {
+  width: 100%;
+  background-color: rgba(50, 77, 51, 0.8);
+  display: flex;
+  color: #acb7ad;
+}
+#footer .foot {
+  width: 100%;
+  display: flex;
+  height: 140px;
+}
+#footer .foot-icon {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer .foot-sbicon {
+  display: flex;
+  gap: 18px;
+  padding-top: 20px;
+}
+#footer .foot-txt {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+#footer .foot-sbtxt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-size: 16px;
+  margin-bottom: 0 auto;
+  gap: 5px;
+}
+#footer .foot-sbtxt:last-child {
+  margin-top: -32px;
+  line-height: -5px;
+}
+/* footer end */
+
+#top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  writing-mode: vertical-rl;
+  /* text-orientation: upright; */
+  color: #333;
+  padding: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 9999;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  font-size: 20px;
+}
+#top-btn {
+  opacity: 1;
+}
+#top-btn:hover {
+  opacity: 1;
+}
+/* 하단버튼 */
+
+/* 등장 전 */
+#meddle .med p img {
+  opacity: 0;
+  transform: translateY(50px);
+}
+/* 등장 후 */
+#meddle .med p img {
+  opacity: 1;
+  transform: translateY(0);
+  animation: up 1.5s ease-out forwards;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
