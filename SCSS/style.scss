@@ -1,13 +1,28 @@
+$main: #f00;
+$size: 20px;
+@mixin txt {
+  background-color: #ccc;
+  border: 1px solid;
+  padding: 10px;
+}
+@mixin text($bg, $height, $margin) {
+  background-color: $bg;
+  line-height: $height;
+  margin: $margin;
+}
+// -----변수 사용가능
+
 ul {
+  // @include txt;
+  @include text(#ddd, 1, 100px);
   list-style: none;
-  li {
-    display: inline-block;
-    a {
-      text-decoration: none;
-      color: #000;
-      &:hover {
-        text-decoration: underline;
-      }
+  display: inline-block;
+  a {
+    text-decoration: none;
+    color: $main;
+    font-size: 20px;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
