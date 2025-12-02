@@ -1,1 +1,95 @@
-*{margin:0;padding:0}ul{list-style:none}a{text-decoration:none;color:#000}#ktng{width:100%}#ktng #head{margin:0 81px}#ktng #head #nav{width:100%;height:105px;display:flex;justify-content:space-between;align-items:center}#ktng #head #nav .nav-logo{width:130px;height:auto}#ktng #head #nav .nav-menu{display:flex;flex-direction:column;align-items:flex-end}#ktng #head #nav .nav-menu .nav-main{font-size:20px}#ktng #head #nav .nav-menu .nav-main ul{display:flex}#ktng #head #nav .nav-menu .nav-main ul li{margin:0 30px}#ktng #head #nav .nav-menu .nav-sb{display:flex;justify-content:center;display:none}#ktng #head #nav .menu-sb ul{display:flex;gap:15px;justify-content:center;align-items:flex-end}#ktng #head #nav .menu-sb ul li:last-child{width:27px;height:auto;cursor:pointer;display:flex;justify-content:flex-end}#ktng #head #nav .menu-sb ul a{font-size:15px}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+#ktng {
+  width: 1912px;
+}
+#ktng #head {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#ktng #head .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+#ktng #head .video-bg .video-bg video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  pointer-events: none;
+  background: #000;
+}
+#ktng #head #nav {
+  width: 100%;
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+#ktng #head #nav .nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#ktng #head #nav .nav-logo svg {
+  width: 130px;
+  height: auto;
+}
+#ktng #head #nav .nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#ktng #head #nav .nav-menu .nav-main {
+  font-size: 20px;
+}
+#ktng #head #nav .nav-menu .nav-main ul {
+  display: flex;
+}
+#ktng #head #nav .nav-menu .nav-main ul li {
+  margin: 0 30px;
+}
+#ktng #head #nav .nav-menu .nav-sb {
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+#ktng #head #nav .menu-sb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ktng #head #nav .menu-sb ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+#ktng #head #nav .menu-sb ul li:last-child {
+  width: 27px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+#ktng #head #nav .menu-sb ul a {
+  font-size: 15px;
+}

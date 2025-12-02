@@ -11,25 +11,50 @@ a {
 }
 // ------------------
 #ktng {
-  width: 100%;
+  width: 1912px;
   #head {
-    margin: 0 81px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      .video-bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        background: #000;
+      }
+    }
     #nav {
       width: 100%;
       height: 105px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .nav-logo {
-        width: 130px;
-        height: auto;
+      padding: 0 81px;
+      box-sizing: border-box;
+      / .nav-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        svg {
+          width: 130px;
+          height: auto;
+        }
       }
       //logo
       .nav-menu {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        // margin-left: 60px;
+        justify-content: center;
         .nav-main {
           font-size: 20px;
           ul {
@@ -49,11 +74,14 @@ a {
       }
       //nav-menu
       .menu-sb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         ul {
           display: flex;
-          gap: 15px;
-          justify-content: center;
-          align-items: flex-end;
+          gap: 1rem;
+          // justify-content: center;
+          // align-items: flex-end;
           li:last-child {
             width: 27px;
             height: auto;
