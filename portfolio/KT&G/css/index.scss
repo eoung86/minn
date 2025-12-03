@@ -11,7 +11,7 @@ a {
 }
 // ------------------
 #ktng {
-  width: 1912px;
+  // width: 1912px;
   #head {
     width: 100%;
     height: 100vh;
@@ -24,7 +24,7 @@ a {
       width: 100%;
       height: 100%;
       overflow: hidden;
-      // z-index: -1;
+      z-index: -1;
       .video-bg video {
         width: 100%;
         height: 100%;
@@ -35,40 +35,65 @@ a {
     }
     #nav {
       width: 100%;
-      height: 105px;
+      height: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 80px;
+      padding: 30px 80px;
       box-sizing: border-box;
-      / .nav-logo {
+      background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+
+      .nav-logo {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-end;
-        svg {
+
+        .ktng-logo {
           width: 130px;
           height: auto;
+          fill: #fff;
         }
       }
       //logo
       .nav-menu {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        position: relative;
+
         .nav-main {
           font-size: 20px;
           ul {
             display: flex;
             li {
               margin: 0 30px;
+              transition: padding-bottom 0.35s ease;
+              a {
+                color: #fff;
+                &:hover {
+                  color: #000;
+                }
+              }
             }
           }
         }
         //nav-main
         .nav-sb {
+          position: static;
+          width: 100%;
           display: flex;
           justify-content: center;
-          display: none;
+          align-items: flex-start;
+          gap: 40px;
+          padding: 20px 0;
+          // opacity: 0;
+          pointer-events: none;
+          overflow: hidden;
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+          }
         }
         //nav-sb
       }
@@ -77,23 +102,144 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        svg {
+          color: #fff;
+        }
         ul {
           display: flex;
           gap: 1rem;
-          // justify-content: center;
-          // align-items: flex-end;
           li:last-child {
             width: 27px;
-            height: auto;
             cursor: pointer;
             display: flex;
             justify-content: flex-end;
           }
           a {
             font-size: 15px;
+            color: #fff;
           }
         }
       }
     }
+  }
+  .med-main-text {
+    margin: 12.438rem 0;
+    text-align: center;
+    p {
+      margin-bottom: 40px;
+      font-size: 28x;
+    }
+    h1 {
+      font-size: 84px;
+    }
+    svg {
+      fill: #000;
+    }
+  }
+  #meddle {
+    height: 100vh;
+
+    .earth-bg {
+      background-image: url(../imegs/med-earth-bg.png);
+      position: relative;
+      height: 100vh;
+
+      .med-earth {
+        background: url(../imegs/med-earth.png);
+        height: 100vh;
+        .earth-main {
+          width: 100%;
+          height: 100%;
+
+          .bg-txt {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 8rem;
+            gap: 1rem;
+            color: #fff;
+            p {
+              font-size: 28px;
+            }
+            span {
+              font-size: 20px;
+            }
+            .arrow {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+              p {
+                width: 26px;
+                height: 26px;
+                background: #fff;
+                border-radius: 50%;
+                margin-top: 2px;
+                svg {
+                  color: #000;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  margin: 1px 0 0 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .earth-main-txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 40px;
+        .earth-txt {
+          padding: 40px;
+          overflow: hidden;
+          position: relative;
+          width: 25rem;
+          height: 25rem;
+          background: #8eaefa;
+          transform-style: preserve-3d;
+          border-radius: 8px;
+          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 50%;
+            height: 50%;
+            background: #3f42e5;
+            filter: blur(100px);
+            animation: ani 5s infinite alternate;
+          }
+          .con {
+            color: #fff;
+            .tit-txt {
+              display: flex;
+            }
+            h1 {
+              font-size: 103px;
+            }
+            p {
+              font-size: 32px;
+            }
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes ani {
+  100% {
+    left: 300px;
   }
 }
