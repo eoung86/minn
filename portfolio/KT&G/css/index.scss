@@ -140,12 +140,12 @@ a {
     height: 100vh;
 
     .earth-bg {
-      background-image: url(../imegs/med-earth-bg.png);
+      background-image: url(../images/med-earth-bg.png);
       position: relative;
       height: 100vh;
 
       .med-earth {
-        background: url(../imegs/med-earth.png);
+        background: url(../images/med-earth.png);
         height: 100vh;
         .earth-main {
           width: 100%;
@@ -169,19 +169,23 @@ a {
               justify-content: center;
               align-items: center;
               gap: 5px;
-              p {
-                width: 26px;
-                height: 26px;
-                background: #fff;
-                border-radius: 50%;
-                margin-top: 2px;
-                svg {
-                  color: #000;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  text-align: center;
-                  margin: 1px 0 0 2px;
+              a {
+                display: flex;
+                color: #fff;
+                p {
+                  width: 26px;
+                  height: 26px;
+                  background: #fff;
+                  border-radius: 50%;
+                  margin-top: 2px;
+                  svg {
+                    color: #000;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    margin: 1px 0 0 2px;
+                  }
                 }
               }
             }
@@ -209,16 +213,26 @@ a {
           align-items: center;
           .circle {
             position: absolute;
-            top: 0;
-            left: 0;
             z-index: 1;
             width: 50%;
             height: 50%;
             background: #3f42e5;
             filter: blur(100px);
-            animation: ani 5s infinite alternate;
           }
+          .c1 {
+            top: 10%;
+            left: 10%;
+            animation: ani 5s infinite alternate ease-in-out;
+          }
+          .c2 {
+            top: 40%;
+            left: 45%;
+            animation: rotate360 7s linear infinite,
+              ani2 8s ease-in-out infinite alternate;
+          }
+
           .con {
+            z-index: 1;
             color: #fff;
             .tit-txt {
               display: flex;
@@ -237,9 +251,99 @@ a {
       }
     }
   }
+  #green {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .grn-main {
+      width: 100%;
+      height: 100%;
+      .con {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
+      .con-txt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 8vw;
+      }
+    }
+  }
+  #forest {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/green-bg.webp);
+    background-size: cover;
+    .for-txt {
+      width: 100%;
+      color: #fff;
+      .for-txt-main {
+        padding: 60px 0 0 60px;
+        p {
+          font-size: 1.5vw;
+        }
+        h1 {
+          font-size: calc(clamp(59.8px, 4.375vw, 84px) * 0.7619);
+          margin-right: 20px;
+        }
+        .arrow {
+          display: flex;
+          gap: 20px;
+          margin-top: 40px;
+          a {
+            display: flex;
+            color: #fff;
+            span {
+              font-size: 1.25rem;
+              margin-right: 10px;
+            }
+            p {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 26px;
+              height: 26px;
+              background: #fff;
+              border-radius: 50%;
+              margin-top: 2px;
+              svg {
+                color: #000;
+                margin: 1px 0 0 2px;
+              }
+            }
+          }
+        }
+      }
+      .for-txt-sb {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    }
+  }
 }
 @keyframes ani {
   100% {
-    left: 300px;
+    transform: translate(100px, -100px);
+  }
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120px);
   }
 }
