@@ -17,6 +17,16 @@ a {
   font-family: "SEOULMILK";
   src: url(/webfonts/SEOULMILK\ 500mL\ TTF.woff);
 }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
 // --------------------------
 html {
   background: #ccc;
@@ -81,7 +91,7 @@ html {
       gap: 0;
       padding-left: 50px;
       color: #fff;
-      &:haver .nav-menu:hover .sb-drop {
+      &:hover .nav-menu:hover .sb-drop {
         max-height: 300px;
         opacity: 1;
         padding: 20px 30px;
@@ -165,6 +175,31 @@ html {
           max-width: 27px;
           cursor: pointer;
           margin-top: 4px;
+        }
+      }
+    }
+  }
+  // nav-------------
+  #meddle {
+    #med1 {
+      .med1-img {
+        .swiper {
+          width: 100%;
+          height: 100%;
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .swiper-slide img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
         }
       }
     }
