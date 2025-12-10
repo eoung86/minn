@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gradient-card {
+        padding: 40px;
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: #8eaefa;
+        transform-style: preserve-3d;
+        border-radius: 8px;
+      }
+      .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 50%;
+        height: 50%;
+        background: #3f42e5;
+        filter: blur(100px);
+        animation: ani 5s infinite alternate;
+      }
+      @keyframes ani {
+        100% {
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-card">
+      <div class="circle"></div>
+      <div class="content">
+        <div>
+          <div>148</div>
+          <div>country</div>
+        </div>
+        <div>
+          <div>
+            <div>CC &amp; NGP</div>
+            <div>148개국 수출</div>
+          </div>
+          <div>'24년 12월</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
