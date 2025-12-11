@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웰컴복지재단</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wel-menu {
+        width: 100%;
+      }
+      #menu-main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        border-bottom: 1px solid #ccc;
+      }
+      #menu-main h4 {
+        width: 375px;
+        height: 80px;
+        font-size: 18px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #menu-main h4:hover {
+        border-bottom: 2px solid #000;
+      }
+      #menu-main h4.active {
+        color: #ea002c;
+        border-bottom: 2px solid #ea002c;
+      }
+      #menu-sub {
+        padding-top: 140px;
+        text-align: center;
+      }
+      #menu-sub .tit {
+        display: none;
+      }
+      #menu-sub .tit.active {
+        display: block;
+      }
+      #menu-sub .tit h1 {
+        font-size: 50px;
+      }
+      #menu-sub span {
+        color: #ea002c;
+      }
+      #menu-sub p {
+        font-size: 18px;
+        color: #444;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wel-menu">
+      <div id="menu-main">
+        <h4>인사말</h4>
+        <h4>웰컴금융그룹</h4>
+        <h4>소개</h4>
+        <h4>오시는길</h4>
+      </div>
+      <div id="menu-sub">
+        <div class="tit">
+          <h1><span>웰컴복지재단 이사장</span> 인사말</h1>
+        </div>
+        <div class="tit">
+          <h1><span>웰컴복지재단 명예이사장</span> 인사말</h1>
+        </div>
+        <div class="tit">
+          <h1>미션 & 비전</h1>
+        </div>
+        <div class="tit">
+          <h1>오시는길</h1>
+          <p>
+            주차장 협소로 방문 시 주차가 불가할 수 있으니 가급적 대중교통 이용을
+            부탁드립니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menuItems = document.querySelectorAll("#menu-main h4");
+      const titBlocks = document.querySelectorAll("#menu-sub .tit");
+
+      // 초기 상태: 첫 번째만 보이게
+      titBlocks.forEach((tit, index) => {
+        tit.style.display = index === 0 ? "block" : "none";
+      });
+      menuItems[0].classList.add("active"); // 첫 번째 h4 활성화 표시
+
+      menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          // 모든 tit 숨김
+          titBlocks.forEach((tit) => (tit.style.display = "none"));
+
+          // 클릭된 항목의 tit만 표시
+          titBlocks[index].style.display = "block";
+
+          // 모든 h4 active 제거
+          menuItems.forEach((m) => m.classList.remove("active"));
+
+          // 클릭된 h4에 active 추가
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

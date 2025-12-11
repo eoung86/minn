@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>녹색성장지속가능대학원</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #green {
+        width: 100%;
+      }
+      #green-bg {
+        width: 1782px;
+        height: 360px;
+        background: url("https://gggs.kaist.ac.kr/html/images/common/sub_visual03.jpg");
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        margin: 60px 60px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #green-bg h1 {
+        color: #fff;
+        font-size: 48px;
+        text-align: center;
+      }
+      #green-bg .green-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #green-bg .green-text p {
+        display: flex;
+        justify-content: center;
+      }
+      #green-bg .green-text ul {
+        display: flex;
+        font-size: 16px;
+        color: #fff;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      #green-bg .green-text > ul li svg {
+        fill: #fff;
+        margin: 21px auto;
+      }
+      .green-text ul .text-sub {
+        position: relative;
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        height: 24px;
+        margin-top: 15px;
+      }
+      .green-text ul .text-sub:last-child {
+        margin-left: 16px;
+      }
+      .green-text ul .text-sub p {
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .green-text ul .text-sub ul a {
+        color: #b8e0d9;
+        font-size: 16px;
+        margin-bottom: 12px;
+        text-align: left;
+      }
+      .green-text ul .text-sub p::after {
+        content: "ˇ";
+        padding-left: 5px;
+        transition: transform 0.3s;
+      }
+      .text-sub.open p::after {
+        transform: rotate(180deg);
+      }
+      .text-sub > ul {
+        background: #00a287;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 0px 24px;
+        margin-top: 10px;
+      }
+      .text-sub > p {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 24px;
+        line-height: 24px;
+        white-space: nowrap;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+      }
+
+      .text-sub > ul.active {
+        max-height: 500px;
+        padding: 20px 24px;
+      }
+      .submenu-wrap {
+        position: absolute;
+        top: 28px; /* p 바로 아래 */
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      .text-sub.open .submenu-wrap {
+        max-height: 300px;
+      }
+      .submenu-wrap ul {
+        display: flex;
+        flex-direction: column;
+        background: #00a287;
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin-top: 10px;
+      }
+      #green-sub {
+        width: 100%;
+        border-bottom: 1px solid #4d4d4d;
+        margin-bottom: 100px;
+      }
+      #green-sub ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #green-sub ul li {
+        width: 650px;
+        height: 70px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #green-sub ul li a {
+        color: #00a287;
+        font-size: 18px;
+      }
+      #green-sub ul li.active {
+        border-bottom: 2px solid #00a287;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="green">
+      <div id="green-bg">
+        <h1>석사과정</h1>
+        <div class="green-text">
+          <ul>
+            <li>
+              <p>
+                <a href=""
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="Outline"
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                  >
+                    <path
+                      xmlns="http://www.w3.org/2000/svg"
+                      d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"
+                    ></path>
+                  </svg>
+                </a>
+              </p>
+            </li>
+            <li class="text-sub">
+              <p>입학</p>
+              <div class="submenu-wrap">
+                <ul>
+                  <li><a href="">대학원 소개</a></li>
+                  <li><a href="">구성원</a></li>
+                  <li><a href="">입학</a></li>
+                  <li><a href="">교육</a></li>
+                  <li><a href="">연구</a></li>
+                  <li><a href="">커뮤니티</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="text-sub">
+              <p>프로그램</p>
+              <div class="submenu-wrap">
+                <ul>
+                  <li><a href="">프로그램</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="text-sub">
+              <p>석사과정</p>
+              <div class="submenu-wrap">
+                <ul>
+                  <li><a href="">석사과정</a></li>
+                  <li><a href="">박사과정</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="green-sub">
+        <ul>
+          <li><a href="">석사과정</a></li>
+          <li><a href="">박사과정</a></li>
+        </ul>
+      </div>
+      <div id="green-bg">
+        <h1>박사과정</h1>
+        <div class="green-text">
+          <ul>
+            <li>
+              <a href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Outline"
+                  viewBox="0 0 24 24"
+                  width="14"
+                  height="14"
+                >
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M23.121,9.069,15.536,1.483a5.008,5.008,0,0,0-7.072,0L.879,9.069A2.978,2.978,0,0,0,0,11.19v9.817a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V11.19A2.978,2.978,0,0,0,23.121,9.069ZM15,22.007H9V18.073a3,3,0,0,1,6,0Zm7-1a1,1,0,0,1-1,1H17V18.073a5,5,0,0,0-10,0v3.934H3a1,1,0,0,1-1-1V11.19a1.008,1.008,0,0,1,.293-.707L9.878,2.9a3.008,3.008,0,0,1,4.244,0l7.585,7.586A1.008,1.008,0,0,1,22,11.19Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li class="text-sub">
+              <p>입학</p>
+              <div class="submenu-wrap">
+                <ul>
+                  <li><a href="">대학원 소개</a></li>
+                  <li><a href="">구성원</a></li>
+                  <li><a href="">입학</a></li>
+                  <li><a href="">교육</a></li>
+                  <li><a href="">연구</a></li>
+                  <li><a href="">커뮤니티</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="text-sub">
+              <p>프로그램</p>
+              <div class="submenu-wrap">
+                <ul>
+                  <li><a href="">프로그램</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="text-sub">
+              <p>박사과정</p>
+              <div class="submenu-wrap">
+                <ul>
+                  <li><a href="">석사과정</a></li>
+                  <li><a href="">박사과정</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="green-sub">
+        <ul>
+          <li><a href="">석사과정</a></li>
+          <li><a href="">박사과정</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    const textSubs = document.querySelectorAll(".text-sub");
+
+    textSubs.forEach((item) => {
+      const title = item.querySelector("p");
+
+      title.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
+    });
+
+    const subMenuItems = document.querySelectorAll("#green-sub ul li");
+
+    subMenuItems.forEach((li) => {
+      const link = li.querySelector("a");
+
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        subMenuItems.forEach((item) => item.classList.remove("active"));
+
+        li.classList.add("active");
+      });
+    });
+  </script>
+</html>
