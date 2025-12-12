@@ -1,8 +1,12 @@
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+const nav = document.querySelector("#nav");
+const tit = document.querySelectorAll(".tit");
+
+tit.forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    nav.classList.add("active");
+  });
+
+  item.addEventListener("mouseleave", () => {
+    nav.classList.remove("active");
+  });
 });

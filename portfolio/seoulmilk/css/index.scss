@@ -7,7 +7,10 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #000;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  line-height: inherit;
 }
 @font-face {
   font-family: "SEOULMILK";
@@ -29,179 +32,137 @@ body {
 }
 // --------------------------
 html {
-  background: #ccc;
+  background: pink;
 }
 #seoulmilk {
-  width: 100%;
+  max-width: 1920px;
   font-family: "SEOULMILK";
   #nav {
     max-width: 1920px;
-    height: 120px;
-    background: transparent;
-    transition: 0.35s ease;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease;
     position: relative;
-    & .nav-main:hover h4,
-    & .nav-main:hover ~ .lang .k a {
-      color: #000;
-    }
+    height: 120px;
     &::after {
       content: "";
       position: absolute;
-      top: 120px;
       left: 0;
+      top: 120px; // nav 기본 높이
       width: 100%;
-      height: 0px;
+      height: 0;
       background: #fff;
-      z-index: -1;
-      transition: 0.35s ease;
+      z-index: -1; // nav 뒤에 깔림
+      transition: height 0.3s ease;
     }
-    &:hover {
+    &.active {
       background: #fff;
-      border-bottom: 1px solid #a0a0a0;
-    }
-    &:hover::after {
-      height: 300px;
-    }
-    & .nav-main:hover::after {
-      height: 300px;
-    }
-    & .nav-main:hover {
-      background: #fff;
-    }
-    .nav-logo {
-      display: flex;
-      text-align: left;
-      p {
-        margin-left: 150px;
-        img {
-          max-width: 220px;
-        }
+      border-bottom: 1px solid #ccc;
+      &::after {
+        height: 290px;
+      }
+      .nav-main .tit-menu .tit > a,
+      .nav-main .lang .lan-txt a {
+        color: #191919;
       }
     }
-    .nav-main {
-      min-width: 970px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0;
-      padding-left: 50px;
-      color: #fff;
-      &:hover .nav-menu:hover .sb-drop {
-        max-height: 300px;
-        opacity: 1;
-        padding: 20px 30px;
-        pointer-events: auto;
-      }
+
+    .seoul-logo {
       a {
-        font-weight: normal;
+        display: inline-block;
+        margin-left: 130px;
       }
-      .nav-menu {
-        position: relative;
-        cursor: pointer;
+      img {
+        width: 220px;
+        height: auto;
+      }
+    }
+
+    .nav-main {
+      display: flex;
+      margin-right: 130px;
+      align-items: center;
+      padding-left: 50px;
+      .tit-menu {
         display: flex;
-        flex-direction: column;
-        h4 {
-          height: 120px;
-          display: flex;
-          align-items: center;
-          cursor: pointer;
-          white-space: nowrap;
+        .tit:first-child {
+          padding-left: 0;
         }
-        .sb-drop {
-          position: absolute;
-          top: 120px;
-          left: 0;
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          display: flex;
-          padding: 0 25px;
-          gap: 30px;
-          text-align: left;
-          pointer-events: none;
-          transition: max-height 0.35s ease, opacity 0.25s ease,
-            padding 0.3s ease;
-          .sb-menu {
-            white-space: nowrap;
-            flex: 0 0 auto;
+        .tit {
+          display: inline-block;
+          padding: 0 32px;
+          position: relative;
+          .dropdown {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px); // 아래에서 살짝 올라오게
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            display: flex;
+            .sub-menu {
+              //   width: auto;
+            }
+          }
+
+          &:hover .dropdown {
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
           }
         }
-        &:hover .sb-drop {
-          max-height: 400px;
-          opacity: 1;
-          padding: 20px 25px;
-          pointer-events: auto;
-        }
-      }
-    }
-    .lang {
-      display: flex;
-      margin-right: 150px;
-      justify-content: center;
-      align-items: center;
-      .k {
-        a {
-          margin-left: 75px;
+        .tit > a {
+          display: block;
+          padding: 0 10px;
+          line-height: 120px;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: -0.72px;
           color: #fff;
         }
       }
-      .e a {
-        margin-left: 39px;
-        position: relative;
-        color: #a0a0a0;
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 2px;
-          height: 16px;
-          background: #b4b4b4;
-          position: absolute;
-          left: -20px;
-          top: 2px;
+      .lang {
+        display: flex;
+        margin-left: 75px;
+        li a {
+          color: #a0a0a0;
+          font-weight: bold;
         }
-      }
-      a {
-        font-size: 17px;
-        font-weight: normal;
-      }
-      .img {
-        margin-left: 20px;
-        img {
-          max-width: 27px;
-          cursor: pointer;
-          margin-top: 4px;
+        .lan-txt a {
+          color: #fff;
+          display: inline-block;
+          font-size: 17px;
+          padding-right: 19px;
+        }
+        li + li {
+          a {
+            padding-left: 19px;
+            border-left: 2px solid #b4b4b4;
+          }
+        }
+        .all-view {
+          background: url(../images/nav-menu.png) no-repeat;
+          background-size: 100% auto;
+          margin-left: 20px;
+          width: 27px;
+          height: 20px;
+          font-size: 0;
+          padding-right: 0;
         }
       }
     }
   }
+
   // nav-------------
-  #meddle {
-    #med1 {
-      .med1-img {
-        .swiper {
-          width: 100%;
-          height: 100%;
-          .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #444;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .swiper-slide img {
-              display: block;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-      }
+
+  #seoul-main {
+    .main-video {
     }
   }
 }
